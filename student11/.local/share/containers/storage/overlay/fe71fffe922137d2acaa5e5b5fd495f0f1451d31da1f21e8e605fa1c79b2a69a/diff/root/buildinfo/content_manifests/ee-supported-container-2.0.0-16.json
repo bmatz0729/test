@@ -1,0 +1,774 @@
+{
+    "image_contents": [
+        {
+            "dependencies": [
+                {
+                    "purl": "pkg:pypi/adal@1.2.7"
+                },
+                {
+                    "purl": "pkg:pypi/aiohttp@3.7.4.post0"
+                },
+                {
+                    "purl": "pkg:pypi/ansible-pylibssh@0.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/appdirs@1.4.4"
+                },
+                {
+                    "purl": "pkg:pypi/applicationinsights@0.11.10"
+                },
+                {
+                    "purl": "pkg:pypi/argcomplete@1.12.3"
+                },
+                {
+                    "purl": "pkg:pypi/async-timeout@3.0.1"
+                },
+                {
+                    "purl": "pkg:pypi/attrs@20.3.0"
+                },
+                {
+                    "purl": "pkg:pypi/awxkit@19.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-cli-core@2.11.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-cli-nspkg@3.0.2"
+                },
+                {
+                    "purl": "pkg:pypi/azure-cli-telemetry@1.0.6"
+                },
+                {
+                    "purl": "pkg:pypi/azure-common@1.1.11"
+                },
+                {
+                    "purl": "pkg:pypi/azure-core@1.15.0b1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-graphrbac@0.61.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-keyvault@1.0.0a1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-apimanagement@0.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-authorization@0.51.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-automation@0.1.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-batch@5.0.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-cdn@3.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-compute@10.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-containerinstance@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-containerregistry@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-containerservice@9.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-core@1.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-cosmosdb@0.5.2"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-datalake-nspkg@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-datalake-store@0.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-devtestlabs@3.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-dns@2.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-eventhub@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-hdinsight@0.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-iothub@0.7.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-keyvault@1.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-loganalytics@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-managedservices@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-managementgroups@0.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-marketplaceordering@0.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-monitor@0.5.2"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-network@12.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-nspkg@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-privatedns@0.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-rdbms@1.9.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-recoveryservices@0.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-recoveryservicesbackup@0.6.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-redis@5.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-resource@10.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-search@3.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-servicebus@0.5.3"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-sql@0.10.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-storage@11.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-trafficmanager@0.50.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-web@0.41.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-nspkg@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-storage@0.35.1"
+                },
+                {
+                    "purl": "pkg:pypi/bcrypt@3.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/boto3@1.17.56"
+                },
+                {
+                    "purl": "pkg:pypi/boto@2.49.0"
+                },
+                {
+                    "purl": "pkg:pypi/botocore@1.20.56"
+                },
+                {
+                    "purl": "pkg:pypi/cachetools@4.2.1"
+                },
+                {
+                    "purl": "pkg:pypi/certifi@2020.12.5"
+                },
+                {
+                    "purl": "pkg:pypi/colorama@0.4.4"
+                },
+                {
+                    "purl": "pkg:pypi/decorator@5.0.7"
+                },
+                {
+                    "purl": "pkg:pypi/dogpile.cache@1.1.2"
+                },
+                {
+                    "purl": "pkg:pypi/google-auth@1.29.0"
+                },
+                {
+                    "purl": "pkg:pypi/humanfriendly@8.2"
+                },
+                {
+                    "purl": "pkg:pypi/ipaddress@1.0.23"
+                },
+                {
+                    "purl": "pkg:pypi/iso8601@0.1.14"
+                },
+                {
+                    "purl": "pkg:pypi/isodate@0.6.0"
+                },
+                {
+                    "purl": "pkg:pypi/jmespath@0.10.0"
+                },
+                {
+                    "purl": "pkg:pypi/jsonpatch@1.32"
+                },
+                {
+                    "purl": "pkg:pypi/jsonpointer@2.1"
+                },
+                {
+                    "purl": "pkg:pypi/jsonschema@3.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/jxmlease@1.0.3"
+                },
+                {
+                    "purl": "pkg:pypi/keystoneauth1@4.3.1"
+                },
+                {
+                    "purl": "pkg:pypi/knack@0.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/kubernetes@12.0.1"
+                },
+                {
+                    "purl": "pkg:pypi/msal-extensions@0.1.3"
+                },
+                {
+                    "purl": "pkg:pypi/msal@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/msrest@0.6.10"
+                },
+                {
+                    "purl": "pkg:pypi/msrestazure@0.6.4"
+                },
+                {
+                    "purl": "pkg:pypi/multidict@5.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/munch@2.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/ncclient@0.6.10"
+                },
+                {
+                    "purl": "pkg:pypi/netaddr@0.8.0"
+                },
+                {
+                    "purl": "pkg:pypi/netifaces@0.10.9"
+                },
+                {
+                    "purl": "pkg:pypi/oauthlib@3.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/openshift@0.12.0"
+                },
+                {
+                    "purl": "pkg:pypi/openstacksdk@0.56.0"
+                },
+                {
+                    "purl": "pkg:pypi/os-service-types@1.7.0"
+                },
+                {
+                    "purl": "pkg:pypi/ovirt-engine-sdk-python@4.4.12"
+                },
+                {
+                    "purl": "pkg:pypi/packaging@20.9"
+                },
+                {
+                    "purl": "pkg:pypi/paramiko@2.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/pkginfo@1.7.0"
+                },
+                {
+                    "purl": "pkg:pypi/portalocker@1.7.1"
+                },
+                {
+                    "purl": "pkg:pypi/pyasn1-modules@0.2.8"
+                },
+                {
+                    "purl": "pkg:pypi/pyasn1@0.4.8"
+                },
+                {
+                    "purl": "pkg:pypi/pycurl@7.43.0.6"
+                },
+                {
+                    "purl": "pkg:pypi/pygments@2.9.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyjwt@1.7.1"
+                },
+                {
+                    "purl": "pkg:pypi/pynacl@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyopenssl@19.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyparsing@2.4.7"
+                },
+                {
+                    "purl": "pkg:pypi/pyrsistent@0.17.3"
+                },
+                {
+                    "purl": "pkg:pypi/python-dateutil@2.6.1"
+                },
+                {
+                    "purl": "pkg:pypi/python-dateutil@2.8.1"
+                },
+                {
+                    "purl": "pkg:pypi/python-string-utils@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyvmomi@7.0.2"
+                },
+                {
+                    "purl": "pkg:pypi/requests-oauthlib@1.3.0"
+                },
+                {
+                    "purl": "pkg:pypi/requestsexceptions@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/rsa@4.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/ruamel.yaml.clib@0.2.2"
+                },
+                {
+                    "purl": "pkg:pypi/ruamel.yaml@0.17.4"
+                },
+                {
+                    "purl": "pkg:pypi/s3transfer@0.4.2"
+                },
+                {
+                    "purl": "pkg:pypi/scp@0.13.3"
+                },
+                {
+                    "purl": "pkg:pypi/stevedore@3.3.0"
+                },
+                {
+                    "purl": "pkg:pypi/tabulate@0.8.9"
+                },
+                {
+                    "purl": "pkg:pypi/textfsm@0.4.1"
+                },
+                {
+                    "purl": "pkg:pypi/ttp@0.6.0"
+                },
+                {
+                    "purl": "pkg:pypi/typing-extensions@3.7.4.3"
+                },
+                {
+                    "purl": "pkg:pypi/websocket-client@0.58.0"
+                },
+                {
+                    "purl": "pkg:pypi/xmltodict@0.12.0"
+                },
+                {
+                    "purl": "pkg:pypi/yarl@1.6.3"
+                }
+            ],
+            "purl": "pkg:generic/ee-supported?vcs_url=https%3A%2F%2Fcode.engineering.redhat.com%2Fgerrit%2Faap-cachito%40c3e233a2ea68f3a1b2f797b3a0ebee0d92426ff5#ee-supported",
+            "sources": [
+                {
+                    "purl": "pkg:pypi/adal@1.2.7"
+                },
+                {
+                    "purl": "pkg:pypi/aiohttp@3.7.4.post0"
+                },
+                {
+                    "purl": "pkg:pypi/ansible-pylibssh@0.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/appdirs@1.4.4"
+                },
+                {
+                    "purl": "pkg:pypi/applicationinsights@0.11.10"
+                },
+                {
+                    "purl": "pkg:pypi/argcomplete@1.12.3"
+                },
+                {
+                    "purl": "pkg:pypi/async-timeout@3.0.1"
+                },
+                {
+                    "purl": "pkg:pypi/attrs@20.3.0"
+                },
+                {
+                    "purl": "pkg:pypi/awxkit@19.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-cli-core@2.11.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-cli-nspkg@3.0.2"
+                },
+                {
+                    "purl": "pkg:pypi/azure-cli-telemetry@1.0.6"
+                },
+                {
+                    "purl": "pkg:pypi/azure-common@1.1.11"
+                },
+                {
+                    "purl": "pkg:pypi/azure-core@1.15.0b1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-graphrbac@0.61.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-keyvault@1.0.0a1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-apimanagement@0.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-authorization@0.51.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-automation@0.1.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-batch@5.0.1"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-cdn@3.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-compute@10.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-containerinstance@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-containerregistry@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-containerservice@9.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-core@1.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-cosmosdb@0.5.2"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-datalake-nspkg@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-datalake-store@0.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-devtestlabs@3.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-dns@2.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-eventhub@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-hdinsight@0.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-iothub@0.7.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-keyvault@1.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-loganalytics@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-managedservices@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-managementgroups@0.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-marketplaceordering@0.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-monitor@0.5.2"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-network@12.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-nspkg@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-privatedns@0.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-rdbms@1.9.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-recoveryservices@0.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-recoveryservicesbackup@0.6.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-redis@5.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-resource@10.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-search@3.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-servicebus@0.5.3"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-sql@0.10.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-storage@11.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-trafficmanager@0.50.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-mgmt-web@0.41.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-nspkg@2.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/azure-storage@0.35.1"
+                },
+                {
+                    "purl": "pkg:pypi/bcrypt@3.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/boto3@1.17.56"
+                },
+                {
+                    "purl": "pkg:pypi/boto@2.49.0"
+                },
+                {
+                    "purl": "pkg:pypi/botocore@1.20.56"
+                },
+                {
+                    "purl": "pkg:pypi/cachetools@4.2.1"
+                },
+                {
+                    "purl": "pkg:pypi/certifi@2020.12.5"
+                },
+                {
+                    "purl": "pkg:pypi/colorama@0.4.4"
+                },
+                {
+                    "purl": "pkg:pypi/decorator@5.0.7"
+                },
+                {
+                    "purl": "pkg:pypi/dogpile.cache@1.1.2"
+                },
+                {
+                    "purl": "pkg:pypi/expandvars@0.7.0"
+                },
+                {
+                    "purl": "pkg:pypi/google-auth@1.29.0"
+                },
+                {
+                    "purl": "pkg:pypi/humanfriendly@8.2"
+                },
+                {
+                    "purl": "pkg:pypi/ipaddress@1.0.23"
+                },
+                {
+                    "purl": "pkg:pypi/iso8601@0.1.14"
+                },
+                {
+                    "purl": "pkg:pypi/isodate@0.6.0"
+                },
+                {
+                    "purl": "pkg:pypi/jmespath@0.10.0"
+                },
+                {
+                    "purl": "pkg:pypi/jsonpatch@1.32"
+                },
+                {
+                    "purl": "pkg:pypi/jsonpointer@2.1"
+                },
+                {
+                    "purl": "pkg:pypi/jsonschema@3.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/jxmlease@1.0.3"
+                },
+                {
+                    "purl": "pkg:pypi/keystoneauth1@4.3.1"
+                },
+                {
+                    "purl": "pkg:pypi/knack@0.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/kubernetes@12.0.1"
+                },
+                {
+                    "purl": "pkg:pypi/msal-extensions@0.1.3"
+                },
+                {
+                    "purl": "pkg:pypi/msal@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/msrest@0.6.10"
+                },
+                {
+                    "purl": "pkg:pypi/msrestazure@0.6.4"
+                },
+                {
+                    "purl": "pkg:pypi/multidict@5.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/munch@2.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/ncclient@0.6.10"
+                },
+                {
+                    "purl": "pkg:pypi/netaddr@0.8.0"
+                },
+                {
+                    "purl": "pkg:pypi/netifaces@0.10.9"
+                },
+                {
+                    "purl": "pkg:pypi/oauthlib@3.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/openshift@0.12.0"
+                },
+                {
+                    "purl": "pkg:pypi/openstacksdk@0.56.0"
+                },
+                {
+                    "purl": "pkg:pypi/os-service-types@1.7.0"
+                },
+                {
+                    "purl": "pkg:pypi/ovirt-engine-sdk-python@4.4.12"
+                },
+                {
+                    "purl": "pkg:pypi/packaging@20.9"
+                },
+                {
+                    "purl": "pkg:pypi/paramiko@2.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/pkginfo@1.7.0"
+                },
+                {
+                    "purl": "pkg:pypi/portalocker@1.7.1"
+                },
+                {
+                    "purl": "pkg:pypi/pyasn1-modules@0.2.8"
+                },
+                {
+                    "purl": "pkg:pypi/pyasn1@0.4.8"
+                },
+                {
+                    "purl": "pkg:pypi/pycurl@7.43.0.6"
+                },
+                {
+                    "purl": "pkg:pypi/pygments@2.9.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyjwt@1.7.1"
+                },
+                {
+                    "purl": "pkg:pypi/pynacl@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyopenssl@19.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyparsing@2.4.7"
+                },
+                {
+                    "purl": "pkg:pypi/pyrsistent@0.17.3"
+                },
+                {
+                    "purl": "pkg:pypi/python-dateutil@2.6.1"
+                },
+                {
+                    "purl": "pkg:pypi/python-dateutil@2.8.1"
+                },
+                {
+                    "purl": "pkg:pypi/python-string-utils@1.0.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyvmomi@7.0.2"
+                },
+                {
+                    "purl": "pkg:pypi/requests-oauthlib@1.3.0"
+                },
+                {
+                    "purl": "pkg:pypi/requestsexceptions@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/rsa@4.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/ruamel.yaml.clib@0.2.2"
+                },
+                {
+                    "purl": "pkg:pypi/ruamel.yaml@0.17.4"
+                },
+                {
+                    "purl": "pkg:pypi/s3transfer@0.4.2"
+                },
+                {
+                    "purl": "pkg:pypi/scp@0.13.3"
+                },
+                {
+                    "purl": "pkg:pypi/setuptools-scm@5.0.2"
+                },
+                {
+                    "purl": "pkg:pypi/stevedore@3.3.0"
+                },
+                {
+                    "purl": "pkg:pypi/tabulate@0.8.9"
+                },
+                {
+                    "purl": "pkg:pypi/textfsm@0.4.1"
+                },
+                {
+                    "purl": "pkg:pypi/toml@0.10.2"
+                },
+                {
+                    "purl": "pkg:pypi/ttp@0.6.0"
+                },
+                {
+                    "purl": "pkg:pypi/typing-extensions@3.7.4.3"
+                },
+                {
+                    "purl": "pkg:pypi/websocket-client@0.58.0"
+                },
+                {
+                    "purl": "pkg:pypi/xmltodict@0.12.0"
+                },
+                {
+                    "purl": "pkg:pypi/yarl@1.6.3"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "icm_spec": "https://raw.githubusercontent.com/containerbuildsystem/atomic-reactor/f4abcfdaf8247a6b074f94fa84f3846f82d781c6/atomic_reactor/schemas/content_manifest.json",
+        "icm_version": 1,
+        "image_layer_index": 4
+    },
+    "content_sets": [
+        "ansible-automation-platform-2_DOT_0-early-access-for-rhel-8-x86_64-rpms",
+        "rhel-8-for-x86_64-baseos-rpms",
+        "rhel-8-for-x86_64-appstream-rpms"
+    ]
+}

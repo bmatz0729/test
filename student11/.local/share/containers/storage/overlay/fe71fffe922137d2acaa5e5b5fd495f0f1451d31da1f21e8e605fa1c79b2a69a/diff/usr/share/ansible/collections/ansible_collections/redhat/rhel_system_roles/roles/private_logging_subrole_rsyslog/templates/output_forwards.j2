@@ -1,0 +1,34 @@
+{% if item.tcp_port | d() %}
+{%   set __forwards_port = item.tcp_port %}
+{%   set __forwards_protocol = 'tcp' %}
+{% elif item.udp_port | d() %}
+{%   set __forwards_port = item.udp_port %}
+{%   set __forwards_protocol = 'udp' %}
+{% else %}
+{%   set __forwards_port = '' %}
+{%   set __forwards_protocol = '' %}
+{% endif %}
+ruleset(name="{{ item.name }}") {
+{% if item.property | d() %}
+    :{{ item.property }}, {{ item.property_op | d('contains') }}, "{{ item.property_value | d('error') }}" action(name="{{ item.name }}"
+{% elif item.exclude | d([]) %}
+    {{ item.facility | d('*') }}.{{ item.severity | d('*') }};{{ item.exclude | join(';') }} action(name="{{ item.name }}"
+{% else %}
+    {{ item.facility | d('*') }}.{{ item.severity | d('*') }} action(name="{{ item.name }}"
+{% endif %}
+        type="omfwd"
+        Target="{{ item.target }}"
+{% if item.tls | d(false) | bool %}
+        StreamDriver="{{ __rsyslog_tls_netstream_driver }}"
+        StreamDriverMode="1"
+        StreamDriverAuthMode="{{ item.pki_authmode | d(__rsyslog_default_pki_authmode) }}"
+        StreamDriverPermittedPeers="{{ item.permitted_server | d('*.' + logging_domain) }}"
+{% endif %}
+{% if __forwards_port != '' %}
+        Port="{{ __forwards_port }}"
+{% endif %}
+{% if __forwards_protocol != '' %}
+        Protocol="{{ __forwards_protocol }}"
+{% endif %}
+    )
+}

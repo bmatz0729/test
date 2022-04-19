@@ -1,0 +1,41 @@
+{
+ "collection_info": {
+  "namespace": "ansible",
+  "name": "security",
+  "version": "1.0.0",
+  "authors": [
+   "Ansible Security Community (ansible-security)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "networking",
+   "security",
+   "cloud",
+   "network_cli",
+   "httpapi"
+  ],
+  "description": "Ansible Security meta Collection to install all security supported content.",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {
+   "ansible.netcommon": "*",
+   "ansible.utils": "*",
+   "cisco.asa": "*",
+   "ibm.qradar": "*",
+   "splunk.es": "*",
+   "trendmicro.deepsec": "*"
+  },
+  "repository": "https://github.com/ansible-collections/ansible.security",
+  "documentation": null,
+  "homepage": null,
+  "issues": null
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "88041cbb24f35f55654b804668175882085a3bdc528c41b837c5949175dad1ea",
+  "format": 1
+ },
+ "format": 1
+}

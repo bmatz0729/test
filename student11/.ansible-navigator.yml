@@ -1,0 +1,17 @@
+---
+ansible-navigator:
+  ansible:
+    inventories:
+    - /home/student11/lab_inventory/hosts
+
+  execution-environment:
+    image: registry.redhat.io/ansible-automation-platform-20-early-access/ee-supported-rhel8:2.0.0
+    enabled: true
+    container-engine: podman
+    pull-policy: missing
+    volume-mounts:
+    - src: "/etc/ansible/"
+      dest: "/etc/ansible/"
+    - src: /tmp/rhel/
+      dest: /tmp/rhel/
+    

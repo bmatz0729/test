@@ -1,0 +1,20 @@
+---
+- name: Verify default packages as well as additional are installed
+  hosts: all
+  vars:
+    additional_package: "{% if ansible_facts['distribution'] in [ 'RedHat', 'CentOS' ] and\n      ansible_facts['distribution_version'] | int < 9 %}\n  openssh-ldap\n{% elif ansible_facts['os_family'] == 'RedHat' %}\n  openssh-keycat\n{% else %}\n  openssh-tests\n{% endif %}"
+  tasks:
+    - name: Run role
+      include_role:
+        name: redhat.rhel_system_roles.ssh
+      vars:
+        ssh_additional_packages:
+          - "{{ additional_package | trim }}"
+
+    - name: Gather the package facts
+      package_facts:
+
+    - name: Verify the packages were installed
+      assert:
+        that:
+          - "'{{ additional_package | trim }}' in ansible_facts.packages"

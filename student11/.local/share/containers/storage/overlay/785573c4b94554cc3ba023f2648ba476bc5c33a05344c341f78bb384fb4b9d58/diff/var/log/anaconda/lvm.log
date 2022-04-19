@@ -1,0 +1,269 @@
+16:24:26.847236 lvs[1902] device_mapper/libdm-config.c:1086  log/activation not found in config: defaulting to 0
+16:24:26.847284 lvs[1902] config/config.c:1475  log/debug_classes not found in config: defaulting to debug_classes = [ "memory", "devices", "io", "activation", "allocation", "metadata", "cache", "locking", "lvmpolld", "dbus" ]
+16:24:26.847295 lvs[1902] commands/toolcontext.c:384  Setting log debug classes to 2031
+16:24:26.847345 lvs[1902] config/config.c:1475  log/debug_file_fields not found in config: defaulting to debug_file_fields = [ "time", "command", "fileline", "message" ]
+16:24:26.847356 lvs[1902] config/config.c:1475  log/debug_output_fields not found in config: defaulting to debug_output_fields = [ "time", "command", "fileline", "message" ]
+16:24:26.847366 lvs[1902] commands/toolcontext.c:393  Logging initialised at Tue Aug  3 16:24:26 2021
+16:24:26.847379 lvs[1902] config/config.c:283  Loading config file: /etc/lvm/lvmlocal.conf
+16:24:26.847394 lvs[1902] device/dev-io.c:418  Opened /etc/lvm/lvmlocal.conf RO
+16:24:26.847442 lvs[1902] device/dev-io.c:455  Closed /etc/lvm/lvmlocal.conf
+16:24:26.847483 lvs[1902] device_mapper/libdm-config.c:1086  config/checks not found in config: defaulting to 1
+16:24:26.847517 lvs[1902] device_mapper/libdm-config.c:1086  config/abort_on_errors not found in config: defaulting to 0
+16:24:26.847525 lvs[1902] device_mapper/libdm-config.c:1086  config/checks not found in config: defaulting to 1
+16:24:26.847562 lvs[1902] device_mapper/libdm-config.c:1086  config/checks not found in config: defaulting to 1
+16:24:26.847597 lvs[1902] device_mapper/libdm-config.c:1014  global/umask not found in config: defaulting to 63
+16:24:26.847607 lvs[1902] device_mapper/libdm-config.c:987  devices/dir not found in config: defaulting to /dev
+16:24:26.847638 lvs[1902] device_mapper/libdm-config.c:987  devices/external_device_info_source not found in config: defaulting to none
+16:24:26.847646 lvs[1902] device_mapper/libdm-config.c:987  global/proc not found in config: defaulting to /proc
+16:24:26.847850 lvs[1902] device_mapper/libdm-config.c:1086  global/activation not found in config: defaulting to 1
+16:24:26.847887 lvs[1902] device_mapper/libdm-config.c:1086  activation/auto_set_activation_skip not found in config: defaulting to 1
+16:24:26.847895 lvs[1902] device_mapper/libdm-config.c:987  activation/readahead not found in config: defaulting to auto
+16:24:26.847901 lvs[1902] device_mapper/libdm-config.c:1086  activation/udev_rules not found in config: defaulting to 1
+16:24:26.847930 lvs[1902] device_mapper/libdm-config.c:1086  activation/udev_sync not found in config: defaulting to 1
+16:24:26.847938 lvs[1902] device_mapper/libdm-config.c:1086  activation/retry_deactivation not found in config: defaulting to 1
+16:24:26.847943 lvs[1902] device_mapper/libdm-config.c:1086  activation/checks not found in config: defaulting to 0
+16:24:26.847967 lvs[1902] misc/lvm-globals.c:205  LVM activation checks disabled
+16:24:26.847975 lvs[1902] device_mapper/libdm-config.c:1086  activation/use_linear_target not found in config: defaulting to 1
+16:24:26.848004 lvs[1902] device_mapper/libdm-config.c:987  activation/missing_stripe_filler not found in config: defaulting to error
+16:24:26.848012 lvs[1902] device_mapper/libdm-config.c:1086  global/metadata_read_only not found in config: defaulting to 0
+16:24:26.848018 lvs[1902] device_mapper/libdm-config.c:1014  devices/pv_min_size not found in config: defaulting to 2048
+16:24:26.848057 lvs[1902] device_mapper/libdm-config.c:1086  metadata/check_pv_device_sizes not found in config: defaulting to 1
+16:24:26.848062 lvs[1902] device_mapper/libdm-config.c:987  global/units not found in config: defaulting to r
+16:24:26.848068 lvs[1902] device_mapper/libdm-config.c:1086  global/si_unit_consistency not found in config: defaulting to 1
+16:24:26.848073 lvs[1902] device_mapper/libdm-config.c:1086  report/binary_values_as_numeric not found in config: defaulting to 0
+16:24:26.848100 lvs[1902] device_mapper/libdm-config.c:1086  report/mark_hidden_devices not found in config: defaulting to 1
+16:24:26.848815 lvs[1902] device_mapper/libdm-config.c:1086  global/suffix not found in config: defaulting to 1
+16:24:26.848825 lvs[1902] device_mapper/libdm-config.c:987  report/list_item_separator not found in config: defaulting to ,
+16:24:26.848844 lvs[1902] device_mapper/libdm-config.c:987  report/time_format not found in config: defaulting to %Y-%m-%d %T %z
+16:24:26.848851 lvs[1902] device_mapper/libdm-config.c:1086  report/two_word_unknown_device not found in config: defaulting to 0
+16:24:26.848857 lvs[1902] device_mapper/libdm-config.c:987  global/system_id_source not found in config: defaulting to none
+16:24:26.848862 lvs[1902] device_mapper/libdm-config.c:1014  global/io_memory_size not found in config: defaulting to 8192
+16:24:26.848870 lvs[1902] device_mapper/libdm-config.c:987  config/profile_dir not found in config: defaulting to /etc/lvm/profile
+16:24:26.849037 lvs[1902] config/config.c:1478  Setting devices/preferred_names to preferred_names = [ "^/dev/mapper/", "^/dev/md/", "^/dev/sd" ]
+16:24:26.849180 lvs[1902] device_mapper/libdm-config.c:1086  devices/obtain_device_list_from_udev not found in config: defaulting to 1
+16:24:26.849221 lvs[1902] config/config.c:1475  devices/scan not found in config: defaulting to scan = [ "/dev" ]
+16:24:26.849315 lvs[1902] metadata/vg.c:64  Allocated VG #orphans_lvm2 at 0x5559b9830fa0.
+16:24:26.849357 lvs[1902] format_text/format-text.c:2689  Initialised format: lvm2
+16:24:26.849394 lvs[1902] striped/striped.c:245  Initialised segtype: linear
+16:24:26.849402 lvs[1902] striped/striped.c:245  Initialised segtype: striped
+16:24:26.849430 lvs[1902] zero/zero.c:99  Initialised segtype: zero
+16:24:26.849438 lvs[1902] error/errseg.c:105  Initialised segtype: error
+16:24:26.849445 lvs[1902] device_mapper/libdm-config.c:987  dmeventd/snapshot_library not found in config: defaulting to libdevmapper-event-lvm2snapshot.so
+16:24:26.849478 lvs[1902] snapshot/snapshot.c:274  Initialised segtype: snapshot
+16:24:26.849485 lvs[1902] device_mapper/libdm-config.c:987  dmeventd/mirror_library not found in config: defaulting to libdevmapper-event-lvm2mirror.so
+16:24:26.849517 lvs[1902] mirror/mirrored.c:538  Initialised segtype: mirror
+16:24:26.849524 lvs[1902] device_mapper/libdm-config.c:987  dmeventd/raid_library not found in config: defaulting to libdevmapper-event-lvm2raid.so
+16:24:26.849555 lvs[1902] raid/raid.c:642  Initialised segtype: raid0
+16:24:26.849562 lvs[1902] raid/raid.c:642  Initialised segtype: raid0_meta
+16:24:26.849567 lvs[1902] raid/raid.c:642  Initialised segtype: raid1
+16:24:26.849597 lvs[1902] raid/raid.c:642  Initialised segtype: raid10
+16:24:26.849605 lvs[1902] raid/raid.c:642  Initialised segtype: raid10_near
+16:24:26.849633 lvs[1902] raid/raid.c:642  Initialised segtype: raid4
+16:24:26.849640 lvs[1902] raid/raid.c:642  Initialised segtype: raid5
+16:24:26.849645 lvs[1902] raid/raid.c:642  Initialised segtype: raid5_n
+16:24:26.849650 lvs[1902] raid/raid.c:642  Initialised segtype: raid5_la
+16:24:26.849681 lvs[1902] raid/raid.c:642  Initialised segtype: raid5_ls
+16:24:26.849686 lvs[1902] raid/raid.c:642  Initialised segtype: raid5_ra
+16:24:26.849719 lvs[1902] raid/raid.c:642  Initialised segtype: raid5_rs
+16:24:26.849725 lvs[1902] raid/raid.c:642  Initialised segtype: raid6
+16:24:26.849730 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_n_6
+16:24:26.849735 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_nc
+16:24:26.849740 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_nr
+16:24:26.849744 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_zr
+16:24:26.849749 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_ls_6
+16:24:26.849754 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_rs_6
+16:24:26.849758 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_la_6
+16:24:26.849763 lvs[1902] raid/raid.c:642  Initialised segtype: raid6_ra_6
+16:24:26.850491 lvs[1902] device_mapper/libdm-config.c:987  dmeventd/thin_library not found in config: defaulting to libdevmapper-event-lvm2thin.so
+16:24:26.850502 lvs[1902] thin/thin.c:827  Initialised segtype: thin-pool
+16:24:26.850515 lvs[1902] device_mapper/libdm-config.c:987  dmeventd/thin_library not found in config: defaulting to libdevmapper-event-lvm2thin.so
+16:24:26.850521 lvs[1902] thin/thin.c:827  Initialised segtype: thin
+16:24:26.850527 lvs[1902] cache_segtype/cache.c:779  Initialised segtype: cache-pool
+16:24:26.850550 lvs[1902] cache_segtype/cache.c:793  Initialised segtype: cache
+16:24:26.850556 lvs[1902] device_mapper/libdm-config.c:987  dmeventd/vdo_library not found in config: defaulting to libdevmapper-event-lvm2vdo.so
+16:24:26.850562 lvs[1902] vdo/vdo.c:580  Initialised segtypes: vdo, vdo-pool.
+16:24:26.850567 lvs[1902] writecache/writecache.c:377  Initialised segtype: writecache
+16:24:26.850579 lvs[1902] integrity/integrity.c:340  Initialised segtype: integrity
+16:24:26.850586 lvs[1902] device_mapper/libdm-config.c:1086  backup/archive not found in config: defaulting to 1
+16:24:26.850591 lvs[1902] device_mapper/libdm-config.c:1014  backup/retain_days not found in config: defaulting to 30
+16:24:26.850596 lvs[1902] device_mapper/libdm-config.c:1014  backup/retain_min not found in config: defaulting to 10
+16:24:26.850604 lvs[1902] device_mapper/libdm-config.c:987  backup/archive_dir not found in config: defaulting to /etc/lvm/archive
+16:24:26.850611 lvs[1902] device_mapper/libdm-config.c:1086  backup/backup not found in config: defaulting to 1
+16:24:26.850616 lvs[1902] device_mapper/libdm-config.c:987  backup/backup_dir not found in config: defaulting to /etc/lvm/backup
+16:24:26.850624 lvs[1902] device_mapper/libdm-config.c:1086  global/use_lvmpolld not found in config: defaulting to 1
+16:24:26.850659 lvs[1902] device_mapper/libdm-config.c:1086  devices/sysfs_scan not found in config: defaulting to 1
+16:24:26.850689 lvs[1902] filters/filter-sysfs.c:331  Sysfs filter initialised.
+16:24:26.850695 lvs[1902] filters/filter-internal.c:82  Internal filter initialised.
+16:24:26.850702 lvs[1902] filters/filter-type.c:61  LVM type filter initialised.
+16:24:26.850708 lvs[1902] device_mapper/libdm-config.c:1086  devices/scan_lvs not found in config: defaulting to 0
+16:24:26.850712 lvs[1902] filters/filter-usable.c:209  Usable device filter initialised (scan_lvs 0).
+16:24:26.850717 lvs[1902] device_mapper/libdm-config.c:1086  devices/multipath_component_detection not found in config: defaulting to 1
+16:24:26.850722 lvs[1902] filters/filter-mpath.c:402  mpath filter initialised.
+16:24:26.850727 lvs[1902] filters/filter-partitioned.c:78  Partitioned filter initialised.
+16:24:26.850732 lvs[1902] filters/filter-signature.c:95  signature filter initialised.
+16:24:26.850736 lvs[1902] device_mapper/libdm-config.c:1086  devices/md_component_detection not found in config: defaulting to 1
+16:24:26.850741 lvs[1902] filters/filter-md.c:157  MD filter initialised.
+16:24:26.850746 lvs[1902] device_mapper/libdm-config.c:1086  devices/fw_raid_component_detection not found in config: defaulting to 0
+16:24:26.850793 lvs[1902] filters/filter-composite.c:103  Composite filter initialised.
+16:24:26.850803 lvs[1902] device_mapper/libdm-config.c:1086  devices/ignore_suspended_devices not found in config: defaulting to 0
+16:24:26.850834 lvs[1902] device_mapper/libdm-config.c:1086  devices/ignore_lvm_mirrors not found in config: defaulting to 1
+16:24:26.850842 lvs[1902] filters/filter-persistent.c:196  Persistent filter initialised.
+16:24:26.850848 lvs[1902] device_mapper/libdm-config.c:1086  devices/scan_lvs not found in config: defaulting to 0
+16:24:26.850881 lvs[1902] device_mapper/libdm-config.c:1086  devices/allow_mixed_block_sizes not found in config: defaulting to 0
+16:24:26.850887 lvs[1902] device_mapper/libdm-config.c:987  devices/hints not found in config: defaulting to all
+16:24:26.850892 lvs[1902] device_mapper/libdm-config.c:987  activation/activation_mode not found in config: defaulting to degraded
+16:24:26.850898 lvs[1902] device_mapper/libdm-config.c:1086  metadata/record_lvs_history not found in config: defaulting to 0
+16:24:26.850930 lvs[1902] lvmcmdline.c:3056  DEGRADED MODE. Incomplete RAID LVs will be processed.
+16:24:26.853015 lvs[1902] device_mapper/libdm-config.c:1086  activation/monitoring not found in config: defaulting to 1
+16:24:26.853053 lvs[1902] lvmcmdline.c:3062  Processing command: lvs --noheadings --nosuffix --nameprefixes --unquoted --units=b -a -o vg_name,lv_name,lv_uuid,lv_size,lv_attr,segtype,origin,pool_lv,data_lv,metadata_lv,role,move_pv,data_percent,metadata_percent,copy_percent '--config= devices { preferred_names=["^/dev/mapper/", "^/dev/md/", "^/dev/sd"] } log {level=7 file=/tmp/lvm.log syslog=0}'
+16:24:26.853061 lvs[1902] lvmcmdline.c:3063  Command pid: 1902
+16:24:26.853065 lvs[1902] lvmcmdline.c:3064  System ID: 
+16:24:26.853069 lvs[1902] lvmcmdline.c:3067  O_DIRECT will be used
+16:24:26.853098 lvs[1902] device_mapper/libdm-config.c:1014  global/locking_type not found in config: defaulting to 1
+16:24:26.853108 lvs[1902] device_mapper/libdm-config.c:1086  global/wait_for_locks not found in config: defaulting to 1
+16:24:26.853113 lvs[1902] locking/locking.c:143  File locking settings: readonly:0 sysinit:0 ignorelockingfailure:0 global/metadata_read_only:0 global/wait_for_locks:1.
+16:24:26.853129 lvs[1902] device_mapper/libdm-config.c:1086  global/prioritise_write_locks not found in config: defaulting to 1
+16:24:26.853136 lvs[1902] device_mapper/libdm-config.c:987  global/locking_dir not found in config: defaulting to /run/lock/lvm
+16:24:26.877047 lvs[1902] device_mapper/libdm-common.c:986  Preparing SELinux context for /run/lock/lvm to system_u:object_r:lvm_lock_t:s0.
+16:24:26.877173 lvs[1902] device_mapper/libdm-common.c:989  Resetting SELinux context to default value.
+16:24:26.877208 lvs[1902] device_mapper/libdm-config.c:1086  devices/md_component_detection not found in config: defaulting to 1
+16:24:26.877225 lvs[1902] device_mapper/libdm-config.c:987  devices/md_component_checks not found in config: defaulting to auto
+16:24:26.877231 lvs[1902] lvmcmdline.c:2907  Using md_component_checks auto use_full_md_check 0
+16:24:26.877238 lvs[1902] device_mapper/libdm-config.c:1086  global/use_lvmlockd not found in config: defaulting to 0
+16:24:26.877266 lvs[1902] device_mapper/libdm-config.c:987  report/output_format not found in config: defaulting to basic
+16:24:26.877276 lvs[1902] device_mapper/libdm-config.c:1086  log/report_command_log not found in config: defaulting to 0
+16:24:26.877294 lvs[1902] device_mapper/libdm-config.c:1086  report/aligned not found in config: defaulting to 1
+16:24:26.877309 lvs[1902] device_mapper/libdm-config.c:1086  report/buffered not found in config: defaulting to 1
+16:24:26.877313 lvs[1902] device_mapper/libdm-config.c:1086  report/headings not found in config: defaulting to 1
+16:24:26.877318 lvs[1902] device_mapper/libdm-config.c:987  report/separator not found in config: defaulting to  
+16:24:26.877323 lvs[1902] device_mapper/libdm-config.c:1086  report/prefixes not found in config: defaulting to 0
+16:24:26.877327 lvs[1902] device_mapper/libdm-config.c:1086  report/quoted not found in config: defaulting to 1
+16:24:26.877332 lvs[1902] device_mapper/libdm-config.c:1086  report/columns_as_rows not found in config: defaulting to 0
+16:24:26.877344 lvs[1902] device_mapper/libdm-config.c:987  report/lvs_sort not found in config: defaulting to vg_name,lv_name
+16:24:26.877350 lvs[1902] device_mapper/libdm-config.c:987  report/lvs_cols not found in config: defaulting to lv_name,vg_name,lv_attr,lv_size,pool_lv,origin,data_percent,metadata_percent,move_pv,mirror_log,copy_percent,convert_lv
+16:24:26.877355 lvs[1902] device_mapper/libdm-config.c:987  report/compact_output_cols not found in config: defaulting to 
+16:24:26.877530 lvs[1902] misc/lvm-flock.c:230  Locking /run/lock/lvm/P_global RB
+16:24:26.879993 lvs[1902] device_mapper/libdm-common.c:986  Preparing SELinux context for /run/lock/lvm/P_global to system_u:object_r:lvm_lock_t:s0.
+16:24:26.880036 lvs[1902] misc/lvm-flock.c:114  _do_flock /run/lock/lvm/P_global:aux WB
+16:24:26.880213 lvs[1902] misc/lvm-flock.c:47  _undo_flock /run/lock/lvm/P_global:aux
+16:24:26.880242 lvs[1902] misc/lvm-flock.c:114  _do_flock /run/lock/lvm/P_global RB
+16:24:26.880277 lvs[1902] device_mapper/libdm-common.c:989  Resetting SELinux context to default value.
+16:24:26.880317 lvs[1902] cache/lvmcache.c:1066  Finding VG info
+16:24:26.880326 lvs[1902] label/label.c:1028  Finding devices to scan
+16:24:26.886644 lvs[1902] device/dev-cache.c:1175  Creating list of system devices.
+16:24:26.890266 lvs[1902] device/dev-cache.c:714  Found dev 252:0 /dev/vda - new.
+16:24:26.890337 lvs[1902] device/dev-cache.c:751  Found dev 252:0 /dev/disk/by-path/pci-0000:00:05.0 - new alias.
+16:24:26.890366 lvs[1902] device/dev-cache.c:751  Found dev 252:0 /dev/disk/by-path/virtio-pci-0000:00:05.0 - new alias.
+16:24:26.890462 lvs[1902] device/dev-cache.c:714  Found dev 7:0 /dev/loop0 - new.
+16:24:26.890584 lvs[1902] device/dev-cache.c:714  Found dev 7:1 /dev/loop1 - new.
+16:24:26.890886 lvs[1902] device/dev-cache.c:714  Found dev 253:1 /dev/disk/by-label/Anaconda - new.
+16:24:26.890904 lvs[1902] device/dev-cache.c:751  Found dev 253:1 /dev/disk/by-uuid/5c9befe5-16c5-4344-8a31-ef76a1fb4b31 - new alias.
+16:24:26.891012 lvs[1902] device/dev-cache.c:714  Found dev 7:2 /dev/loop2 - new.
+16:24:26.891176 lvs[1902] device/dev-cache.c:714  Found dev 253:0 /dev/dm-0 - new.
+16:24:26.891250 lvs[1902] device/dev-cache.c:751  Found dev 253:0 /dev/disk/by-id/dm-name-live-rw - new alias.
+16:24:26.891265 lvs[1902] device/dev-cache.c:705  Found dev 253:1 /dev/disk/by-label/Anaconda - exists. 
+16:24:26.891276 lvs[1902] device/dev-cache.c:705  Found dev 253:1 /dev/disk/by-uuid/5c9befe5-16c5-4344-8a31-ef76a1fb4b31 - exists. 
+16:24:26.891286 lvs[1902] device/dev-cache.c:751  Found dev 253:0 /dev/mapper/live-rw - new alias.
+16:24:26.891385 lvs[1902] device/dev-cache.c:751  Found dev 253:1 /dev/dm-1 - new alias.
+16:24:26.891457 lvs[1902] device/dev-cache.c:751  Found dev 253:1 /dev/disk/by-id/dm-name-live-base - new alias.
+16:24:26.891479 lvs[1902] device/dev-cache.c:705  Found dev 253:1 /dev/disk/by-label/Anaconda - exists. 
+16:24:26.891489 lvs[1902] device/dev-cache.c:705  Found dev 253:1 /dev/disk/by-uuid/5c9befe5-16c5-4344-8a31-ef76a1fb4b31 - exists. 
+16:24:26.891498 lvs[1902] device/dev-cache.c:751  Found dev 253:1 /dev/mapper/live-base - new alias.
+16:24:26.892395 lvs[1902] label/label.c:1095  Filtering devices to scan (nodata)
+16:24:26.892596 lvs[1902] device/dev-io.c:418  Opened /dev/loop0 RO O_DIRECT
+16:24:26.892609 lvs[1902] device/dev-io.c:117  /dev/loop0: size is 1266376 sectors
+16:24:26.892617 lvs[1902] device/dev-io.c:455  Closed /dev/loop0
+16:24:26.892625 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/loop0
+16:24:26.892643 lvs[1902] device/dev-io.c:418  Opened /dev/vda RO O_DIRECT
+16:24:26.892650 lvs[1902] device/dev-io.c:117  /dev/vda: size is 20971520 sectors
+16:24:26.892664 lvs[1902] device/dev-io.c:455  Closed /dev/vda
+16:24:26.892671 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/vda
+16:24:26.892722 lvs[1902] device_mapper/ioctl/libdm-iface.c:1898  dm version   [ opencount flush ]   [16384] (*1)
+16:24:26.892742 lvs[1902] device_mapper/ioctl/libdm-iface.c:1898  dm status   (253:0) [ noopencount noflush ]   [16384] (*1)
+16:24:26.892807 lvs[1902] device/dev-io.c:418  Opened /dev/mapper/live-rw RO O_DIRECT
+16:24:26.892817 lvs[1902] device/dev-io.c:117  /dev/mapper/live-rw: size is 6291456 sectors
+16:24:26.892824 lvs[1902] device/dev-io.c:455  Closed /dev/mapper/live-rw
+16:24:26.892830 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/mapper/live-rw
+16:24:26.892847 lvs[1902] device/dev-io.c:418  Opened /dev/loop1 RO O_DIRECT
+16:24:26.892854 lvs[1902] device/dev-io.c:117  /dev/loop1: size is 6291456 sectors
+16:24:26.892860 lvs[1902] device/dev-io.c:455  Closed /dev/loop1
+16:24:26.892865 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/loop1
+16:24:26.892874 lvs[1902] device_mapper/ioctl/libdm-iface.c:1898  dm status   (253:1) [ noopencount noflush ]   [16384] (*1)
+16:24:26.892907 lvs[1902] device/dev-io.c:418  Opened /dev/mapper/live-base RO O_DIRECT
+16:24:26.892915 lvs[1902] device/dev-io.c:117  /dev/mapper/live-base: size is 6291456 sectors
+16:24:26.892929 lvs[1902] device/dev-io.c:455  Closed /dev/mapper/live-base
+16:24:26.892935 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/mapper/live-base
+16:24:26.892953 lvs[1902] device/dev-io.c:418  Opened /dev/loop2 RO O_DIRECT
+16:24:26.892959 lvs[1902] device/dev-io.c:117  /dev/loop2: size is 67108864 sectors
+16:24:26.892966 lvs[1902] device/dev-io.c:455  Closed /dev/loop2
+16:24:26.892971 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/loop2
+16:24:26.892994 lvs[1902] label/hints.c:1309  get_hints: no file
+16:24:26.893146 lvs[1902] label/label.c:911  Checking fd limit for num_devs 6 want 38 soft 1024 hard 262144
+16:24:26.893157 lvs[1902] label/label.c:692  Scanning 6 devices for VG info
+16:24:26.893169 lvs[1902] label/label.c:589  open /dev/loop0 ro di 0 fd 7
+16:24:26.893380 lvs[1902] label/label.c:589  open /dev/vda ro di 1 fd 8
+16:24:26.893475 lvs[1902] label/label.c:589  open /dev/mapper/live-rw ro di 2 fd 9
+16:24:26.893639 lvs[1902] label/label.c:589  open /dev/loop1 ro di 3 fd 10
+16:24:26.893683 lvs[1902] label/label.c:589  open /dev/mapper/live-base ro di 4 fd 11
+16:24:26.893724 lvs[1902] label/label.c:589  open /dev/loop2 ro di 5 fd 12
+16:24:26.893999 lvs[1902] label/label.c:728  Scanning submitted 6 reads
+16:24:26.894015 lvs[1902] label/label.c:744  Processing data from device /dev/loop0 7:0 di 0 block 0x5559b994c430
+16:24:26.894021 lvs[1902] device/dev-io.c:94  /dev/loop0: using cached size 1266376 sectors
+16:24:26.894113 lvs[1902] device/dev-io.c:94  /dev/loop0: using cached size 1266376 sectors
+16:24:26.894459 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/loop0
+16:24:26.894471 lvs[1902] label/label.c:414  /dev/loop0: No lvm label detected
+16:24:26.894485 lvs[1902] label/label.c:744  Processing data from device /dev/vda 252:0 di 1 block 0x5559b994c470
+16:24:26.894500 lvs[1902] device/dev-io.c:94  /dev/vda: using cached size 20971520 sectors
+16:24:26.894510 lvs[1902] device/dev-io.c:94  /dev/vda: using cached size 20971520 sectors
+16:24:26.894691 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/vda
+16:24:26.894702 lvs[1902] label/label.c:414  /dev/vda: No lvm label detected
+16:24:26.894713 lvs[1902] label/label.c:744  Processing data from device /dev/mapper/live-rw 253:0 di 2 block 0x5559b994c4b0
+16:24:26.894723 lvs[1902] device_mapper/ioctl/libdm-iface.c:1898  dm status   (253:0) [ noopencount noflush ]   [16384] (*1)
+16:24:26.894750 lvs[1902] device/dev-io.c:94  /dev/mapper/live-rw: using cached size 6291456 sectors
+16:24:26.894759 lvs[1902] device/dev-io.c:94  /dev/mapper/live-rw: using cached size 6291456 sectors
+16:24:26.894955 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/mapper/live-rw
+16:24:26.894966 lvs[1902] label/label.c:414  /dev/mapper/live-rw: No lvm label detected
+16:24:26.894975 lvs[1902] label/label.c:744  Processing data from device /dev/loop1 7:1 di 3 block 0x5559b994c4f0
+16:24:26.894981 lvs[1902] device/dev-io.c:94  /dev/loop1: using cached size 6291456 sectors
+16:24:26.895027 lvs[1902] device/dev-io.c:94  /dev/loop1: using cached size 6291456 sectors
+16:24:26.895253 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/loop1
+16:24:26.895263 lvs[1902] label/label.c:414  /dev/loop1: No lvm label detected
+16:24:26.895273 lvs[1902] label/label.c:744  Processing data from device /dev/mapper/live-base 253:1 di 4 block 0x5559b994c530
+16:24:26.895284 lvs[1902] device_mapper/ioctl/libdm-iface.c:1898  dm status   (253:1) [ noopencount noflush ]   [16384] (*1)
+16:24:26.895304 lvs[1902] device/dev-io.c:94  /dev/mapper/live-base: using cached size 6291456 sectors
+16:24:26.895314 lvs[1902] device/dev-io.c:94  /dev/mapper/live-base: using cached size 6291456 sectors
+16:24:26.895487 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/mapper/live-base
+16:24:26.895498 lvs[1902] label/label.c:414  /dev/mapper/live-base: No lvm label detected
+16:24:26.895508 lvs[1902] label/label.c:744  Processing data from device /dev/loop2 7:2 di 5 block 0x5559b994c570
+16:24:26.895514 lvs[1902] device/dev-io.c:94  /dev/loop2: using cached size 67108864 sectors
+16:24:26.895563 lvs[1902] device/dev-io.c:94  /dev/loop2: using cached size 67108864 sectors
+16:24:26.895708 lvs[1902] filters/filter-persistent.c:140  filter caching good /dev/loop2
+16:24:26.895717 lvs[1902] label/label.c:414  /dev/loop2: No lvm label detected
+16:24:26.895726 lvs[1902] label/label.c:824  Scanned devices: read errors 0 process errors 0 failed 0
+16:24:26.895734 lvs[1902] label/hints.c:917  Writing hint file 2
+16:24:26.895805 lvs[1902] config/config.c:1475  devices/global_filter not found in config: defaulting to global_filter = [ "a|.*|" ]
+16:24:26.895821 lvs[1902] config/config.c:1475  devices/filter not found in config: defaulting to filter = [ "a|.*|" ]
+16:24:26.895829 lvs[1902] device/dev-io.c:94  /dev/loop0: using cached size 1266376 sectors
+16:24:26.895836 lvs[1902] device/dev-io.c:94  /dev/vda: using cached size 20971520 sectors
+16:24:26.895868 lvs[1902] device/dev-io.c:94  /dev/mapper/live-rw: using cached size 6291456 sectors
+16:24:26.895876 lvs[1902] device/dev-io.c:94  /dev/loop1: using cached size 6291456 sectors
+16:24:26.895901 lvs[1902] device/dev-io.c:94  /dev/mapper/live-base: using cached size 6291456 sectors
+16:24:26.895908 lvs[1902] device/dev-io.c:94  /dev/loop2: using cached size 67108864 sectors
+16:24:26.895922 lvs[1902] label/hints.c:1023  Wrote hint file with devs_hash 3903803874 count 6
+16:24:26.895936 lvs[1902] cache/lvmcache.c:1136  Found VG info for 0 VGs
+16:24:26.895942 lvs[1902] toollib.c:3733  Obtaining the complete list of VGs before processing their LVs
+16:24:26.895956 lvs[1902] toollib.c:3753  No volume groups found.
+16:24:26.895964 lvs[1902] device_mapper/libdm-config.c:1086  report/compact_output not found in config: defaulting to 0
+16:24:26.895985 lvs[1902] misc/lvm-flock.c:84  Unlocking /run/lock/lvm/P_global
+16:24:26.895995 lvs[1902] misc/lvm-flock.c:47  _undo_flock /run/lock/lvm/P_global
+16:24:26.896023 lvs[1902] device_mapper/libdm-config.c:1086  global/notify_dbus not found in config: defaulting to 1
+16:24:26.896030 lvs[1902] cache/lvmcache.c:2091  Destroy lvmcache content
+16:24:26.906194 lvs[1902] commands/toolcontext.c:1830  Reloading config files
+16:24:26.906226 lvs[1902] activate/fs.c:492  Syncing device names
+16:24:26.906246 lvs[1902] cache/lvmcache.c:2091  Destroy lvmcache content
+16:24:26.906273 lvs[1902] metadata/vg.c:79  Freeing VG #orphans_lvm2 at 0x5559b9830fa0.
+16:24:26.906361 lvs[1902] config/config.c:283  Loading config file: /etc/lvm/lvm.conf
+16:24:26.906385 lvs[1902] device/dev-io.c:418  Opened /etc/lvm/lvm.conf RO
+16:24:26.906404 lvs[1902] device/dev-io.c:455  Closed /etc/lvm/lvm.conf
+16:24:26.906414 lvs[1902] device_mapper/libdm-config.c:1086  log/syslog not found in config: defaulting to 1
+16:24:26.906420 lvs[1902] device_mapper/libdm-config.c:1014  log/level not found in config: defaulting to 0

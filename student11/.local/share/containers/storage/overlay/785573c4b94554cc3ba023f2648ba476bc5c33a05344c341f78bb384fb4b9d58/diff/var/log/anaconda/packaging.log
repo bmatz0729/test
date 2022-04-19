@@ -1,0 +1,795 @@
+16:24:24,080 DBG dnf: User-Agent: constructed: 'libdnf (Red Hat Enterprise Linux 8.4; generic; Linux.x86_64)'
+16:24:24,152 INF packaging: setting DNF platform id to: platform:el8
+16:24:24,153 DBG packaging: getting release version from tree at None (8.4)
+16:24:24,153 DBG packaging: using default release version of 8.4
+16:24:24,166 DBG packaging: Dnf configuration:
+[main]
+allow_vendor_change = 1
+assumeno = 0
+assumeyes = 0
+autocheck_running_kernel = 1
+bandwidth = 0
+best = 0
+bugtracker_url = https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=dnf
+cachedir = /tmp/dnf.cache
+cacheonly = 0
+check_config_file_age = 1
+clean_requirements_on_remove = 1
+color = auto
+color_list_available_downgrade = magenta
+color_list_available_install = bold,cyan
+color_list_available_reinstall = bold,underline,green
+color_list_available_upgrade = bold,blue
+color_list_installed_extra = bold,red
+color_list_installed_newer = bold,yellow
+color_list_installed_older = yellow
+color_list_installed_reinstall = cyan
+color_search_match = bold,magenta
+color_update_installed = red
+color_update_local = green
+color_update_remote = bold,green
+config_file_path = /etc/dnf/dnf.conf
+countme = 0
+debug_solver = 0
+debuglevel = 2
+defaultyes = 0
+deltarpm = 1
+deltarpm_percentage = 75
+disable_excludes = 
+diskspacecheck = 1
+enabled = 1
+enablegroups = 1
+errorlevel = 3
+exclude = 
+excludepkgs = 
+exit_on_lock = 0
+fastestmirror = 0
+gpgcheck = 0
+gpgkey_dns_verification = 0
+group_package_types = mandatory, default, conditional
+history_list_view = commands
+history_record = 1
+history_record_packages = dnf, rpm
+ignorearch = 0
+includepkgs = 
+install_weak_deps = 0
+installonly_limit = 3
+installonlypkgs = kernel, kernel-PAE, installonlypkg(kernel), installonlypkg(kernel-module), installonlypkg(vm), multiversion(kernel)
+installroot = /mnt/sysroot
+ip_resolve = whatever
+keepcache = 0
+localpkg_gpgcheck = 0
+log_compress = 0
+log_rotate = 4
+log_size = 1048576
+logdir = /tmp/
+logfilelevel = 9
+max_parallel_downloads = 3
+metadata_expire = 172800
+metadata_timer_sync = 10800
+minrate = 1000
+module_platform_id = platform:el8
+module_stream_switch = 0
+multilib_policy = best
+obsoletes = 1
+password = 
+persistdir = /mnt/sysroot/var/lib/dnf
+pluginconfpath = /tmp/dnf.pluginconf
+pluginpath = /usr/lib/python3.6/site-packages/dnf-plugins
+plugins = 1
+protect_running_kernel = 1
+protected_packages = dnf, setup, redhat-release, systemd, systemd-udev, dnf
+proxy = 
+proxy_auth_method = any
+recent = 7
+repo_gpgcheck = 0
+reposdir = /etc/yum.repos.d, /etc/anaconda.repos.d, /tmp/updates/anaconda.repos.d, /tmp/product/anaconda.repos.d
+reset_nice = 1
+retries = 10
+rpmverbosity = info
+showdupesfromrepos = 0
+skip_broken = 0
+skip_if_unavailable = 0
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = 1
+strict = 1
+system_cachedir = /var/cache/dnf
+throttle = 0
+timeout = 30
+transformdb = 1
+tsflags = 
+upgrade_group_objects_upgrade = 1
+user_agent = libdnf (Red Hat Enterprise Linux 8.4; generic; Linux.x86_64)
+username = 
+varsdir = /etc/yum/vars, /etc/dnf/vars
+zchunk = 1
+
+16:24:24,186 DBG dnf: User-Agent: constructed: 'libdnf (Red Hat Enterprise Linux 8.4; generic; Linux.x86_64)'
+16:24:24,188 DDEBUG dnf: Cleaning up.
+16:24:24,189 INF packaging: setting DNF platform id to: platform:el8
+16:24:24,190 DBG packaging: getting release version from tree at None (8.4)
+16:24:24,190 DBG packaging: using default release version of 8.4
+16:24:24,198 DDEBUG dnf: Getting group metadata
+16:24:24,198 DDEBUG dnf: timer: loading comps: 0 ms
+16:24:24,200 DBG packaging: Dnf configuration:
+[main]
+allow_vendor_change = 1
+assumeno = 0
+assumeyes = 0
+autocheck_running_kernel = 1
+bandwidth = 0
+best = 0
+bugtracker_url = https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=dnf
+cachedir = /tmp/dnf.cache
+cacheonly = 0
+check_config_file_age = 1
+clean_requirements_on_remove = 1
+color = auto
+color_list_available_downgrade = magenta
+color_list_available_install = bold,cyan
+color_list_available_reinstall = bold,underline,green
+color_list_available_upgrade = bold,blue
+color_list_installed_extra = bold,red
+color_list_installed_newer = bold,yellow
+color_list_installed_older = yellow
+color_list_installed_reinstall = cyan
+color_search_match = bold,magenta
+color_update_installed = red
+color_update_local = green
+color_update_remote = bold,green
+config_file_path = /etc/dnf/dnf.conf
+countme = 0
+debug_solver = 0
+debuglevel = 2
+defaultyes = 0
+deltarpm = 1
+deltarpm_percentage = 75
+disable_excludes = 
+diskspacecheck = 1
+enabled = 1
+enablegroups = 1
+errorlevel = 3
+exclude = 
+excludepkgs = 
+exit_on_lock = 0
+fastestmirror = 0
+gpgcheck = 0
+gpgkey_dns_verification = 0
+group_package_types = mandatory, default, conditional
+history_list_view = commands
+history_record = 1
+history_record_packages = dnf, rpm
+ignorearch = 0
+includepkgs = 
+install_weak_deps = 0
+installonly_limit = 3
+installonlypkgs = kernel, kernel-PAE, installonlypkg(kernel), installonlypkg(kernel-module), installonlypkg(vm), multiversion(kernel)
+installroot = /mnt/sysroot
+ip_resolve = whatever
+keepcache = 0
+localpkg_gpgcheck = 0
+log_compress = 0
+log_rotate = 4
+log_size = 1048576
+logdir = /tmp/
+logfilelevel = 9
+max_parallel_downloads = 3
+metadata_expire = 172800
+metadata_timer_sync = 10800
+minrate = 1000
+module_platform_id = platform:el8
+module_stream_switch = 0
+multilib_policy = best
+obsoletes = 1
+password = 
+persistdir = /mnt/sysroot/var/lib/dnf
+pluginconfpath = /tmp/dnf.pluginconf
+pluginpath = /usr/lib/python3.6/site-packages/dnf-plugins
+plugins = 1
+protect_running_kernel = 1
+protected_packages = dnf, setup, redhat-release, systemd, systemd-udev, dnf
+proxy = 
+proxy_auth_method = any
+recent = 7
+repo_gpgcheck = 0
+reposdir = /etc/yum.repos.d, /etc/anaconda.repos.d, /tmp/updates/anaconda.repos.d, /tmp/product/anaconda.repos.d
+reset_nice = 1
+retries = 10
+rpmverbosity = info
+showdupesfromrepos = 0
+skip_broken = 0
+skip_if_unavailable = 0
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = 1
+strict = 1
+system_cachedir = /var/cache/dnf
+throttle = 0
+timeout = 30
+transformdb = 1
+tsflags = 
+upgrade_group_objects_upgrade = 1
+user_agent = libdnf (Red Hat Enterprise Linux 8.4; generic; Linux.x86_64)
+username = 
+varsdir = /etc/yum/vars, /etc/dnf/vars
+zchunk = 1
+
+16:24:28,044 INF packaging: Configuring the base repo
+16:24:28,101 DBG packaging: Using the repo configuration: RepoConfigurationData(cost=1000, excluded_packages=[], included_packages=[], name='anaconda-0', proxy='', ssl_configuration=SSLConfigurationData(ca_cert_path='', client_cert_path='', client_key_path=''), ssl_verification_enabled=True, type='BASEURL', url='http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os')
+16:24:28,103 DBG packaging: retrieving treeinfo from http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os (proxy: None ; ssl_verify: True)
+16:24:28,103 INF packaging: Trying to download '.treeinfo'
+16:24:28,114 DBG packaging: Retrieved '.treeinfo' from http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os
+16:24:28,118 DBG packaging: getting release version from tree at http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os (8.4)
+16:24:28,119 DBG packaging: using treeinfo release version of 8.4
+16:24:28,119 DBG packaging: Treeinfo points base repository to http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os.
+16:24:28,120 DBG packaging: releasever from http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os is 8.4
+16:24:28,121 INF packaging: added repo: 'anaconda' - http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os
+16:24:28,138 DBG dnf: repo: downloading from remote: anaconda
+16:24:28,229 INF packaging: enabled repo: 'anaconda' - ['http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os'] and got repomd
+16:24:28,230 DBG packaging: repo koji-override-0: mirrorlist None, baseurl http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os, metalink False
+16:24:28,231 INF packaging: added repo: 'koji-override-0' - http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os
+16:24:28,231 DBG packaging: repo koji-override-1: mirrorlist None, baseurl http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/AppStream/x86_64/os, metalink False
+16:24:28,232 INF packaging: added repo: 'koji-override-1' - http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/AppStream/x86_64/os
+16:24:28,232 DBG dnf: repo: downloading from remote: koji-override-0
+16:24:28,287 INF packaging: enabled repo: 'koji-override-0' - ['http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os'] and got repomd
+16:24:28,288 DBG dnf: repo: downloading from remote: koji-override-1
+16:24:28,440 INF packaging: enabled repo: 'koji-override-1' - ['http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/AppStream/x86_64/os'] and got repomd
+16:24:28,442 DBG dnf: repo: using cache for: anaconda
+16:24:28,442 DBG packaging: repo anaconda: _sync_metadata success from ['http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os']
+16:24:28,443 DBG dnf: repo: using cache for: koji-override-0
+16:24:28,443 DBG packaging: repo koji-override-0: _sync_metadata success from ['http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/BaseOS/x86_64/os']
+16:24:28,444 DBG dnf: repo: using cache for: koji-override-1
+16:24:28,444 DBG packaging: repo koji-override-1: _sync_metadata success from ['http://download-node-02.eng.bos.redhat.com/rhel-8/devel/candidate-trees/RHEL-8/RHEL-8.4.0-updates-20210803.2/compose/AppStream/x86_64/os']
+16:24:28,446 DBG dnf: repo: using cache for: anaconda
+16:24:29,158 DBG dnf: anaconda: using metadata from Tue 03 Aug 2021 04:18:21 PM UTC.
+16:24:29,160 DBG dnf: repo: using cache for: koji-override-0
+16:24:29,867 DBG dnf: koji-override-0: using metadata from Tue 03 Aug 2021 04:18:21 PM UTC.
+16:24:29,868 DBG dnf: repo: using cache for: koji-override-1
+16:24:31,976 DBG dnf: koji-override-1: using metadata from Tue 03 Aug 2021 04:18:07 PM UTC.
+16:24:31,978 INF dnf: Last metadata expiration check: 0:00:01 ago on Tue 03 Aug 2021 04:24:28 PM UTC.
+16:24:31,980 DBG dnf: User-Agent: constructed: 'libdnf (Red Hat Enterprise Linux 8.4; generic; Linux.x86_64)'
+16:24:33,106 DDEBUG dnf: timer: sack setup: 4661 ms
+16:24:33,107 DDEBUG dnf: Getting group metadata
+16:24:33,108 DDEBUG dnf: Adding group file from repository: anaconda
+16:24:33,135 DDEBUG dnf: Adding group file from repository: koji-override-0
+16:24:33,169 DDEBUG dnf: Adding group file from repository: koji-override-1
+16:24:33,229 DDEBUG dnf: timer: loading comps: 122 ms
+16:24:33,232 INF packaging: Refreshing environment_addons
+16:24:33,431 INF packaging: Failed to parse proxy for test if repo available : No host url
+16:24:33,437 INF packaging: Failed to parse proxy for test if repo available : No host url
+16:24:33,442 INF packaging: Failed to parse proxy for test if repo available : No host url
+16:24:36,329 DBG packaging: Input mount points: {'/dev': Size (1.880031585693359375 GiB), '/dev/shm': Size (1.918537139892578125 GiB), '/run': Size (1.8632659912109375 GiB), '/sys/fs/cgroup': Size (1.91854095458984375 GiB), '/': Size (703.75 MiB), '/tmp': Size (1.887706756591796875 GiB), '/mnt/sysroot': 9125914214}
+16:24:36,330 INF packaging: Estimated size: download 0 B & install 2.79 GiB
+16:24:36,331 INF packaging: Sufficient mountpoints found: {'/mnt/sysroot': 9125914214}
+16:24:36,331 DBG packaging: Install + download space required 2.79 GiB
+16:24:43,677 INF packaging: checking software selection
+16:24:43,679 DBG packaging: disabling modules: []
+16:24:43,757 DBG packaging: enabling modules: []
+16:24:43,831 DBG packaging: applying DNF package/group/module selection
+16:24:43,832 INF packaging: skipping core group due to %%packages --nocore; system may not be complete
+16:24:43,832 INF packaging: excluded package: 'crypto-policies-scripts'
+16:24:43,833 INF packaging: excluded package: 'dosfstools'
+16:24:43,833 INF packaging: excluded package: 'e2fsprogs'
+16:24:43,833 INF packaging: excluded package: 'fuse-libs'
+16:24:43,833 INF packaging: excluded package: 'gnupg2-smime'
+16:24:43,834 INF packaging: excluded package: 'kernel'
+16:24:43,834 INF packaging: excluded package: 'libss'
+16:24:43,834 INF packaging: excluded package: 'pinentry'
+16:24:43,834 INF packaging: excluded package: 'qemu-guest-agent'
+16:24:43,834 INF packaging: excluded package: 'shared-mime-info'
+16:24:43,835 INF packaging: excluded package: 'trousers'
+16:24:43,835 INF packaging: excluded package: 'xfsprogs'
+16:24:43,835 INF packaging: excluded package: 'xkeyboard-config'
+16:24:43,836 INF packaging: selected package: 'bash'
+16:24:43,837 INF packaging: selected package: 'coreutils-single'
+16:24:43,838 INF packaging: selected package: 'glibc-minimal-langpack'
+16:24:43,838 INF packaging: selected package: 'libusbx'
+16:24:43,839 INF packaging: selected package: 'microdnf'
+16:24:43,840 INF packaging: selected package: 'redhat-release'
+16:24:43,841 INF packaging: selected package: 'rootfiles'
+16:24:43,841 ERR packaging: kernel: failed to select a kernel from []
+16:24:43,842 DBG packaging: selected package: langpacks-en, requirement for ['langpacks'] 
+16:24:43,842 DBG packaging: selected package: e2fsprogs, requirement for ['Required to manage storage devices.'] IGNORED because excluded
+16:24:43,843 DBG packaging: selected group: platform-kvm, requirement for ['platform']
+16:24:43,843 DBG packaging: transaction include list
+16:24:43,843 DBG packaging: ['bash', 'coreutils-single', 'glibc-minimal-langpack', 'libusbx', 'microdnf', 'redhat-release', 'rootfiles', '@platform-kvm', 'langpacks-en']
+16:24:43,844 DBG packaging: transaction exclude list
+16:24:43,844 DBG packaging: ['@core', 'crypto-policies-scripts', 'dosfstools', 'e2fsprogs', 'fuse-libs', 'gnupg2-smime', 'kernel', 'libss', 'pinentry', 'qemu-guest-agent', 'shared-mime-info', 'trousers', 'xfsprogs', 'xkeyboard-config']
+16:24:44,154 DBG dnf: Adding packages from group 'platform-kvm': {<libcomps.Package object 'qemu-guest-agent' at 0x7f838dc15a50>}
+16:24:44,156 WRN dnf: No match for group package "qemu-guest-agent"
+16:24:44,170 DDEBUG dnf: timer: depsolve: 13 ms
+16:24:44,177 INF packaging: checking dependencies: success
+16:24:44,209 DBG packaging: Size from DNF: 121.04 MiB
+16:24:44,209 DBG packaging: Bonus size 135.11 MiB by number of files 23058
+16:24:44,209 DBG packaging: Total size required 281.76 MiB
+16:24:44,231 DBG packaging: Input mount points: {'/dev': Size (1.880031585693359375 GiB), '/dev/shm': Size (1.918537139892578125 GiB), '/run': Size (1.863262176513671875 GiB), '/sys/fs/cgroup': Size (1.91854095458984375 GiB), '/': Size (703.7109375 MiB), '/tmp': Size (1.887592315673828125 GiB), '/mnt/sysroot': Size (9.2286224365234375 GiB), '/mnt/sysroot/dev/shm': Size (1.91854095458984375 GiB)}
+16:24:44,232 INF packaging: Estimated size: download 178.99 MiB & install 281.76 MiB
+16:24:44,233 INF packaging: Sufficient mountpoints found: {'/mnt/sysroot': Size (9.2286224365234375 GiB)}
+16:24:44,233 DBG packaging: Install + download space required 460.75 MiB
+16:24:44,234 INF packaging: 103 packages selected totalling 460.75 MiB
+16:24:44,268 DBG packaging: Size from DNF: 121.04 MiB
+16:24:44,268 DBG packaging: Bonus size 135.11 MiB by number of files 23058
+16:24:44,269 DBG packaging: Total size required 281.76 MiB
+16:24:44,282 DBG packaging: Input mount points: {'/dev': Size (1.880031585693359375 GiB), '/dev/shm': Size (1.918537139892578125 GiB), '/run': Size (1.863262176513671875 GiB), '/sys/fs/cgroup': Size (1.91854095458984375 GiB), '/': Size (703.7109375 MiB), '/tmp': Size (1.887592315673828125 GiB), '/mnt/sysroot': Size (9.2286224365234375 GiB), '/mnt/sysroot/dev/shm': Size (1.91854095458984375 GiB)}
+16:24:44,283 INF packaging: Estimated size: download 178.99 MiB & install 281.76 MiB
+16:24:44,284 INF packaging: Sufficient mountpoints found: {'/mnt/sysroot': Size (9.2286224365234375 GiB)}
+16:24:44,284 INF packaging: Mountpoint /mnt/sysroot picked as download location
+16:24:44,287 INF packaging: Downloading packages to /mnt/sysroot/dnf.package.cache.
+16:24:45,020 INF packaging: Downloading packages finished.
+16:24:45,064 INF dnf: Running transaction check
+16:24:45,186 INF dnf: Transaction check succeeded.
+16:24:45,187 INF dnf: Running transaction test
+16:24:46,281 INF dnf: Transaction test succeeded.
+16:24:46,281 DDEBUG dnf: timer: transaction test: 1094 ms
+16:24:46,283 INF dnf: Running transaction
+16:24:46,285 DBG dnf: RPMDB altered outside of DNF.
+16:24:59,542 DDEBUG dnf: RPM transaction start.
+16:25:00,095 INF packaging: Configuring (running scriptlet for): filesystem-3.8-3.el8.x86_64 1587623203 3b78a074b7f24acab538bb0dc3296dd465f796a54e32ae3b097668c8e15cfea2
+16:25:00,576 INF packaging: Installed: libgcc-8.4.1-1.el8.x86_64 1601424063 d5d4156b88b64a7d7e86ed0a7fdb3adb7bfc815ec413a4aba74d70cf8f831aea
+16:25:00,603 INF packaging: Configuring (running scriptlet for): libgcc-8.4.1-1.el8.x86_64 1601424063 d5d4156b88b64a7d7e86ed0a7fdb3adb7bfc815ec413a4aba74d70cf8f831aea
+16:25:00,607 INF packaging: Installed: crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch 1613063803 7ffb8c75e74104968b8eed779518c2c6d6794450878233b08c7e8c245b3087f2
+16:25:00,680 INF packaging: Configuring (running scriptlet for): crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch 1613063803 7ffb8c75e74104968b8eed779518c2c6d6794450878233b08c7e8c245b3087f2
+16:25:00,690 INF packaging: Installed: tzdata-2021a-1.el8.noarch 1611592265 eb783cb89d46af58fd6735c175ab30f904ff65aa78a6eaadc8fc750dba7af258
+16:25:01,564 INF packaging: Installed: redhat-release-8.4-0.6.el8.x86_64 1617179292 c1f7127360782384a0e887356f45e209762c14469a63cc0a1d8f0ef002bf1148
+16:25:01,585 INF packaging: Installed: setup-2.12.2-6.el8.noarch 1586943783 aa4b8463be8bceddb296424e76ddecc80b72ffc8543b6746eadfc4972131b6e2
+16:25:01,624 INF packaging: Configuring (running scriptlet for): setup-2.12.2-6.el8.noarch 1586943783 aa4b8463be8bceddb296424e76ddecc80b72ffc8543b6746eadfc4972131b6e2
+16:25:01,648 INF packaging: Installed: filesystem-3.8-3.el8.x86_64 1587623203 3b78a074b7f24acab538bb0dc3296dd465f796a54e32ae3b097668c8e15cfea2
+16:25:01,941 INF packaging: Installed: basesystem-11-5.el8.noarch 1534063206 b9584e6823ffe9ccf79282bd57ee076a1e3a71c4c1020a20b5e1975141a50f14
+16:25:01,944 INF packaging: Installed: publicsuffix-list-dafsa-20180723-1.el8.noarch 1534094638 f8c191d8b952621d10a1055be960bbe07be66f557c5a9d007f8908abcde1b9af
+16:25:01,957 INF packaging: Installed: ncurses-base-6.1-7.20180224.el8.noarch 1547644074 ec84264c5a188f1e717dcac04fb190869a3e801d54b0e83769e3f42b27fd180b
+16:25:02,065 INF packaging: Installed: pcre2-10.32-2.el8.x86_64 1590685238 2ae7eca09c469bbf5c362daa544ccb453f22d7267a85e7aec006a83cce163aa8
+16:25:02,105 INF packaging: Installed: libselinux-2.9-5.el8.x86_64 1603273869 5d527a7fe40c223f9e8448cdb657daba3582d4ab296400c65294a4f1f921892b
+16:25:02,123 INF packaging: Installed: ncurses-libs-6.1-7.20180224.el8.x86_64 1547643898 6d2ad3959103e46354f7491ff7911759016fa262581b0149ed5b3433b24a8129
+16:25:02,192 INF packaging: Installed: glibc-minimal-langpack-2.28-151.el8.x86_64 1614965196 edd4a584b9f668d90780361ddccca8c41dec238f3dbcda2e7764f2a976d8c204
+16:25:02,195 INF packaging: Installed: glibc-common-2.28-151.el8.x86_64 1614965196 b5dcc665ce4bc702958208589f004fa894e19b86e76ea9eff2739a861f0cb9b0
+16:25:02,610 INF packaging: Configuring (running scriptlet for): glibc-2.28-151.el8.x86_64 1614965196 4b0a7687a242028e513e0cf5d55e1daf57e82e625ffa4b4ddfb89ba6abbb9513
+16:25:02,611 INF packaging: Installed: glibc-2.28-151.el8.x86_64 1614965196 4b0a7687a242028e513e0cf5d55e1daf57e82e625ffa4b4ddfb89ba6abbb9513
+16:25:03,518 INF packaging: Configuring (running scriptlet for): glibc-2.28-151.el8.x86_64 1614965196 4b0a7687a242028e513e0cf5d55e1daf57e82e625ffa4b4ddfb89ba6abbb9513
+16:25:03,840 INF packaging: Installed: bash-4.4.20-1.el8_4.x86_64 1619014183 5cf9436d647c94e5a5f90f7a6001fb37d53b8f1311050e771c6daf05b3d561b9
+16:25:04,059 INF packaging: Configuring (running scriptlet for): bash-4.4.20-1.el8_4.x86_64 1619014183 5cf9436d647c94e5a5f90f7a6001fb37d53b8f1311050e771c6daf05b3d561b9
+16:25:04,062 INF packaging: Installed: libsepol-2.9-2.el8.x86_64 1610126030 f43d8fbd83779706c5d2d8ebec56b9cf7178dab9e02b53f952d0abbd198963ec
+16:25:04,110 INF packaging: Configuring (running scriptlet for): libsepol-2.9-2.el8.x86_64 1610126030 f43d8fbd83779706c5d2d8ebec56b9cf7178dab9e02b53f952d0abbd198963ec
+16:25:04,236 INF packaging: Installed: zlib-1.2.11-17.el8.x86_64 1603788603 43a4f1c39b2a8b212d50af73d0d510adfdc4ac61be8ecdc6bd718f6cab0e5afc
+16:25:04,256 INF packaging: Installed: libgpg-error-1.31-1.el8.x86_64 1534080339 4bef8c6105544198bc4c5fecd21202bcf7823dda888cbe3fee888ee936c46bd9
+16:25:04,297 INF packaging: Installed: xz-libs-5.2.4-3.el8.x86_64 1542895708 d3813d081414edc480f5ffb428f6c9b005e33ebe8dd3a6ac8bf4d13e5aa4419b
+16:25:04,317 INF packaging: Installed: info-6.5-6.el8.x86_64 1578565041 e233a9ecfbf657192902180f6a67a225e5ec0194834df672eaeb2b3a50e8fb49
+16:25:04,353 INF packaging: Installed: bzip2-libs-1.0.6-26.el8.x86_64 1534060311 4d1be1a327a1ef7f0fa6a0005f32b962d446597febebae80b21d8f8f1355a8aa
+16:25:04,363 INF packaging: Installed: gmp-1:6.1.2-10.el8.x86_64 1560501714 134219ddd4f07902fcbd999c089200e0d77eb5139eec73aa9e56e0bdddb7a932
+16:25:04,432 INF packaging: Configuring (running scriptlet for): gmp-1:6.1.2-10.el8.x86_64 1560501714 134219ddd4f07902fcbd999c089200e0d77eb5139eec73aa9e56e0bdddb7a932
+16:25:04,529 INF packaging: Installed: libcap-2.26-4.el8.x86_64 1590147890 382afcc614dbcd3817aa3f7e12e2a5c32b3e5ba91b27f7b86b7ef5102c7b82cb
+16:25:04,552 INF packaging: Installed: libcom_err-1.45.6-1.el8.x86_64 1591610932 c4074dcf1be5305379967c6ce11e30ce3a1a26320f7888b5dbda7d0454304ba9
+16:25:04,560 INF packaging: Configuring (running scriptlet for): libcom_err-1.45.6-1.el8.x86_64 1591610932 c4074dcf1be5305379967c6ce11e30ce3a1a26320f7888b5dbda7d0454304ba9
+16:25:04,692 INF packaging: Installed: libzstd-1.4.4-1.el8.x86_64 1591348933 45cc50a8b02f9bbbbe2c8c056f34622d15d383f695916ac07821d688fcab1c25
+16:25:04,738 INF packaging: Installed: libunistring-0.9.9-3.el8.x86_64 1534538842 07d885ed980e09242fa1b6b4faaa5aaf3ea1f24415ac86a6a1f2f08ab5797784
+16:25:04,820 INF packaging: Installed: libidn2-2.2.0-1.el8.x86_64 1560162261 4a62975251933dcaff77fdbd7704e8a12bea0ecb6eaaae5ea5e552bedd6788ec
+16:25:04,844 INF packaging: Installed: libxml2-2.9.7-9.el8_4.2.x86_64 1621412087 aeb381f969689e8b9a07fdf6133cefe69cb46e28a58849682bccd2961da7f90e
+16:25:04,947 INF packaging: Installed: libffi-3.1-22.el8.x86_64 1589395351 eb3732b52b805b28192463682e961408db8c6449bb27e733081cff62e77194b3
+16:25:04,959 INF packaging: Installed: p11-kit-0.23.22-1.el8.x86_64 1610373390 eeb48256a3d0a6a10076ce7974074e49e99607d92c771673260b1a1e82c1f5da
+16:25:05,033 INF packaging: Installed: popt-1.18-1.el8.x86_64 1610017544 150e9dbb5a19483c85c25c722ff63a08d9411023c40faf88f42843fdf68ea275
+16:25:05,049 INF packaging: Installed: readline-7.0-10.el8.x86_64 1534096329 ef221ca565f17ed425997e97fdeb5fc27261910659fa61372b18d93e1a5613e9
+16:25:05,083 INF packaging: Configuring (running scriptlet for): readline-7.0-10.el8.x86_64 1534096329 ef221ca565f17ed425997e97fdeb5fc27261910659fa61372b18d93e1a5613e9
+16:25:05,205 INF dnf.rpm: install-info: No such file or directory for /usr/share/info/history.info
+install-info: No such file or directory for /usr/share/info/rluserman.info
+
+16:25:05,208 INF packaging: Installed: libassuan-2.5.1-3.el8.x86_64 1534079123 862e75a1cf6aa5be750a530c8ce8b999d0b2efe9737e20f37f9f9153a82e56fa
+16:25:05,229 INF packaging: Installed: libgcrypt-1.8.5-4.el8.x86_64 1592238149 a12d7736b18b1cb21ab10e3b42c303693904e4fa03b772a9a7c9ca8be84f6894
+16:25:05,303 INF packaging: Configuring (running scriptlet for): libgcrypt-1.8.5-4.el8.x86_64 1592238149 a12d7736b18b1cb21ab10e3b42c303693904e4fa03b772a9a7c9ca8be84f6894
+16:25:06,165 INF packaging: Installed: elfutils-libelf-0.182-3.el8.x86_64 1608209946 3fd74e8e26c1c4bd4506509811c68bd807bb31c0a6e4647c640943194487e1b1
+16:25:06,202 INF packaging: Installed: sqlite-libs-3.26.0-13.el8.x86_64 1606831854 4e0c74fabe6c631afdc533f7923e6e7c1381b3bb538d2b1fbb085088f9f53cb0
+16:25:06,280 INF packaging: Installed: libattr-2.4.48-3.el8.x86_64 1534063387 2733570f8ea94551f3381538f9c8642c88532c800b384c07b4db02f6b8896c3f
+16:25:06,289 INF packaging: Installed: libacl-2.2.53-1.el8.x86_64 1534063074 9461fa7a5e74bfd8d9e9961af9d3003d9d2b496830c2fd6b0641ae8b8bc8e178
+16:25:06,299 INF packaging: Installed: coreutils-single-8.30-8.el8.x86_64 1586866435 01db20786dbfd82a3ffba21b16440477918426c3263c50294be3a956edc9b99a
+16:25:06,442 INF packaging: Installed: sed-4.5-2.el8.x86_64 1589884034 f39e031ea848d9605601b3e8e9424339cec44ecb521fbd1a415915a5f373eb37
+16:25:06,485 INF packaging: Configuring (running scriptlet for): sed-4.5-2.el8.x86_64 1589884034 f39e031ea848d9605601b3e8e9424339cec44ecb521fbd1a415915a5f373eb37
+16:25:06,496 INF dnf.rpm: install-info: No such file or directory for /usr/share/info/sed.info.gz
+
+16:25:06,500 INF packaging: Installed: libsmartcols-2.32.1-27.el8.x86_64 1611049948 5e8c3337e3ed2e31bab967ae331e58f5d7e5534f10ac4677d97e35ba282ade51
+16:25:06,524 INF packaging: Configuring (running scriptlet for): libsmartcols-2.32.1-27.el8.x86_64 1611049948 5e8c3337e3ed2e31bab967ae331e58f5d7e5534f10ac4677d97e35ba282ade51
+16:25:06,639 INF packaging: Installed: libtasn1-4.13-3.el8.x86_64 1534083482 b1ce343456452d02648d8a0c4ff277e25eb32113b800ed3f16fca91939193e0f
+16:25:06,657 INF packaging: Configuring (running scriptlet for): libtasn1-4.13-3.el8.x86_64 1534083482 b1ce343456452d02648d8a0c4ff277e25eb32113b800ed3f16fca91939193e0f
+16:25:06,791 INF packaging: Installed: libuuid-2.32.1-27.el8.x86_64 1611049948 716c655cda9bbb4dc7eea0f8c80888fb9daddc1fc95d3504d4454fcb917e08f8
+16:25:06,803 INF packaging: Configuring (running scriptlet for): libuuid-2.32.1-27.el8.x86_64 1611049948 716c655cda9bbb4dc7eea0f8c80888fb9daddc1fc95d3504d4454fcb917e08f8
+16:25:06,875 INF packaging: Installed: lua-libs-5.3.4-11.el8.x86_64 1559576723 60c5b5ece7a84f1c5e320b6120b64c176ce4bc48b484b85e20a13cb52ee7db05
+16:25:06,898 INF packaging: Installed: lz4-libs-1.8.3-3.el8_4.x86_64 1622121453 f0e3f336e2910f8282c39a5bce21ffa35d6037842d219761ed8c58b4208077cc
+16:25:06,912 INF packaging: Installed: pcre-8.42-4.el8.x86_64 1535969821 ecc78698c4e19ce8bfd0a133bc5e8e437171465887437ca2bc18de02c43acf0f
+16:25:06,948 INF packaging: Installed: grep-3.1-6.el8.x86_64 1534060242 d570af0578f5b2c6225f1f2354404f65bccf91c3974e98dcbc0c7b55a61b9b46
+16:25:06,992 INF packaging: Configuring (running scriptlet for): grep-3.1-6.el8.x86_64 1534060242 d570af0578f5b2c6225f1f2354404f65bccf91c3974e98dcbc0c7b55a61b9b46
+16:25:07,003 INF dnf.rpm: install-info: No such file or directory for /usr/share/info/grep.info.gz
+
+16:25:07,007 INF packaging: Installed: libblkid-2.32.1-27.el8.x86_64 1611049948 197b12db401b9a501bc92f6b000be37af4b89d874463810e074fdf6acb563f39
+16:25:07,034 INF packaging: Configuring (running scriptlet for): libblkid-2.32.1-27.el8.x86_64 1611049948 197b12db401b9a501bc92f6b000be37af4b89d874463810e074fdf6acb563f39
+16:25:07,164 INF packaging: Installed: libmount-2.32.1-27.el8.x86_64 1611049948 6ab7a496748f0a9c13631e9284d8c0b09f1bd616fbc6af5cf45d22ed15ff58ba
+16:25:07,195 INF packaging: Configuring (running scriptlet for): libmount-2.32.1-27.el8.x86_64 1611049948 6ab7a496748f0a9c13631e9284d8c0b09f1bd616fbc6af5cf45d22ed15ff58ba
+16:25:07,287 INF packaging: Installed: systemd-libs-239-45.el8_4.3.x86_64 1627473433 ffa8ded366e77c3c95154180414e651730f860904f1077b9f556433527755575
+16:25:07,476 INF packaging: Configuring (running scriptlet for): systemd-libs-239-45.el8_4.3.x86_64 1627473433 ffa8ded366e77c3c95154180414e651730f860904f1077b9f556433527755575
+16:25:07,509 INF packaging: Installed: libusbx-1.0.23-4.el8.x86_64 1597242806 09149617095dc52e19cdce1e45c8245e1e92d371bd4d107320ff56788b9977f1
+16:25:07,526 INF packaging: Installed: chkconfig-1.13-2.el8.x86_64 1587109456 980704e06e8bca4cf302b3498e1432063539c324a3f3feb3b7d7ece5d2aefcf8
+16:25:07,568 INF packaging: Installed: p11-kit-trust-0.23.22-1.el8.x86_64 1610373390 6ff975465dcff2d8b7f6f1efb8c865aff9baed1500e8f48e4a569700fb1208ea
+16:25:07,596 INF packaging: Configuring (running scriptlet for): p11-kit-trust-0.23.22-1.el8.x86_64 1610373390 6ff975465dcff2d8b7f6f1efb8c865aff9baed1500e8f48e4a569700fb1208ea
+16:25:07,609 INF packaging: Configuring (running scriptlet for): ca-certificates-2020.2.41-80.0.el8_2.noarch 1592867963 703f78e932f243ccf2890039ab582176b829f4dfc302a4c9a4e48189eb3a0bd2
+16:25:07,619 INF packaging: Installed: ca-certificates-2020.2.41-80.0.el8_2.noarch 1592867963 703f78e932f243ccf2890039ab582176b829f4dfc302a4c9a4e48189eb3a0bd2
+16:25:07,687 INF packaging: Configuring (running scriptlet for): ca-certificates-2020.2.41-80.0.el8_2.noarch 1592867963 703f78e932f243ccf2890039ab582176b829f4dfc302a4c9a4e48189eb3a0bd2
+16:25:08,182 INF packaging: Installed: openssl-libs-1:1.1.1g-15.el8_3.x86_64 1616691111 7f4ffa37a0fdc0b7de2fceca3aa2301678368bf3ac924981beb4d7232c2f465d
+16:25:08,393 INF packaging: Configuring (running scriptlet for): openssl-libs-1:1.1.1g-15.el8_3.x86_64 1616691111 7f4ffa37a0fdc0b7de2fceca3aa2301678368bf3ac924981beb4d7232c2f465d
+16:25:08,500 INF packaging: Installed: libdb-5.3.28-40.el8.x86_64 1606995916 dc7cae6d236b36420e400d1a9731ba6006b3ba8c67d8267931196c7fb9dae873
+16:25:08,613 INF packaging: Configuring (running scriptlet for): libdb-5.3.28-40.el8.x86_64 1606995916 dc7cae6d236b36420e400d1a9731ba6006b3ba8c67d8267931196c7fb9dae873
+16:25:08,699 INF packaging: Installed: libdb-utils-5.3.28-40.el8.x86_64 1606995916 b16b74a33e1cbbdf69ce43d869eafc87b325510de731e07d41f3325aa1645fdb
+16:25:08,740 INF packaging: Installed: libarchive-3.3.3-1.el8.x86_64 1601461249 7795715412f1a518529241d6254130fffda54b8026021743d31edc591f415f34
+16:25:08,796 INF packaging: Installed: libpsl-0.20.2-6.el8.x86_64 1591290830 3384bccab530807195eb9d72547aa588bdea55567ca86d1719f32402bf1cd0c9
+16:25:08,810 INF packaging: Installed: mpfr-3.1.6-1.el8.x86_64 1534087668 28ccf9ff472c824f6c5a3c2a0c076bfa221b8e48368e43de9b3c2e83d67e8b5d
+16:25:08,845 INF packaging: Configuring (running scriptlet for): mpfr-3.1.6-1.el8.x86_64 1534087668 28ccf9ff472c824f6c5a3c2a0c076bfa221b8e48368e43de9b3c2e83d67e8b5d
+16:25:08,946 INF packaging: Installed: nettle-3.4.1-4.el8_3.x86_64 1617782218 0560f6fc7a40f556747796aaeac72e1c7361ee6a63a0378287773117b1bfaf92
+16:25:08,997 INF packaging: Configuring (running scriptlet for): nettle-3.4.1-4.el8_3.x86_64 1617782218 0560f6fc7a40f556747796aaeac72e1c7361ee6a63a0378287773117b1bfaf92
+16:25:09,107 INF dnf.rpm: install-info: No such file or directory for /usr/share/info/nettle.info
+
+16:25:09,111 INF packaging: Installed: gnutls-3.6.14-8.el8_3.x86_64 1617283116 f76d8e3372e285284bf1fca996ad10936c93ee3c2c76d1cd30263ee10ebc4180
+16:25:09,264 INF packaging: Installed: glib2-2.56.4-10.el8_4.1.x86_64 1627307172 8dce48d055054ecddc38142aa33ae9c8c66a78a380b57a099730cc5147cc684e
+16:25:09,679 INF packaging: Installed: json-glib-1.4.4-1.el8.x86_64 1539698450 a1dcfb41bc9a8dc4533ebe66449f0101e4da7548b7f3d6f17e0d815025b9c437
+16:25:09,710 INF packaging: Installed: librhsm-0.0.3-4.el8.x86_64 1609936729 bd37c05e277205686dade257e19f95839fad32f2278872dbc9969c50ec9da0b6
+16:25:09,720 INF packaging: Installed: gobject-introspection-1.56.1-1.el8.x86_64 1534073327 1065049dbd53849d35db269a23be54148cbe481122381ab71b72f62e83816b26
+16:25:09,781 INF packaging: Installed: libpeas-1.22.0-6.el8.x86_64 1534081941 6a804fa0a0086d4bf8f0bc398a2235fb4201668fb8bf5a8fe768b42db305fdfd
+16:25:09,813 INF packaging: Installed: libksba-1.3.5-7.el8.x86_64 1534081143 1d47e465939bba5bcf9c37be2516e60d6c9449ccee70a54a6133df989ac8b1f5
+16:25:09,841 INF packaging: Installed: file-libs-5.33-16.el8_3.1.x86_64 1611937411 3dc82857e070870d00a5d44e2ff597bdb3f7eb9784c84807c170086729c61825
+16:25:10,004 INF packaging: Installed: brotli-1.0.6-3.el8.x86_64 1601568906 267858a95e543459a0cd683e641955d7c04c13bcda830c5f7db5a0529077428a
+16:25:10,072 INF packaging: Installed: expat-2.2.5-4.el8.x86_64 1587742261 0b4118e4f4aec595982dbb9f4b48999284e9e51dfd45d251d930f1541d8a8020
+16:25:10,095 INF packaging: Installed: libmetalink-0.1.3-7.el8.x86_64 1534081092 cd7c30d21e7240f60f0861c229e17fda43e855ab4c78fab39f47f7ae2be5720e
+16:25:10,109 INF packaging: Installed: json-c-0.13.1-0.4.el8.x86_64 1612371230 8e19e2cf55b7e3635ce8c6504ff6db0d829fdb74481e71c176979e684093fe5d
+16:25:10,119 INF packaging: Installed: keyutils-libs-1.5.10-6.el8.x86_64 1534078445 4da971c6e5a8a759c919dc9cde21324ee2b309c96b46eb000b4f251a287b08b1
+16:25:10,130 INF packaging: Installed: libcap-ng-0.7.9-5.el8.x86_64 1572942997 268b587d4a2db65a55e0009cfa506126022829589f049a77f70b9dc015b3ed05
+16:25:10,139 INF packaging: Installed: audit-libs-3.0-0.17.20191104git1c2f876.el8.x86_64 1578502271 d84d9c2262e0ccdff46b3f6363c1a74ef870795947f716ada3d5ccf160d7b433
+16:25:10,165 INF packaging: Installed: libnghttp2-1.33.0-3.el8_2.1.x86_64 1591702545 2e8fd9d87a922b1441538318c401b1e4353b87a9e8000ca76b0cee681ec79c45
+16:25:10,182 INF packaging: Installed: libsigsegv-2.11-5.el8.x86_64 1534083003 d0188d22323619c9069c2de6f85ebe5302c76fde5f52ebd148988e75a75110dc
+16:25:10,192 INF packaging: Installed: gawk-4.2.1-2.el8.x86_64 1606997680 affab770e241d6c70cb271cbe5f84d02a946ad1b4d17d36f74dab74e9ca8fd7f
+16:25:10,331 INF packaging: Installed: libstdc++-8.4.1-1.el8.x86_64 1601424063 8f8dcdf62017314ff4728716916c6c2d99b08b54709873e0495cf4165ba3814b
+16:25:10,422 INF packaging: Configuring (running scriptlet for): libstdc++-8.4.1-1.el8.x86_64 1601424063 8f8dcdf62017314ff4728716916c6c2d99b08b54709873e0495cf4165ba3814b
+16:25:10,606 INF packaging: Installed: libverto-0.3.0-5.el8.x86_64 1534083575 9560ff328ff89cdea202354f17e852c69fc41de1ed008e5dd1a86ffadb89c6f1
+16:25:10,620 INF packaging: Installed: krb5-libs-1.18.2-8.el8.x86_64 1608141651 c79d94c1289135a659a54a2328f40b5739db9afc969d5fa601db67f4e07ffcfe
+16:25:10,755 INF packaging: Installed: libxcrypt-4.1.1-4.el8.x86_64 1534060199 0d612ef49922f8eff2d2c96e8da290f77dacf7b667f6b8a9be751bd6394fcf73
+16:25:10,774 INF packaging: Installed: cyrus-sasl-lib-2.1.27-5.el8.x86_64 1588873068 fa38da11fac69d66c239bdd5b723d550a570861e3f8a8187f105828fbdcca4a7
+16:25:10,803 INF packaging: Configuring (running scriptlet for): cyrus-sasl-lib-2.1.27-5.el8.x86_64 1588873068 fa38da11fac69d66c239bdd5b723d550a570861e3f8a8187f105828fbdcca4a7
+16:25:10,909 INF packaging: Installed: openldap-2.4.46-17.el8_4.x86_64 1623854782 c49d8e36c2493003147fde89c827086fa019f9f722bfb9b45cf7277fdd88547d
+16:25:10,968 INF packaging: Installed: libyaml-0.1.7-5.el8.x86_64 1534085220 018409b1eda8be48a11a5b76b95e82ff1d9002569e0644291532d8424dc31edf
+16:25:10,982 INF packaging: Installed: npth-1.5-4.el8.x86_64 1534088492 4f3c2518a3a02e4cec426928f8e5b28d9318af2b1aeaf7fc77f9d4a313f09740
+16:25:10,994 INF packaging: Installed: gnupg2-2.2.20-2.el8.x86_64 1588610085 b92a1778cf0cbd78f528fe508fa3859c113a413fdbaead1b5a1070b2f93af164
+16:25:11,398 INF packaging: Installed: gpgme-1.13.1-7.el8.x86_64 1609760984 ee097b3cf5931024ebd322f3e379e3925aeb85878af128d9ca86ee2eef6b00ab
+16:25:11,449 INF packaging: Installed: libssh-config-0.9.4-2.el8.noarch 1593094870 121a18cdc3ff0a1d66b8f9a879ccabffb501468b764d7d285abbcf5c25337bd0
+16:25:11,454 INF packaging: Installed: libssh-0.9.4-2.el8.x86_64 1593094173 f42d5927dc2a8335180a2ebeb62523155cd452c3fb4057767ecb062fdce7bdeb
+16:25:11,491 INF packaging: Installed: libcurl-7.61.1-18.el8.x86_64 1611938883 8dfb5536f04989c0aef22a8ae8dfd013cd2fd979f62b6f94e20f680e42d2cac5
+16:25:11,538 INF packaging: Installed: curl-7.61.1-18.el8.x86_64 1611938883 d82dc918c9a667202e46d82c865a571126c695c0d2c89aec1103383349e4ae71
+16:25:11,582 INF packaging: Installed: rpm-4.14.3-14.el8_4.x86_64 1622479399 89055fff4b1791b122c3f61269a30a0cf2e849cc4a3ef7951757327689dcdc26
+16:25:11,736 INF packaging: Installed: rpm-libs-4.14.3-14.el8_4.x86_64 1622479399 846a7e284988a10c5b93cdd98423f52d24c7f963f1eb22831ba74d2e31735ab1
+16:25:11,779 INF packaging: Configuring (running scriptlet for): rpm-libs-4.14.3-14.el8_4.x86_64 1622479399 846a7e284988a10c5b93cdd98423f52d24c7f963f1eb22831ba74d2e31735ab1
+16:25:13,485 INF packaging: Installed: libmodulemd-2.9.4-2.el8.x86_64 1590005713 bf3da2ba8e4cc0c1cc56a2472b963b53bbb193367eb152e5cc6716bb6c139c38
+16:25:13,524 INF packaging: Installed: libsolv-0.7.16-2.el8.x86_64 1610709778 c07cca867b98c959c67cda988ed8bf9f111f9fc61b635d39b2823513811eade4
+16:25:13,577 INF packaging: Installed: librepo-1.12.0-3.el8.x86_64 1608027509 f3f4f7af723db58c5576ac8d9178bd4f1face86fa5018b40fa8cc50de2c31c8b
+16:25:13,597 INF packaging: Installed: libdnf-0.55.0-7.el8.x86_64 1615218214 1973e58ee34e330e0df37d23cdf7c2e6996fc3512ac96099bbe9f7c7ae44ee59
+16:25:13,710 INF packaging: Installed: microdnf-3.4.0-4.el8.x86_64 1612862948 27f676917ec82ca6469e1e16c817b4a4971d432e7595c1fa89a53214bc99207f
+16:25:13,722 INF packaging: Installed: langpacks-en-1.0-12.el8.noarch 1534078655 38affe91361bf56b84490d97c7e3f815965cf8d2bbb222c6c045af4bf2dff736
+16:25:13,728 INF packaging: Installed: rootfiles-8.1-22.el8.noarch 1534096383 ad060f60303b6764e08657436147cc24cfc4bb1ccc1431796407ba005a7bcec0
+16:25:13,732 INF packaging: Post installation setup phase started.
+16:25:13,752 INF packaging: Configuring (running scriptlet for): filesystem-3.8-3.el8.x86_64 1587623203 3b78a074b7f24acab538bb0dc3296dd465f796a54e32ae3b097668c8e15cfea2
+16:25:13,773 INF packaging: Configuring (running scriptlet for): ca-certificates-2020.2.41-80.0.el8_2.noarch 1592867963 703f78e932f243ccf2890039ab582176b829f4dfc302a4c9a4e48189eb3a0bd2
+16:25:14,263 INF packaging: Configuring (running scriptlet for): rootfiles-8.1-22.el8.noarch 1534096383 ad060f60303b6764e08657436147cc24cfc4bb1ccc1431796407ba005a7bcec0
+16:25:14,302 INF packaging: Configuring (running scriptlet for): glibc-common-2.28-151.el8.x86_64 1614965196 b5dcc665ce4bc702958208589f004fa894e19b86e76ea9eff2739a861f0cb9b0
+16:25:14,577 INF packaging: Configuring (running scriptlet for): info-6.5-6.el8.x86_64 1578565041 e233a9ecfbf657192902180f6a67a225e5ec0194834df672eaeb2b3a50e8fb49
+16:25:14,643 INF packaging: Configuring (running scriptlet for): glib2-2.56.4-10.el8_4.1.x86_64 1627307172 8dce48d055054ecddc38142aa33ae9c8c66a78a380b57a099730cc5147cc684e
+16:25:14,696 DDEBUG dnf: RPM transaction over.
+16:25:14,733 INF packaging: Verifying: audit-libs-3.0-0.17.20191104git1c2f876.el8.x86_64 1578502271 d84d9c2262e0ccdff46b3f6363c1a74ef870795947f716ada3d5ccf160d7b433
+16:25:14,734 INF packaging: Verifying: basesystem-11-5.el8.noarch 1534063206 b9584e6823ffe9ccf79282bd57ee076a1e3a71c4c1020a20b5e1975141a50f14
+16:25:14,734 INF packaging: Verifying: bash-4.4.20-1.el8_4.x86_64 1619014183 5cf9436d647c94e5a5f90f7a6001fb37d53b8f1311050e771c6daf05b3d561b9
+16:25:14,735 INF packaging: Verifying: brotli-1.0.6-3.el8.x86_64 1601568906 267858a95e543459a0cd683e641955d7c04c13bcda830c5f7db5a0529077428a
+16:25:14,735 INF packaging: Verifying: bzip2-libs-1.0.6-26.el8.x86_64 1534060311 4d1be1a327a1ef7f0fa6a0005f32b962d446597febebae80b21d8f8f1355a8aa
+16:25:14,736 INF packaging: Verifying: ca-certificates-2020.2.41-80.0.el8_2.noarch 1592867963 703f78e932f243ccf2890039ab582176b829f4dfc302a4c9a4e48189eb3a0bd2
+16:25:14,741 INF packaging: Verifying: chkconfig-1.13-2.el8.x86_64 1587109456 980704e06e8bca4cf302b3498e1432063539c324a3f3feb3b7d7ece5d2aefcf8
+16:25:14,742 INF packaging: Verifying: coreutils-single-8.30-8.el8.x86_64 1586866435 01db20786dbfd82a3ffba21b16440477918426c3263c50294be3a956edc9b99a
+16:25:14,744 INF packaging: Verifying: crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch 1613063803 7ffb8c75e74104968b8eed779518c2c6d6794450878233b08c7e8c245b3087f2
+16:25:14,745 INF packaging: Verifying: curl-7.61.1-18.el8.x86_64 1611938883 d82dc918c9a667202e46d82c865a571126c695c0d2c89aec1103383349e4ae71
+16:25:14,747 INF packaging: Verifying: cyrus-sasl-lib-2.1.27-5.el8.x86_64 1588873068 fa38da11fac69d66c239bdd5b723d550a570861e3f8a8187f105828fbdcca4a7
+16:25:14,748 INF packaging: Verifying: elfutils-libelf-0.182-3.el8.x86_64 1608209946 3fd74e8e26c1c4bd4506509811c68bd807bb31c0a6e4647c640943194487e1b1
+16:25:14,750 INF packaging: Verifying: expat-2.2.5-4.el8.x86_64 1587742261 0b4118e4f4aec595982dbb9f4b48999284e9e51dfd45d251d930f1541d8a8020
+16:25:14,751 INF packaging: Verifying: file-libs-5.33-16.el8_3.1.x86_64 1611937411 3dc82857e070870d00a5d44e2ff597bdb3f7eb9784c84807c170086729c61825
+16:25:14,753 INF packaging: Verifying: filesystem-3.8-3.el8.x86_64 1587623203 3b78a074b7f24acab538bb0dc3296dd465f796a54e32ae3b097668c8e15cfea2
+16:25:14,754 INF packaging: Verifying: gawk-4.2.1-2.el8.x86_64 1606997680 affab770e241d6c70cb271cbe5f84d02a946ad1b4d17d36f74dab74e9ca8fd7f
+16:25:14,755 INF packaging: Verifying: glib2-2.56.4-10.el8_4.1.x86_64 1627307172 8dce48d055054ecddc38142aa33ae9c8c66a78a380b57a099730cc5147cc684e
+16:25:14,755 INF packaging: Verifying: glibc-2.28-151.el8.x86_64 1614965196 4b0a7687a242028e513e0cf5d55e1daf57e82e625ffa4b4ddfb89ba6abbb9513
+16:25:14,756 INF packaging: Verifying: glibc-common-2.28-151.el8.x86_64 1614965196 b5dcc665ce4bc702958208589f004fa894e19b86e76ea9eff2739a861f0cb9b0
+16:25:14,757 INF packaging: Verifying: glibc-minimal-langpack-2.28-151.el8.x86_64 1614965196 edd4a584b9f668d90780361ddccca8c41dec238f3dbcda2e7764f2a976d8c204
+16:25:14,757 INF packaging: Verifying: gmp-1:6.1.2-10.el8.x86_64 1560501714 134219ddd4f07902fcbd999c089200e0d77eb5139eec73aa9e56e0bdddb7a932
+16:25:14,758 INF packaging: Verifying: gnupg2-2.2.20-2.el8.x86_64 1588610085 b92a1778cf0cbd78f528fe508fa3859c113a413fdbaead1b5a1070b2f93af164
+16:25:14,758 INF packaging: Verifying: gnutls-3.6.14-8.el8_3.x86_64 1617283116 f76d8e3372e285284bf1fca996ad10936c93ee3c2c76d1cd30263ee10ebc4180
+16:25:14,759 INF packaging: Verifying: gobject-introspection-1.56.1-1.el8.x86_64 1534073327 1065049dbd53849d35db269a23be54148cbe481122381ab71b72f62e83816b26
+16:25:14,759 INF packaging: Verifying: gpgme-1.13.1-7.el8.x86_64 1609760984 ee097b3cf5931024ebd322f3e379e3925aeb85878af128d9ca86ee2eef6b00ab
+16:25:14,760 INF packaging: Verifying: grep-3.1-6.el8.x86_64 1534060242 d570af0578f5b2c6225f1f2354404f65bccf91c3974e98dcbc0c7b55a61b9b46
+16:25:14,760 INF packaging: Verifying: info-6.5-6.el8.x86_64 1578565041 e233a9ecfbf657192902180f6a67a225e5ec0194834df672eaeb2b3a50e8fb49
+16:25:14,761 INF packaging: Verifying: json-c-0.13.1-0.4.el8.x86_64 1612371230 8e19e2cf55b7e3635ce8c6504ff6db0d829fdb74481e71c176979e684093fe5d
+16:25:14,762 INF packaging: Verifying: json-glib-1.4.4-1.el8.x86_64 1539698450 a1dcfb41bc9a8dc4533ebe66449f0101e4da7548b7f3d6f17e0d815025b9c437
+16:25:14,762 INF packaging: Verifying: keyutils-libs-1.5.10-6.el8.x86_64 1534078445 4da971c6e5a8a759c919dc9cde21324ee2b309c96b46eb000b4f251a287b08b1
+16:25:14,763 INF packaging: Verifying: krb5-libs-1.18.2-8.el8.x86_64 1608141651 c79d94c1289135a659a54a2328f40b5739db9afc969d5fa601db67f4e07ffcfe
+16:25:14,763 INF packaging: Verifying: libacl-2.2.53-1.el8.x86_64 1534063074 9461fa7a5e74bfd8d9e9961af9d3003d9d2b496830c2fd6b0641ae8b8bc8e178
+16:25:14,764 INF packaging: Verifying: libarchive-3.3.3-1.el8.x86_64 1601461249 7795715412f1a518529241d6254130fffda54b8026021743d31edc591f415f34
+16:25:14,764 INF packaging: Verifying: libassuan-2.5.1-3.el8.x86_64 1534079123 862e75a1cf6aa5be750a530c8ce8b999d0b2efe9737e20f37f9f9153a82e56fa
+16:25:14,765 INF packaging: Verifying: libattr-2.4.48-3.el8.x86_64 1534063387 2733570f8ea94551f3381538f9c8642c88532c800b384c07b4db02f6b8896c3f
+16:25:14,765 INF packaging: Verifying: libblkid-2.32.1-27.el8.x86_64 1611049948 197b12db401b9a501bc92f6b000be37af4b89d874463810e074fdf6acb563f39
+16:25:14,766 INF packaging: Verifying: libcap-2.26-4.el8.x86_64 1590147890 382afcc614dbcd3817aa3f7e12e2a5c32b3e5ba91b27f7b86b7ef5102c7b82cb
+16:25:14,766 INF packaging: Verifying: libcap-ng-0.7.9-5.el8.x86_64 1572942997 268b587d4a2db65a55e0009cfa506126022829589f049a77f70b9dc015b3ed05
+16:25:14,767 INF packaging: Verifying: libcom_err-1.45.6-1.el8.x86_64 1591610932 c4074dcf1be5305379967c6ce11e30ce3a1a26320f7888b5dbda7d0454304ba9
+16:25:14,767 INF packaging: Verifying: libcurl-7.61.1-18.el8.x86_64 1611938883 8dfb5536f04989c0aef22a8ae8dfd013cd2fd979f62b6f94e20f680e42d2cac5
+16:25:14,768 INF packaging: Verifying: libdb-5.3.28-40.el8.x86_64 1606995916 dc7cae6d236b36420e400d1a9731ba6006b3ba8c67d8267931196c7fb9dae873
+16:25:14,768 INF packaging: Verifying: libdb-utils-5.3.28-40.el8.x86_64 1606995916 b16b74a33e1cbbdf69ce43d869eafc87b325510de731e07d41f3325aa1645fdb
+16:25:14,769 INF packaging: Verifying: libdnf-0.55.0-7.el8.x86_64 1615218214 1973e58ee34e330e0df37d23cdf7c2e6996fc3512ac96099bbe9f7c7ae44ee59
+16:25:14,770 INF packaging: Verifying: libffi-3.1-22.el8.x86_64 1589395351 eb3732b52b805b28192463682e961408db8c6449bb27e733081cff62e77194b3
+16:25:14,770 INF packaging: Verifying: libgcc-8.4.1-1.el8.x86_64 1601424063 d5d4156b88b64a7d7e86ed0a7fdb3adb7bfc815ec413a4aba74d70cf8f831aea
+16:25:14,771 INF packaging: Verifying: libgcrypt-1.8.5-4.el8.x86_64 1592238149 a12d7736b18b1cb21ab10e3b42c303693904e4fa03b772a9a7c9ca8be84f6894
+16:25:14,771 INF packaging: Verifying: libgpg-error-1.31-1.el8.x86_64 1534080339 4bef8c6105544198bc4c5fecd21202bcf7823dda888cbe3fee888ee936c46bd9
+16:25:14,772 INF packaging: Verifying: libidn2-2.2.0-1.el8.x86_64 1560162261 4a62975251933dcaff77fdbd7704e8a12bea0ecb6eaaae5ea5e552bedd6788ec
+16:25:14,772 INF packaging: Verifying: libksba-1.3.5-7.el8.x86_64 1534081143 1d47e465939bba5bcf9c37be2516e60d6c9449ccee70a54a6133df989ac8b1f5
+16:25:14,773 INF packaging: Verifying: libmetalink-0.1.3-7.el8.x86_64 1534081092 cd7c30d21e7240f60f0861c229e17fda43e855ab4c78fab39f47f7ae2be5720e
+16:25:14,773 INF packaging: Verifying: libmodulemd-2.9.4-2.el8.x86_64 1590005713 bf3da2ba8e4cc0c1cc56a2472b963b53bbb193367eb152e5cc6716bb6c139c38
+16:25:14,774 INF packaging: Verifying: libmount-2.32.1-27.el8.x86_64 1611049948 6ab7a496748f0a9c13631e9284d8c0b09f1bd616fbc6af5cf45d22ed15ff58ba
+16:25:14,774 INF packaging: Verifying: libnghttp2-1.33.0-3.el8_2.1.x86_64 1591702545 2e8fd9d87a922b1441538318c401b1e4353b87a9e8000ca76b0cee681ec79c45
+16:25:14,775 INF packaging: Verifying: libpeas-1.22.0-6.el8.x86_64 1534081941 6a804fa0a0086d4bf8f0bc398a2235fb4201668fb8bf5a8fe768b42db305fdfd
+16:25:14,775 INF packaging: Verifying: libpsl-0.20.2-6.el8.x86_64 1591290830 3384bccab530807195eb9d72547aa588bdea55567ca86d1719f32402bf1cd0c9
+16:25:14,777 INF packaging: Verifying: librepo-1.12.0-3.el8.x86_64 1608027509 f3f4f7af723db58c5576ac8d9178bd4f1face86fa5018b40fa8cc50de2c31c8b
+16:25:14,782 INF packaging: Verifying: librhsm-0.0.3-4.el8.x86_64 1609936729 bd37c05e277205686dade257e19f95839fad32f2278872dbc9969c50ec9da0b6
+16:25:14,783 INF packaging: Verifying: libselinux-2.9-5.el8.x86_64 1603273869 5d527a7fe40c223f9e8448cdb657daba3582d4ab296400c65294a4f1f921892b
+16:25:14,783 INF packaging: Verifying: libsepol-2.9-2.el8.x86_64 1610126030 f43d8fbd83779706c5d2d8ebec56b9cf7178dab9e02b53f952d0abbd198963ec
+16:25:14,784 INF packaging: Verifying: libsigsegv-2.11-5.el8.x86_64 1534083003 d0188d22323619c9069c2de6f85ebe5302c76fde5f52ebd148988e75a75110dc
+16:25:14,785 INF packaging: Verifying: libsmartcols-2.32.1-27.el8.x86_64 1611049948 5e8c3337e3ed2e31bab967ae331e58f5d7e5534f10ac4677d97e35ba282ade51
+16:25:14,786 INF packaging: Verifying: libsolv-0.7.16-2.el8.x86_64 1610709778 c07cca867b98c959c67cda988ed8bf9f111f9fc61b635d39b2823513811eade4
+16:25:14,786 INF packaging: Verifying: libssh-0.9.4-2.el8.x86_64 1593094173 f42d5927dc2a8335180a2ebeb62523155cd452c3fb4057767ecb062fdce7bdeb
+16:25:14,787 INF packaging: Verifying: libssh-config-0.9.4-2.el8.noarch 1593094870 121a18cdc3ff0a1d66b8f9a879ccabffb501468b764d7d285abbcf5c25337bd0
+16:25:14,788 INF packaging: Verifying: libstdc++-8.4.1-1.el8.x86_64 1601424063 8f8dcdf62017314ff4728716916c6c2d99b08b54709873e0495cf4165ba3814b
+16:25:14,788 INF packaging: Verifying: libtasn1-4.13-3.el8.x86_64 1534083482 b1ce343456452d02648d8a0c4ff277e25eb32113b800ed3f16fca91939193e0f
+16:25:14,789 INF packaging: Verifying: libunistring-0.9.9-3.el8.x86_64 1534538842 07d885ed980e09242fa1b6b4faaa5aaf3ea1f24415ac86a6a1f2f08ab5797784
+16:25:14,789 INF packaging: Verifying: libusbx-1.0.23-4.el8.x86_64 1597242806 09149617095dc52e19cdce1e45c8245e1e92d371bd4d107320ff56788b9977f1
+16:25:14,790 INF packaging: Verifying: libuuid-2.32.1-27.el8.x86_64 1611049948 716c655cda9bbb4dc7eea0f8c80888fb9daddc1fc95d3504d4454fcb917e08f8
+16:25:14,790 INF packaging: Verifying: libverto-0.3.0-5.el8.x86_64 1534083575 9560ff328ff89cdea202354f17e852c69fc41de1ed008e5dd1a86ffadb89c6f1
+16:25:14,791 INF packaging: Verifying: libxcrypt-4.1.1-4.el8.x86_64 1534060199 0d612ef49922f8eff2d2c96e8da290f77dacf7b667f6b8a9be751bd6394fcf73
+16:25:14,792 INF packaging: Verifying: libxml2-2.9.7-9.el8_4.2.x86_64 1621412087 aeb381f969689e8b9a07fdf6133cefe69cb46e28a58849682bccd2961da7f90e
+16:25:14,792 INF packaging: Verifying: libyaml-0.1.7-5.el8.x86_64 1534085220 018409b1eda8be48a11a5b76b95e82ff1d9002569e0644291532d8424dc31edf
+16:25:14,793 INF packaging: Verifying: libzstd-1.4.4-1.el8.x86_64 1591348933 45cc50a8b02f9bbbbe2c8c056f34622d15d383f695916ac07821d688fcab1c25
+16:25:14,793 INF packaging: Verifying: lua-libs-5.3.4-11.el8.x86_64 1559576723 60c5b5ece7a84f1c5e320b6120b64c176ce4bc48b484b85e20a13cb52ee7db05
+16:25:14,794 INF packaging: Verifying: lz4-libs-1.8.3-3.el8_4.x86_64 1622121453 f0e3f336e2910f8282c39a5bce21ffa35d6037842d219761ed8c58b4208077cc
+16:25:14,794 INF packaging: Verifying: microdnf-3.4.0-4.el8.x86_64 1612862948 27f676917ec82ca6469e1e16c817b4a4971d432e7595c1fa89a53214bc99207f
+16:25:14,795 INF packaging: Verifying: mpfr-3.1.6-1.el8.x86_64 1534087668 28ccf9ff472c824f6c5a3c2a0c076bfa221b8e48368e43de9b3c2e83d67e8b5d
+16:25:14,796 INF packaging: Verifying: ncurses-base-6.1-7.20180224.el8.noarch 1547644074 ec84264c5a188f1e717dcac04fb190869a3e801d54b0e83769e3f42b27fd180b
+16:25:14,796 INF packaging: Verifying: ncurses-libs-6.1-7.20180224.el8.x86_64 1547643898 6d2ad3959103e46354f7491ff7911759016fa262581b0149ed5b3433b24a8129
+16:25:14,797 INF packaging: Verifying: nettle-3.4.1-4.el8_3.x86_64 1617782218 0560f6fc7a40f556747796aaeac72e1c7361ee6a63a0378287773117b1bfaf92
+16:25:14,797 INF packaging: Verifying: npth-1.5-4.el8.x86_64 1534088492 4f3c2518a3a02e4cec426928f8e5b28d9318af2b1aeaf7fc77f9d4a313f09740
+16:25:14,798 INF packaging: Verifying: openldap-2.4.46-17.el8_4.x86_64 1623854782 c49d8e36c2493003147fde89c827086fa019f9f722bfb9b45cf7277fdd88547d
+16:25:14,798 INF packaging: Verifying: openssl-libs-1:1.1.1g-15.el8_3.x86_64 1616691111 7f4ffa37a0fdc0b7de2fceca3aa2301678368bf3ac924981beb4d7232c2f465d
+16:25:14,799 INF packaging: Verifying: p11-kit-0.23.22-1.el8.x86_64 1610373390 eeb48256a3d0a6a10076ce7974074e49e99607d92c771673260b1a1e82c1f5da
+16:25:14,799 INF packaging: Verifying: p11-kit-trust-0.23.22-1.el8.x86_64 1610373390 6ff975465dcff2d8b7f6f1efb8c865aff9baed1500e8f48e4a569700fb1208ea
+16:25:14,800 INF packaging: Verifying: pcre-8.42-4.el8.x86_64 1535969821 ecc78698c4e19ce8bfd0a133bc5e8e437171465887437ca2bc18de02c43acf0f
+16:25:14,800 INF packaging: Verifying: pcre2-10.32-2.el8.x86_64 1590685238 2ae7eca09c469bbf5c362daa544ccb453f22d7267a85e7aec006a83cce163aa8
+16:25:14,801 INF packaging: Verifying: popt-1.18-1.el8.x86_64 1610017544 150e9dbb5a19483c85c25c722ff63a08d9411023c40faf88f42843fdf68ea275
+16:25:14,801 INF packaging: Verifying: publicsuffix-list-dafsa-20180723-1.el8.noarch 1534094638 f8c191d8b952621d10a1055be960bbe07be66f557c5a9d007f8908abcde1b9af
+16:25:14,802 INF packaging: Verifying: readline-7.0-10.el8.x86_64 1534096329 ef221ca565f17ed425997e97fdeb5fc27261910659fa61372b18d93e1a5613e9
+16:25:14,803 INF packaging: Verifying: redhat-release-8.4-0.6.el8.x86_64 1617179292 c1f7127360782384a0e887356f45e209762c14469a63cc0a1d8f0ef002bf1148
+16:25:14,803 INF packaging: Verifying: rootfiles-8.1-22.el8.noarch 1534096383 ad060f60303b6764e08657436147cc24cfc4bb1ccc1431796407ba005a7bcec0
+16:25:14,803 INF packaging: Verifying: rpm-4.14.3-14.el8_4.x86_64 1622479399 89055fff4b1791b122c3f61269a30a0cf2e849cc4a3ef7951757327689dcdc26
+16:25:14,804 INF packaging: Verifying: rpm-libs-4.14.3-14.el8_4.x86_64 1622479399 846a7e284988a10c5b93cdd98423f52d24c7f963f1eb22831ba74d2e31735ab1
+16:25:14,805 INF packaging: Verifying: sed-4.5-2.el8.x86_64 1589884034 f39e031ea848d9605601b3e8e9424339cec44ecb521fbd1a415915a5f373eb37
+16:25:14,805 INF packaging: Verifying: setup-2.12.2-6.el8.noarch 1586943783 aa4b8463be8bceddb296424e76ddecc80b72ffc8543b6746eadfc4972131b6e2
+16:25:14,806 INF packaging: Verifying: sqlite-libs-3.26.0-13.el8.x86_64 1606831854 4e0c74fabe6c631afdc533f7923e6e7c1381b3bb538d2b1fbb085088f9f53cb0
+16:25:14,807 INF packaging: Verifying: systemd-libs-239-45.el8_4.3.x86_64 1627473433 ffa8ded366e77c3c95154180414e651730f860904f1077b9f556433527755575
+16:25:14,807 INF packaging: Verifying: tzdata-2021a-1.el8.noarch 1611592265 eb783cb89d46af58fd6735c175ab30f904ff65aa78a6eaadc8fc750dba7af258
+16:25:14,808 INF packaging: Verifying: xz-libs-5.2.4-3.el8.x86_64 1542895708 d3813d081414edc480f5ffb428f6c9b005e33ebe8dd3a6ac8bf4d13e5aa4419b
+16:25:14,808 INF packaging: Verifying: zlib-1.2.11-17.el8.x86_64 1603788603 43a4f1c39b2a8b212d50af73d0d510adfdc4ac61be8ecdc6bd718f6cab0e5afc
+16:25:14,809 INF packaging: Verifying: langpacks-en-1.0-12.el8.noarch 1534078655 38affe91361bf56b84490d97c7e3f815965cf8d2bbb222c6c045af4bf2dff736
+16:25:17,076 DDEBUG dnf: timer: verify transaction: 2373 ms
+16:25:17,077 DDEBUG dnf: timer: transaction: 30794 ms
+16:25:17,098 DBG dnf: Installed: audit-libs-3.0-0.17.20191104git1c2f876.el8.x86_64
+16:25:17,099 DBG dnf: Installed: basesystem-11-5.el8.noarch
+16:25:17,099 DBG dnf: Installed: bash-4.4.20-1.el8_4.x86_64
+16:25:17,099 DBG dnf: Installed: brotli-1.0.6-3.el8.x86_64
+16:25:17,100 DBG dnf: Installed: bzip2-libs-1.0.6-26.el8.x86_64
+16:25:17,100 DBG dnf: Installed: ca-certificates-2020.2.41-80.0.el8_2.noarch
+16:25:17,100 DBG dnf: Installed: chkconfig-1.13-2.el8.x86_64
+16:25:17,100 DBG dnf: Installed: coreutils-single-8.30-8.el8.x86_64
+16:25:17,100 DBG dnf: Installed: crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch
+16:25:17,101 DBG dnf: Installed: curl-7.61.1-18.el8.x86_64
+16:25:17,101 DBG dnf: Installed: cyrus-sasl-lib-2.1.27-5.el8.x86_64
+16:25:17,101 DBG dnf: Installed: elfutils-libelf-0.182-3.el8.x86_64
+16:25:17,101 DBG dnf: Installed: expat-2.2.5-4.el8.x86_64
+16:25:17,102 DBG dnf: Installed: file-libs-5.33-16.el8_3.1.x86_64
+16:25:17,102 DBG dnf: Installed: filesystem-3.8-3.el8.x86_64
+16:25:17,102 DBG dnf: Installed: gawk-4.2.1-2.el8.x86_64
+16:25:17,102 DBG dnf: Installed: glib2-2.56.4-10.el8_4.1.x86_64
+16:25:17,102 DBG dnf: Installed: glibc-2.28-151.el8.x86_64
+16:25:17,103 DBG dnf: Installed: glibc-common-2.28-151.el8.x86_64
+16:25:17,103 DBG dnf: Installed: glibc-minimal-langpack-2.28-151.el8.x86_64
+16:25:17,103 DBG dnf: Installed: gmp-1:6.1.2-10.el8.x86_64
+16:25:17,103 DBG dnf: Installed: gnupg2-2.2.20-2.el8.x86_64
+16:25:17,104 DBG dnf: Installed: gnutls-3.6.14-8.el8_3.x86_64
+16:25:17,104 DBG dnf: Installed: gobject-introspection-1.56.1-1.el8.x86_64
+16:25:17,104 DBG dnf: Installed: gpgme-1.13.1-7.el8.x86_64
+16:25:17,104 DBG dnf: Installed: grep-3.1-6.el8.x86_64
+16:25:17,104 DBG dnf: Installed: info-6.5-6.el8.x86_64
+16:25:17,105 DBG dnf: Installed: json-c-0.13.1-0.4.el8.x86_64
+16:25:17,105 DBG dnf: Installed: json-glib-1.4.4-1.el8.x86_64
+16:25:17,105 DBG dnf: Installed: keyutils-libs-1.5.10-6.el8.x86_64
+16:25:17,105 DBG dnf: Installed: krb5-libs-1.18.2-8.el8.x86_64
+16:25:17,105 DBG dnf: Installed: langpacks-en-1.0-12.el8.noarch
+16:25:17,106 DBG dnf: Installed: libacl-2.2.53-1.el8.x86_64
+16:25:17,106 DBG dnf: Installed: libarchive-3.3.3-1.el8.x86_64
+16:25:17,106 DBG dnf: Installed: libassuan-2.5.1-3.el8.x86_64
+16:25:17,106 DBG dnf: Installed: libattr-2.4.48-3.el8.x86_64
+16:25:17,107 DBG dnf: Installed: libblkid-2.32.1-27.el8.x86_64
+16:25:17,107 DBG dnf: Installed: libcap-2.26-4.el8.x86_64
+16:25:17,107 DBG dnf: Installed: libcap-ng-0.7.9-5.el8.x86_64
+16:25:17,107 DBG dnf: Installed: libcom_err-1.45.6-1.el8.x86_64
+16:25:17,107 DBG dnf: Installed: libcurl-7.61.1-18.el8.x86_64
+16:25:17,108 DBG dnf: Installed: libdb-5.3.28-40.el8.x86_64
+16:25:17,108 DBG dnf: Installed: libdb-utils-5.3.28-40.el8.x86_64
+16:25:17,108 DBG dnf: Installed: libdnf-0.55.0-7.el8.x86_64
+16:25:17,108 DBG dnf: Installed: libffi-3.1-22.el8.x86_64
+16:25:17,108 DBG dnf: Installed: libgcc-8.4.1-1.el8.x86_64
+16:25:17,109 DBG dnf: Installed: libgcrypt-1.8.5-4.el8.x86_64
+16:25:17,109 DBG dnf: Installed: libgpg-error-1.31-1.el8.x86_64
+16:25:17,109 DBG dnf: Installed: libidn2-2.2.0-1.el8.x86_64
+16:25:17,109 DBG dnf: Installed: libksba-1.3.5-7.el8.x86_64
+16:25:17,110 DBG dnf: Installed: libmetalink-0.1.3-7.el8.x86_64
+16:25:17,110 DBG dnf: Installed: libmodulemd-2.9.4-2.el8.x86_64
+16:25:17,110 DBG dnf: Installed: libmount-2.32.1-27.el8.x86_64
+16:25:17,110 DBG dnf: Installed: libnghttp2-1.33.0-3.el8_2.1.x86_64
+16:25:17,110 DBG dnf: Installed: libpeas-1.22.0-6.el8.x86_64
+16:25:17,111 DBG dnf: Installed: libpsl-0.20.2-6.el8.x86_64
+16:25:17,111 DBG dnf: Installed: librepo-1.12.0-3.el8.x86_64
+16:25:17,111 DBG dnf: Installed: librhsm-0.0.3-4.el8.x86_64
+16:25:17,111 DBG dnf: Installed: libselinux-2.9-5.el8.x86_64
+16:25:17,111 DBG dnf: Installed: libsepol-2.9-2.el8.x86_64
+16:25:17,112 DBG dnf: Installed: libsigsegv-2.11-5.el8.x86_64
+16:25:17,112 DBG dnf: Installed: libsmartcols-2.32.1-27.el8.x86_64
+16:25:17,112 DBG dnf: Installed: libsolv-0.7.16-2.el8.x86_64
+16:25:17,112 DBG dnf: Installed: libssh-0.9.4-2.el8.x86_64
+16:25:17,113 DBG dnf: Installed: libssh-config-0.9.4-2.el8.noarch
+16:25:17,113 DBG dnf: Installed: libstdc++-8.4.1-1.el8.x86_64
+16:25:17,113 DBG dnf: Installed: libtasn1-4.13-3.el8.x86_64
+16:25:17,113 DBG dnf: Installed: libunistring-0.9.9-3.el8.x86_64
+16:25:17,113 DBG dnf: Installed: libusbx-1.0.23-4.el8.x86_64
+16:25:17,114 DBG dnf: Installed: libuuid-2.32.1-27.el8.x86_64
+16:25:17,114 DBG dnf: Installed: libverto-0.3.0-5.el8.x86_64
+16:25:17,114 DBG dnf: Installed: libxcrypt-4.1.1-4.el8.x86_64
+16:25:17,114 DBG dnf: Installed: libxml2-2.9.7-9.el8_4.2.x86_64
+16:25:17,114 DBG dnf: Installed: libyaml-0.1.7-5.el8.x86_64
+16:25:17,115 DBG dnf: Installed: libzstd-1.4.4-1.el8.x86_64
+16:25:17,115 DBG dnf: Installed: lua-libs-5.3.4-11.el8.x86_64
+16:25:17,115 DBG dnf: Installed: lz4-libs-1.8.3-3.el8_4.x86_64
+16:25:17,115 DBG dnf: Installed: microdnf-3.4.0-4.el8.x86_64
+16:25:17,116 DBG dnf: Installed: mpfr-3.1.6-1.el8.x86_64
+16:25:17,116 DBG dnf: Installed: ncurses-base-6.1-7.20180224.el8.noarch
+16:25:17,116 DBG dnf: Installed: ncurses-libs-6.1-7.20180224.el8.x86_64
+16:25:17,116 DBG dnf: Installed: nettle-3.4.1-4.el8_3.x86_64
+16:25:17,116 DBG dnf: Installed: npth-1.5-4.el8.x86_64
+16:25:17,117 DBG dnf: Installed: openldap-2.4.46-17.el8_4.x86_64
+16:25:17,117 DBG dnf: Installed: openssl-libs-1:1.1.1g-15.el8_3.x86_64
+16:25:17,117 DBG dnf: Installed: p11-kit-0.23.22-1.el8.x86_64
+16:25:17,117 DBG dnf: Installed: p11-kit-trust-0.23.22-1.el8.x86_64
+16:25:17,117 DBG dnf: Installed: pcre-8.42-4.el8.x86_64
+16:25:17,118 DBG dnf: Installed: pcre2-10.32-2.el8.x86_64
+16:25:17,118 DBG dnf: Installed: popt-1.18-1.el8.x86_64
+16:25:17,118 DBG dnf: Installed: publicsuffix-list-dafsa-20180723-1.el8.noarch
+16:25:17,118 DBG dnf: Installed: readline-7.0-10.el8.x86_64
+16:25:17,118 DBG dnf: Installed: redhat-release-8.4-0.6.el8.x86_64
+16:25:17,119 DBG dnf: Installed: rootfiles-8.1-22.el8.noarch
+16:25:17,119 DBG dnf: Installed: rpm-4.14.3-14.el8_4.x86_64
+16:25:17,119 DBG dnf: Installed: rpm-libs-4.14.3-14.el8_4.x86_64
+16:25:17,119 DBG dnf: Installed: sed-4.5-2.el8.x86_64
+16:25:17,120 DBG dnf: Installed: setup-2.12.2-6.el8.noarch
+16:25:17,120 DBG dnf: Installed: sqlite-libs-3.26.0-13.el8.x86_64
+16:25:17,120 DBG dnf: Installed: systemd-libs-239-45.el8_4.3.x86_64
+16:25:17,120 DBG dnf: Installed: tzdata-2021a-1.el8.noarch
+16:25:17,120 DBG dnf: Installed: xz-libs-5.2.4-3.el8.x86_64
+16:25:17,121 DBG dnf: Installed: zlib-1.2.11-17.el8.x86_64
+16:25:17,121 DDEBUG dnf: Cleaning up.
+16:25:17,122 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/rootfiles-8.1-22.el8.noarch.rpm removed
+16:25:17,123 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/p11-kit-trust-0.23.22-1.el8.x86_64.rpm removed
+16:25:17,123 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/chkconfig-1.13-2.el8.x86_64.rpm removed
+16:25:17,123 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/ca-certificates-2020.2.41-80.0.el8_2.noarch.rpm removed
+16:25:17,124 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/systemd-libs-239-45.el8_4.3.x86_64.rpm removed
+16:25:17,124 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libcurl-7.61.1-18.el8.x86_64.rpm removed
+16:25:17,124 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/bzip2-libs-1.0.6-26.el8.x86_64.rpm removed
+16:25:17,124 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libcap-2.26-4.el8.x86_64.rpm removed
+16:25:17,125 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libmetalink-0.1.3-7.el8.x86_64.rpm removed
+16:25:17,125 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libksba-1.3.5-7.el8.x86_64.rpm removed
+16:25:17,125 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/gnutls-3.6.14-8.el8_3.x86_64.rpm removed
+16:25:17,126 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/glibc-minimal-langpack-2.28-151.el8.x86_64.rpm removed
+16:25:17,126 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/openssl-libs-1.1.1g-15.el8_3.x86_64.rpm removed
+16:25:17,126 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libcom_err-1.45.6-1.el8.x86_64.rpm removed
+16:25:17,126 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libverto-0.3.0-5.el8.x86_64.rpm removed
+16:25:17,127 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/zlib-1.2.11-17.el8.x86_64.rpm removed
+16:25:17,127 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/pcre2-10.32-2.el8.x86_64.rpm removed
+16:25:17,127 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/krb5-libs-1.18.2-8.el8.x86_64.rpm removed
+16:25:17,127 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libffi-3.1-22.el8.x86_64.rpm removed
+16:25:17,128 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libselinux-2.9-5.el8.x86_64.rpm removed
+16:25:17,128 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libcap-ng-0.7.9-5.el8.x86_64.rpm removed
+16:25:17,128 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libstdc++-8.4.1-1.el8.x86_64.rpm removed
+16:25:17,128 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libzstd-1.4.4-1.el8.x86_64.rpm removed
+16:25:17,128 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libmount-2.32.1-27.el8.x86_64.rpm removed
+16:25:17,129 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/librepo-1.12.0-3.el8.x86_64.rpm removed
+16:25:17,129 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libssh-config-0.9.4-2.el8.noarch.rpm removed
+16:25:17,129 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/glibc-common-2.28-151.el8.x86_64.rpm removed
+16:25:17,129 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/librhsm-0.0.3-4.el8.x86_64.rpm removed
+16:25:17,130 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libxml2-2.9.7-9.el8_4.2.x86_64.rpm removed
+16:25:17,130 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/curl-7.61.1-18.el8.x86_64.rpm removed
+16:25:17,130 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/expat-2.2.5-4.el8.x86_64.rpm removed
+16:25:17,130 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/brotli-1.0.6-3.el8.x86_64.rpm removed
+16:25:17,131 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/openldap-2.4.46-17.el8_4.x86_64.rpm removed
+16:25:17,131 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/p11-kit-0.23.22-1.el8.x86_64.rpm removed
+16:25:17,131 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/rpm-4.14.3-14.el8_4.x86_64.rpm removed
+16:25:17,131 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/audit-libs-3.0-0.17.20191104git1c2f876.el8.x86_64.rpm removed
+16:25:17,132 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/ncurses-base-6.1-7.20180224.el8.noarch.rpm removed
+16:25:17,132 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/glibc-2.28-151.el8.x86_64.rpm removed
+16:25:17,133 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/info-6.5-6.el8.x86_64.rpm removed
+16:25:17,133 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/mpfr-3.1.6-1.el8.x86_64.rpm removed
+16:25:17,133 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libacl-2.2.53-1.el8.x86_64.rpm removed
+16:25:17,133 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libnghttp2-1.33.0-3.el8_2.1.x86_64.rpm removed
+16:25:17,133 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/publicsuffix-list-dafsa-20180723-1.el8.noarch.rpm removed
+16:25:17,134 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libsolv-0.7.16-2.el8.x86_64.rpm removed
+16:25:17,134 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/gpgme-1.13.1-7.el8.x86_64.rpm removed
+16:25:17,134 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libidn2-2.2.0-1.el8.x86_64.rpm removed
+16:25:17,135 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/bash-4.4.20-1.el8_4.x86_64.rpm removed
+16:25:17,135 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/elfutils-libelf-0.182-3.el8.x86_64.rpm removed
+16:25:17,135 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libsmartcols-2.32.1-27.el8.x86_64.rpm removed
+16:25:17,135 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/json-c-0.13.1-0.4.el8.x86_64.rpm removed
+16:25:17,135 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/basesystem-11-5.el8.noarch.rpm removed
+16:25:17,136 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libmodulemd-2.9.4-2.el8.x86_64.rpm removed
+16:25:17,136 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/lua-libs-5.3.4-11.el8.x86_64.rpm removed
+16:25:17,136 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libxcrypt-4.1.1-4.el8.x86_64.rpm removed
+16:25:17,136 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libtasn1-4.13-3.el8.x86_64.rpm removed
+16:25:17,136 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/lz4-libs-1.8.3-3.el8_4.x86_64.rpm removed
+16:25:17,137 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libunistring-0.9.9-3.el8.x86_64.rpm removed
+16:25:17,137 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libgcrypt-1.8.5-4.el8.x86_64.rpm removed
+16:25:17,137 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/json-glib-1.4.4-1.el8.x86_64.rpm removed
+16:25:17,137 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/rpm-libs-4.14.3-14.el8_4.x86_64.rpm removed
+16:25:17,138 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/keyutils-libs-1.5.10-6.el8.x86_64.rpm removed
+16:25:17,138 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/gnupg2-2.2.20-2.el8.x86_64.rpm removed
+16:25:17,138 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libsepol-2.9-2.el8.x86_64.rpm removed
+16:25:17,139 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libgcc-8.4.1-1.el8.x86_64.rpm removed
+16:25:17,139 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libassuan-2.5.1-3.el8.x86_64.rpm removed
+16:25:17,139 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/gmp-6.1.2-10.el8.x86_64.rpm removed
+16:25:17,139 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libdnf-0.55.0-7.el8.x86_64.rpm removed
+16:25:17,140 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libssh-0.9.4-2.el8.x86_64.rpm removed
+16:25:17,140 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libblkid-2.32.1-27.el8.x86_64.rpm removed
+16:25:17,140 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/readline-7.0-10.el8.x86_64.rpm removed
+16:25:17,140 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/redhat-release-8.4-0.6.el8.x86_64.rpm removed
+16:25:17,140 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/setup-2.12.2-6.el8.noarch.rpm removed
+16:25:17,141 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/gobject-introspection-1.56.1-1.el8.x86_64.rpm removed
+16:25:17,141 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libdb-utils-5.3.28-40.el8.x86_64.rpm removed
+16:25:17,141 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/filesystem-3.8-3.el8.x86_64.rpm removed
+16:25:17,141 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/xz-libs-5.2.4-3.el8.x86_64.rpm removed
+16:25:17,142 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/ncurses-libs-6.1-7.20180224.el8.x86_64.rpm removed
+16:25:17,142 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libdb-5.3.28-40.el8.x86_64.rpm removed
+16:25:17,142 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libsigsegv-2.11-5.el8.x86_64.rpm removed
+16:25:17,142 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libattr-2.4.48-3.el8.x86_64.rpm removed
+16:25:17,142 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libyaml-0.1.7-5.el8.x86_64.rpm removed
+16:25:17,143 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/sqlite-libs-3.26.0-13.el8.x86_64.rpm removed
+16:25:17,143 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/tzdata-2021a-1.el8.noarch.rpm removed
+16:25:17,143 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/microdnf-3.4.0-4.el8.x86_64.rpm removed
+16:25:17,143 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libpsl-0.20.2-6.el8.x86_64.rpm removed
+16:25:17,144 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch.rpm removed
+16:25:17,144 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libusbx-1.0.23-4.el8.x86_64.rpm removed
+16:25:17,144 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/sed-4.5-2.el8.x86_64.rpm removed
+16:25:17,144 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/langpacks-en-1.0-12.el8.noarch.rpm removed
+16:25:17,144 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/nettle-3.4.1-4.el8_3.x86_64.rpm removed
+16:25:17,145 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/popt-1.18-1.el8.x86_64.rpm removed
+16:25:17,145 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libarchive-3.3.3-1.el8.x86_64.rpm removed
+16:25:17,145 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/cyrus-sasl-lib-2.1.27-5.el8.x86_64.rpm removed
+16:25:17,145 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/pcre-8.42-4.el8.x86_64.rpm removed
+16:25:17,146 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libgpg-error-1.31-1.el8.x86_64.rpm removed
+16:25:17,146 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libpeas-1.22.0-6.el8.x86_64.rpm removed
+16:25:17,146 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/coreutils-single-8.30-8.el8.x86_64.rpm removed
+16:25:17,146 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/file-libs-5.33-16.el8_3.1.x86_64.rpm removed
+16:25:17,147 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/grep-3.1-6.el8.x86_64.rpm removed
+16:25:17,147 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/libuuid-2.32.1-27.el8.x86_64.rpm removed
+16:25:17,147 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/gawk-4.2.1-2.el8.x86_64.rpm removed
+16:25:17,147 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/npth-1.5-4.el8.x86_64.rpm removed
+16:25:17,148 DDEBUG dnf: /mnt/sysroot/dnf.package.cache/glib2-2.56.4-10.el8_4.1.x86_64.rpm removed
+16:25:17,786 INF packaging: Cleaning up downloaded packages: /mnt/sysroot/dnf.package.cache
+16:25:17,825 DDEBUG dnf: Cleaning up.
+16:25:17,826 INF dnf: The downloaded packages were saved in cache until the next successful transaction.
+16:25:17,826 INF dnf: You can remove cached packages by executing 'dnf clean packages'.

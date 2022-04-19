@@ -1,0 +1,144 @@
+---
+- name: get a list of rpm packages installed on host machine
+  package_facts:
+    manager: "auto"
+  when: false
+
+- name: make sure blivet is available
+  package:
+    name: "{{ blivet_package_list }}"
+    state: present
+
+- debug:
+    var: storage_pools
+
+- debug:
+    var: storage_volumes
+
+- name: get required packages
+  redhat.rhel_system_roles.blivet:
+    pools: "{{ storage_pools|default([]) }}"
+    volumes: "{{ storage_volumes|default([]) }}"
+    use_partitions: "{{ storage_use_partitions }}"
+    disklabel_type: "{{ storage_disklabel_type }}"
+    pool_defaults: "{{ storage_pool_defaults }}"
+    volume_defaults: "{{ storage_volume_defaults }}"
+    packages_only: true
+  register: package_info
+
+- name: make sure required packages are installed
+  package:
+    name: "{{ package_info.packages }}"
+    state: present
+
+- service_facts:
+
+- set_fact:
+  # For an explanation of the to_json|from_json silliness, see
+  # https://github.com/ansible-collections/community.general/issues/320
+    storage_cryptsetup_services: "{{ ansible_facts.services|to_json|from_json|json_query('*.name')|json_query('[?starts_with(@, `\"systemd-cryptsetup@\"`)]') }}"
+
+- block:
+    - name: Mask the systemd cryptsetup services
+      systemd:
+        name: "{{ item }}"
+        masked: yes
+      loop: "{{ storage_cryptsetup_services }}"
+
+    - name: manage the pools and volumes to match the specified state
+      redhat.rhel_system_roles.blivet:
+        pools: "{{ storage_pools|default([]) }}"
+        volumes: "{{ storage_volumes|default([]) }}"
+        use_partitions: "{{ storage_use_partitions }}"
+        disklabel_type: "{{ storage_disklabel_type }}"
+        pool_defaults: "{{ storage_pool_defaults }}"
+        volume_defaults: "{{ storage_volume_defaults }}"
+        safe_mode: "{{ storage_safe_mode }}"
+        diskvolume_mkfs_option_map: "{{ __storage_blivet_diskvolume_mkfs_option_map|d(omit) }}"
+      register: blivet_output
+  rescue:
+    - fail:
+        msg: "{{ ansible_failed_result }}"
+  always:
+    - name: Unmask the systemd cryptsetup services
+      systemd:
+        name: "{{ item }}"
+        masked: no
+      loop: "{{ storage_cryptsetup_services }}"
+
+- debug:
+    var: blivet_output
+
+- name: set the list of pools for test verification
+  set_fact:
+    _storage_pools_list: "{{ blivet_output.pools }}"
+
+- name: set the list of volumes for test verification
+  set_fact:
+    _storage_volumes_list: "{{ blivet_output.volumes }}"
+
+# Mount Management
+#
+# remove obsolete mounts
+#  removed
+#  reformatted (just add w/ new settings?)
+#  changed options? (just add w/ new settings?)
+# add new mounts
+#
+# XXX Apparently we have to do the removals, then tell systemd to
+#     update its view, then set up the new mounts. Otherwise,
+#     systemd will forcibly prevent mounting a new volume to an
+#     existing mount point.
+- name: remove obsolete mounts
+  mount:
+    src: "{{ mount_info['src']|default(omit) }}"
+    path: "{{ mount_info['path'] }}"
+    fstype: "{{ mount_info['fstype']|default(omit) }}"
+    opts: "{{ mount_info['opts']|default(omit) }}"
+    state: "{{ mount_info['state'] }}"
+  loop: "{{ blivet_output.mounts|json_query('[?state==`absent`]') }}"
+  loop_control:
+    loop_var: mount_info
+
+- name: tell systemd to refresh its view of /etc/fstab
+  systemd:
+    daemon_reload: yes
+  when: blivet_output['mounts']
+
+- name: set up new/current mounts
+  mount:
+    src: "{{ mount_info['src']|default(omit) }}"
+    path: "{{ mount_info['path'] }}"
+    fstype: "{{ mount_info['fstype']|default(omit) }}"
+    opts: "{{ mount_info['opts']|default(omit) }}"
+    state: "{{ mount_info['state'] }}"
+  loop: "{{ blivet_output.mounts|json_query('[?state!=`absent`]') }}"
+  loop_control:
+    loop_var: mount_info
+
+- name: tell systemd to refresh its view of /etc/fstab
+  systemd:
+    daemon_reload: yes
+  when: blivet_output['mounts']
+
+#
+# Manage /etc/crypttab
+#
+- name: Manage /etc/crypttab to account for changes we just made
+  crypttab:
+    name: "{{ entry.name }}"
+    backing_device: "{{ entry.backing_device }}"
+    password: "{{ entry.password }}"
+    state: "{{ entry.state }}"
+  loop: "{{ blivet_output.crypts }}"
+  loop_control:
+    loop_var: entry
+
+#
+# Update facts since we may have changed system state.
+#
+# Should this be in a handler instead?
+#
+- name: Update facts
+  setup:
+  when: not ansible_check_mode

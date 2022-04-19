@@ -1,0 +1,936 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07df4597b3b03d01a76f926caab2bfde13a733018e81d77e3af3db881ece2828",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/network-integration.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d67b11263a8f50b30bf43c7c2b4bdd8dc4f173f0b5dd22761311360dfbd56a1d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e82c716422654d049fd043bbf84d624ed532f96741e032f52f14c19e970d3e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/tasks/redirection.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "53aeba20178e0fdbdec844267225b427b26c2d94db09d1853056c471117e228a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/tasks/cli.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79c2820b2b63ca8b1b4025dfdac534f3296e24d72ad688c06d33268cfafff497",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d7f58a1d24f52718c31cc560ba27eaf69da2df9e8b0d26516560b547d1d9da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/tests/cli",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/tests/cli/basic.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b785dd07b9a4fc058c6421ed3c0584ea9eb899f68943648b864ed1df6ab7b42",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_firewallrules/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec4fa30fc4a7b9e002d1c7b3932286ace72ba36e4f532e2cc79f49d07e0794c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e82c716422654d049fd043bbf84d624ed532f96741e032f52f14c19e970d3e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/tasks/redirection.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "53aeba20178e0fdbdec844267225b427b26c2d94db09d1853056c471117e228a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/tasks/cli.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79c2820b2b63ca8b1b4025dfdac534f3296e24d72ad688c06d33268cfafff497",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d7f58a1d24f52718c31cc560ba27eaf69da2df9e8b0d26516560b547d1d9da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/tests/cli",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/tests/cli/basic.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e9660485c55b73a257b8f527e2213d21e7249da6fe831bbc778548903bf117c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_apikey/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec4fa30fc4a7b9e002d1c7b3932286ace72ba36e4f532e2cc79f49d07e0794c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e82c716422654d049fd043bbf84d624ed532f96741e032f52f14c19e970d3e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/tasks/redirection.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "53aeba20178e0fdbdec844267225b427b26c2d94db09d1853056c471117e228a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/tasks/cli.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79c2820b2b63ca8b1b4025dfdac534f3296e24d72ad688c06d33268cfafff497",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d7f58a1d24f52718c31cc560ba27eaf69da2df9e8b0d26516560b547d1d9da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/tests/cli",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/tests/cli/basic.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0606f1b59e3c2abd24553de79bbd8862d6bb8f40b217d37a7aeb857b1a5c3f5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_log_inspectionrules/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec4fa30fc4a7b9e002d1c7b3932286ace72ba36e4f532e2cc79f49d07e0794c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e82c716422654d049fd043bbf84d624ed532f96741e032f52f14c19e970d3e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/tasks/redirection.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "53aeba20178e0fdbdec844267225b427b26c2d94db09d1853056c471117e228a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/tasks/cli.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79c2820b2b63ca8b1b4025dfdac534f3296e24d72ad688c06d33268cfafff497",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d7f58a1d24f52718c31cc560ba27eaf69da2df9e8b0d26516560b547d1d9da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/tests/cli",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/tests/cli/basic.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e42b62315781e7d0342ef038f6286562448ef50f8c91cba7f8d777010dbf1111",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_system_settings/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec4fa30fc4a7b9e002d1c7b3932286ace72ba36e4f532e2cc79f49d07e0794c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e82c716422654d049fd043bbf84d624ed532f96741e032f52f14c19e970d3e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/tasks/redirection.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "53aeba20178e0fdbdec844267225b427b26c2d94db09d1853056c471117e228a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/tasks/cli.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79c2820b2b63ca8b1b4025dfdac534f3296e24d72ad688c06d33268cfafff497",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d7f58a1d24f52718c31cc560ba27eaf69da2df9e8b0d26516560b547d1d9da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/tests/cli",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/tests/cli/basic.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5344a25d1a89c9205bf031652d582012ba33a8bb210922b7148079b3ec41d132",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/legacy_deepsec_syslog/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec4fa30fc4a7b9e002d1c7b3932286ace72ba36e4f532e2cc79f49d07e0794c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e82c716422654d049fd043bbf84d624ed532f96741e032f52f14c19e970d3e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/tasks/redirection.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "53aeba20178e0fdbdec844267225b427b26c2d94db09d1853056c471117e228a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/tasks/cli.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79c2820b2b63ca8b1b4025dfdac534f3296e24d72ad688c06d33268cfafff497",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d7f58a1d24f52718c31cc560ba27eaf69da2df9e8b0d26516560b547d1d9da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/tests/cli",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/tests/cli/basic.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dfaff60e1682e913b05d82a52bd1d80f14fac60ece4d8da54c6d29f7d5ee094b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deepsec_anti_malware/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec4fa30fc4a7b9e002d1c7b3932286ace72ba36e4f532e2cc79f49d07e0794c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/target-prefixes.network",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c4b534c2ac581f6f1baeeff559ffdcf73c10d8e415fa32d0a446a40dbfb7236",
+   "format": 1
+  },
+  {
+   "name": "tests/unit",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/mock.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "52ecd54195edca933104eb3e937547c7395ff604ada2694a8b184c2c1466dbf1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/unittest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ed698b1faec43d87a2c1ebcb15a2aae48b09ff355bb9a598e5f5a1c928dbb30",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/builtins.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba13a350ade8ef804336f888d5883b8e54f8bddfb9d0fadc10277a8ca6540f4e",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/vault_helper.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "feae23166b6eb502f7d9b77c314970516c9a99aaad7de01295b4dfdad53c5c09",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/loader.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0cfbf4c710a5d5725f84d5f34ab76ec1a0e853397cd945c90fd97769f89dddc5",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/path.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "77760b066115f34f1ecce2387f8194ba254f3dc44ed89f439f3e6adfd258cdf1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/yaml_helper.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "94e2f3c867d2582c9f7a0e99e544718e355025c4a51c9925e70158fa89b3609e",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/procenv.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7f9e134ebd607e1b2910d62cd8997535c8a2cced4473a2bf5cdaae2233e3049",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules/utils.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ecb4e4c4a3a490b49d33d043d246bea11580cfe5460e70630a793c2ffd0ff450",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules/conftest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2af4846e50d461a131ad3edfb609fbb39a9eb1796048c62e4ead8234bcf5c6a1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49ba996dc4735c3463e9af561344346dfae14bcc1a68096ce78364b377f0df1f",
+   "format": 1
+  },
+  {
+   "name": "tox.ini",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa849abc071b00742c00b96e3df480355a2af2c60e4c920f085a9ac5616d8d4b",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_syslog_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79962a653d59cdd224991b7f57a12d14b2118eb68daa28ee4e50b3445c599a9d",
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_hosts_info_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb69d5f6267ddb9489b6925a8880aa45b2933f3c23e09e31091e798e3dc1e43b",
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_log_inspectionrules_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "866ae63e42f2328e5ee2a57c1527710b36f45250e82087bfbfac5386cba893b0",
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_httpapi.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f321b145e041e398152faeb117c4d1e2350914d8dc0d86542a5b71b43bdc9d38",
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_system_settings_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0eae77e321fe7bde5fffd74f95d76b9860d58c8383631ef0ed23db09ed980739",
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_apikey_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf78b00034a633456943cc9549e550ed81babcdd1c23c4947b49a1930473712e",
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_anti_malware_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "234a6ee2064e82158aa3ceffdf4dd444ae94c5380119167da9a76aa7e45e0bfa",
+   "format": 1
+  },
+  {
+   "name": "docs/trendmicro.deepsec.deepsec_firewallrules_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ecfde0d9df67ed30a51e64f304d379aaa2db8b0b71b5f4d82c7f4a20858c91c",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4752a1f18b4605130ba63595396b642f79b4e72cb3da2fac5f103d9e448943fd",
+   "format": 1
+  },
+  {
+   "name": "test-requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69976b424fdcd1d68a764dd63c3d16ea4f5120510611f642b4872702daa66b6b",
+   "format": 1
+  },
+  {
+   "name": "changelogs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/changelog.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c0cea35c3fb8b37ce945ba65d43f918e3dd013827d824a5f1daea264a420684",
+   "format": 1
+  },
+  {
+   "name": "changelogs/config.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e0d08eccbf09f3ca2870051b82bb1abc27899d9711eea4bfb453a6962c8b319",
+   "format": 1
+  },
+  {
+   "name": "changelogs/CHANGELOG.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4429773be523db60033d9c2fabc958b0878b4d48a1520f5cdf9409d20d8382ff",
+   "format": 1
+  },
+  {
+   "name": "requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deepsec_syslog.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8a320935858208e2532007cdeda9e88faf3cfce146dbd6704fc9bbecb6556f2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deepsec_hosts_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "167de51bfe044e2316239a0fe81c6ae07fcde51e5323a63329d8fcaeb4aacee1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deepsec_log_inspectionrules.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4fec3a0080739b97b4ee23ea18ca68d7b111033a61913bce2529d61d1dd4ba1a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deepsec_apikey.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20e2d7aeb81f907ab5f07b183cc319619e5708bcbc23af6fbc4a2209c1575320",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deepsec_system_settings.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c305ef13809d5ed56062d3e4aba5fc53bd5c0579edbee32a33f2f18fa4402f23",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deepsec_anti_malware.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1860b32d14cdbb144dc28aea642d843e6ee80dd86fbd15402c8031b652f4d2c7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deepsec_firewallrules.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bbea35b33f2d3a6ba57dedde9bf46f475a0440ecfb5a932219722e9bc3353c59",
+   "format": 1
+  },
+  {
+   "name": "plugins/httpapi",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/httpapi/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/httpapi/deepsec.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9c260a0252e35f44385ab6c35435e6a48e96deb9f9fde67cc84c542b5bd2a8a4",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/deepsec.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f4a62eb01ab76435b40138d7e47b6192d3688956386d1cd67c7780cc28cb938",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

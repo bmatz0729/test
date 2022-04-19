@@ -1,0 +1,32 @@
+{% if item.path is defined %}
+ruleset(name="{{ item.name }}") {
+{%   if item.property | d() %}
+    :{{ item.property }}, {{ item.property_op | d('contains') }}, "{{ item.property_value | d('error') }}" {{ item.path }}
+{%   elif item.exclude | d([]) %}
+    {{ item.facility | d('*') }}.{{ item.severity | d('*') }};{{ item.exclude | join(';') }} {{ item.path }}
+{%   else %}
+    {{ item.facility | d('*') }}.{{ item.severity | d('*') }} {{ item.path }}
+{%   endif %}
+}
+{% else %}
+ruleset(name="{{ item.name }}") {
+    # Log all kernel messages to the console.
+    # Logging much else clutters up the screen.
+    kern.*                                                 /dev/console
+    # Log anything (except mail) of level info or higher.
+    # Don't log private authentication messages!
+    *.info;mail.none;authpriv.none;cron.none                {{ __rsyslog_system_log_dir }}/messages
+    # The authpriv file has restricted access.
+    authpriv.*                                              {{ __rsyslog_system_log_dir }}/secure
+    # Log all the mail messages in one place.
+    mail.*                                                  -{{ __rsyslog_system_log_dir }}/maillog
+    # Log cron stuff
+    cron.*                                                  -{{ __rsyslog_system_log_dir }}/cron
+    # Everybody gets emergency messages
+    *.emerg                                                  :omusrmsg:*
+    # Save news errors of level crit and higher in a special file.
+    uucp,news.crit                                          {{ __rsyslog_system_log_dir }}/spooler
+    # Save boot messages also to boot.log
+    local7.*                                                {{ __rsyslog_system_log_dir }}/boot.log
+}
+{% endif %}

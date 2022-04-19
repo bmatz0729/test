@@ -1,0 +1,5 @@
+[2022-04-18 17:40:19.480] [remoteagent] [info] Installing extension: hnw.vscode-auto-open-markdown-preview
+[2022-04-18 17:40:19.932] [remoteagent] [info] Extracted extension to /home/student11/.local/share/code-server/extensions/.bfbebc9c-f2ad-42cb-ae50-eada79efa66b: hnw.vscode-auto-open-markdown-preview
+[2022-04-18 17:40:19.938] [remoteagent] [info] Renamed to /home/student11/.local/share/code-server/extensions/hnw.vscode-auto-open-markdown-preview-0.0.4
+[2022-04-18 17:40:19.939] [remoteagent] [info] Extracting completed. hnw.vscode-auto-open-markdown-preview
+[2022-04-18 17:40:19.940] [remoteagent] [info] Extension installed successfully: hnw.vscode-auto-open-markdown-preview

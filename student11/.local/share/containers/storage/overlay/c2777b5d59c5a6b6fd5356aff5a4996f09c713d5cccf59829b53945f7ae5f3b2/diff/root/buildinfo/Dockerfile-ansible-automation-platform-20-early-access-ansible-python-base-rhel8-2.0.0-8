@@ -1,0 +1,39 @@
+#@follow_tag(registry.redhat.io/ubi8/ubi-minimal:latest)
+FROM sha256:cf2faf23cb4655c0a430827731009da042b788bdfe0e8061940d8a5441e9a978
+# ============================================================================
+COPY RH-IT-Root-CA.crt /etc/pki/ca-trust/source/anchors/RH-IT-Root-CA.crt
+
+RUN microdnf update -y --nodocs --setopt install_weak_deps=0 \
+  && microdnf install -y --nodocs --setopt install_weak_deps=0 dumb-init glibc-langpack-en python38-pip \
+  && rpm -e --nodeps python38-pip-wheel python38-pip \
+  && update-ca-trust \
+  && rpm -i $(grep odcs /etc/yum.repos.d/odcs-*.repo | grep baseurl | cut -d '=' -f2 | sed 's/$basearch/x86_64/g' | awk '{ print $1 }')/Packages/p/python38-pip-wheel-20.2.4-4.el8.noarch.rpm \
+  && rpm -i $(grep odcs /etc/yum.repos.d/odcs-*.repo | grep baseurl | cut -d '=' -f2 | sed 's/$basearch/x86_64/g' | awk '{ print $1 }')/Packages/p/python38-pip-20.2.4-4.el8.noarch.rpm \
+  && rm /etc/pki/ca-trust/source/anchors/RH-IT-Root-CA.crt \
+  && update-ca-trust \
+  && microdnf clean all \
+  && rm -rf /var/cache/{dnf,yum} \
+  && rm -rf /var/lib/dnf/history.* \
+  && rm -rf /var/log/*
+
+# NOTE(pabelanger): We do this to allow users to install python36 but not
+# change python3 to python36.
+RUN alternatives --set python3 /usr/bin/python3.8
+
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+
+ENV DESCRIPTION="Red Hat Ansible Automation Platform Python Execution Environment" \
+    container=oci
+
+LABEL com.redhat.component="ansible-python-base-container" \
+      name="ansible-automation-platform-20-early-access/ansible-python-base-rhel8" \
+      version="2.0.0" \
+      summary="${DESCRIPTION}" \
+      io.openshift.expose-services="" \
+      io.openshift.tags="automation,ansible" \
+      io.k8s.display-name="ansible-python-base-rhel8" \
+      maintainer="Ansible Automation Platform Productization Team" \
+      description="${DESCRIPTION}"
+
+ADD ansible-python-base-container-2.0.0-8.json /root/buildinfo/content_manifests/ansible-python-base-container-2.0.0-8.json
+LABEL "release"="8" "com.redhat.license_terms"="https://www.redhat.com/agreements" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2021-08-10T16:14:20.115325" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="f2053ce4c1bbc7cb682ccd1aae4b461f1c1e5677" "com.redhat.build-host"="cpt-1003.osbs.prod.upshift.rdu2.redhat.com" "io.k8s.description"="Red Hat Ansible Automation Platform Python Execution Environment" "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ansible-automation-platform-20-early-access/ansible-python-base-rhel8/images/2.0.0-8"

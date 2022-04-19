@@ -1,0 +1,32 @@
+---
+- name: Check whether key exists
+  stat: path="{{ kdump_sshkey }}"
+  register: sshkey_stats
+
+- name: Create key
+  command: "/usr/bin/ssh-keygen -t rsa -f {{ kdump_sshkey }} -N '' "
+  when: not sshkey_stats.stat.exists
+
+- name: Fetch key
+  slurp:
+    src: "{{ kdump_sshkey }}.pub"
+  register: keydata
+
+- name: Add key to authorized keys
+  authorized_key:
+    user: "{{ kdump_ssh_user }}"
+    key: "{{ keydata.content|b64decode }}"
+    state: present
+  delegate_to: "{{ kdump_ssh_server }}"
+
+- name: Fetch the servers public key
+  slurp:
+    src: /etc/ssh/ssh_host_rsa_key.pub
+  register: serverpubkey
+  delegate_to: "{{ kdump_ssh_server }}"
+
+- name: Add the servers public key to known_hosts on managed node
+  known_hosts:
+    key: "{{ kdump_ssh_server_location }} {{ serverpubkey.content | b64decode }}"
+    name: "{{ kdump_ssh_server_location }}"
+    path: /etc/ssh/ssh_known_hosts

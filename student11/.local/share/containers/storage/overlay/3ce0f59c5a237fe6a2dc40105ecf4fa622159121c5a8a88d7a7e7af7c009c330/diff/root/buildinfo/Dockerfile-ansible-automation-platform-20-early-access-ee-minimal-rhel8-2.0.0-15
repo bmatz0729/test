@@ -1,0 +1,84 @@
+ARG REMOTE_SOURCE
+ARG REMOTE_SOURCE_DIR
+ARG REMOTE_SOURCE_APP_DIR=$REMOTE_SOURCE_DIR/app
+ARG PIP_CERT
+
+FROM sha256:81b675cc65f8adbcea4aee0e326be5c96fb6c43d1a60f6f0f46af70c21d41774 AS builder
+# =============================================================================
+ARG REMOTE_SOURCE_DIR
+ARG REMOTE_SOURCE_APP_DIR
+
+# NOTE(pabelanger): Copy in data from https://cachito.engineering.redhat.com
+# https://source.redhat.com/groups/public/container-build-system/container_build_system_wiki/containers_from_source_multistage_builds_in_osbs#jive_content_id_Cachito_Integration_for_pip
+COPY $REMOTE_SOURCE $REMOTE_SOURCE_DIR
+
+COPY . /tmp/src
+
+# NOTE(pabelanger): Combined both requirements files for upper-constraints.txt
+RUN cd $REMOTE_SOURCE_APP_DIR/ee-minimal \
+  && cat build-requirements.txt requirements.txt | sort > /tmp/src/upper-constraints.txt
+
+# NOTE(pabelanger): Disable build isolation for pip3. This means we can use
+# existing python RPMs for build dependencies over adding them to cachito.
+ENV PIP_OPTS=--no-build-isolation
+RUN assemble
+
+FROM sha256:ec23db693769117c072ef2161ce48ff1bbbf1a29cc7e4d629337f2c9250a5ccc
+# =============================================================================
+ARG PIP_CERT
+
+# NOTE(pabelanger): The pip cert to access cachito
+COPY --from=builder $PIP_CERT $PIP_CERT
+COPY --from=builder /output/ /output
+RUN /output/install-from-bindep \
+  && rm -rf /output
+
+# NOTE(pabelanger): Also delete the pip cert
+RUN rm -rf $PIP_CERT
+
+# In OpenShift, container will run as a random uid number and gid 0. Make sure things
+# are writeable by the root group.
+RUN for dir in \
+      /home/runner \
+      /home/runner/.ansible \
+      /home/runner/.ansible/tmp \
+      /runner \
+      /home/runner \
+      /runner/env \
+      /runner/inventory \
+      /runner/project \
+      /runner/artifacts ; \
+    do mkdir -m 0775 -p $dir ; chmod -R g+rwx $dir ; chgrp -R root $dir ; done && \
+    for file in \
+      /home/runner/.ansible/galaxy_token \
+      /etc/passwd \
+      /etc/group ; \
+    do touch $file ; chmod g+rw $file ; chgrp root $file ; done
+
+VOLUME /runner
+
+WORKDIR /runner
+
+ENV HOME=/home/runner
+
+RUN cp /usr/share/ansible-runner/utils/entrypoint.sh /bin/entrypoint
+RUN chmod +x /bin/entrypoint
+
+ENTRYPOINT ["entrypoint"]
+CMD ["ansible-runner", "run", "/runner"]
+
+ENV DESCRIPTION="Red Hat Ansible Automation Platform Minimal Execution Environment" \
+    container=oci
+
+LABEL com.redhat.component="ee-minimal-container" \
+      name="ansible-automation-platform-20-early-access/ee-minimal-rhel8" \
+      version="2.0.0" \
+      summary="${DESCRIPTION}" \
+      io.openshift.expose-services="" \
+      io.openshift.tags="automation,ansible" \
+      io.k8s.display-name="ee-minimal-rhel8" \
+      maintainer="Ansible Automation Platform Productization Team" \
+      description="${DESCRIPTION}"
+
+ADD ee-minimal-container-2.0.0-15.json /root/buildinfo/content_manifests/ee-minimal-container-2.0.0-15.json
+LABEL "release"="15" "com.redhat.license_terms"="https://www.redhat.com/agreements" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2021-08-10T17:46:11.549828" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="e46cf04d92f2d73d56b61bedd4687dff61cea2ac" "com.redhat.build-host"="cpt-1006.osbs.prod.upshift.rdu2.redhat.com" "io.k8s.description"="Red Hat Ansible Automation Platform Minimal Execution Environment" "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ansible-automation-platform-20-early-access/ee-minimal-rhel8/images/2.0.0-15"

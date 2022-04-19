@@ -1,0 +1,16 @@
+---
+- name: Set OS dependent variables
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    ansible_distribution_lts_offset: "{{\n  ansible_distribution_major_version|int % 2\n  if ansible_distribution == \"Ubuntu\"\n  else 0\n}}"
+    ansible_distribution_lts_version: "{{\n  ansible_distribution_major_version|int -\n  ansible_distribution_lts_offset|int\n  if ansible_distribution == \"Ubuntu\"\n  else ansible_distribution_version\n}}"
+    params:
+      files:
+        - "{{ ansible_distribution }}_{{ ansible_distribution_lts_version }}.yml"
+        - "{{ ansible_os_family }}_{{ ansible_distribution_major_version }}.yml"
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
+        - default.yml
+      paths:
+        - "{{ role_path }}/vars"
+        - "{{ playbook_dir }}/vars"

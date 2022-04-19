@@ -1,0 +1,86 @@
+ruleset(name="{{ item.name }}") {
+    if (strlen($.omes) > 0) and (strlen($.omes!status) > 0) then {
+        # retry case
+        if ($.omes!status == 200) or ($.omes!status == 201) or (($.omes!status == 409) and ($.omes!writeoperation == "create")) then {
+            stop # successful
+        }
+        if ($.omes!writeoperation == "unknown") or (strlen($.omes!error!type) == 0) or (strlen($.omes!error!reason) == 0) then {
+            call error_es
+            stop
+        }
+        if ($.omes!status == 400) or ($.omes!status < 200) then {
+            call error_es
+            stop
+        }
+        # else fall through to retry operation
+    }
+    if strlen($!es_msg_id) > 0 then {
+        set $.es_msg_id = $!es_msg_id;
+    } else if (strlen($.omes) > 0) and (strlen($.omes!_id) > 0) then {
+        # retry
+        set $.es_msg_id = $.omes!_id;
+    } else {
+        # NOTE: depends on rsyslog being compiled with --enable-uuid
+        set $.es_msg_id = $uuid;
+    }
+    if (strlen($.omes) > 0) and (strlen($.omes!_index) > 0) then {
+        # retry
+        set $.index_name = $.omes!_index;
+    } else {
+        set $.index_name = exec_template("prefix_index_template");
+    }
+    if ($.input_type == "{{ item.input_type | d('ovirt') }}") and ($.index_prefix startswith "{{ item.index_prefix }}") then {
+        action(
+            type="omelasticsearch"
+            name="{{ item.name }}"
+            server="{{ item.server_host | d('logging-es') }}"
+            serverport="{{ item.server_port | d(9200) | int }}"
+            template="{{ item.template | d("es_template") }}"
+            searchIndex="{{ item.searchIndex | d("index_template") }}"
+            dynSearchIndex="{{ item.dynSearchIndex | d(true) | ternary('on', 'off') }}"
+            searchType="{{ item.searchType | d("com.redhat.viaq.common") }}"
+            bulkmode="{{ item.bulkmode | d(true) | ternary('on', 'off') }}"
+            writeoperation="{{ item.writeoperation | d("create") }}"
+            bulkid="{{ item.bulkid | d("id_template") }}"
+            dynbulkid="{{ item.dynbulkid | d(true) | ternary('on', 'off') }}"
+            allowUnsignedCerts="{{ item.allowUnsignedCerts | d(false) | ternary('on', 'off') }}"
+{% if item.retryfailures | d(true) %}
+            retryfailures="on"
+{%   if item.retryruleset | d() | length > 0 %}
+            retryruleset="{{ item.retryruleset }}"
+{%   else %}
+            retryruleset="{{ item.name }}"
+{%   endif %}
+{% else %}
+            retryfailures="off"
+{% endif %}
+            usehttps="{{ item.usehttps | d(true) | ternary('on', 'off') }}"
+{% if (item.tls is defined) | ternary(item.tls, item.use_cert | d(true)) %}
+{%   if item.ca_cert is defined %}
+{%     set __cacert = item.ca_cert %}
+{%   elif item.ca_cert_src is defined %}
+{%     set __cacert = __rsyslog_default_pki_path + __rsyslog_default_pki_cert_dir + item.ca_cert_src | basename %}
+{%   else %}
+{%     set __cacert = __rsyslog_default_pki_path + __rsyslog_default_pki_cert_dir + 'es-ca.crt' %}
+{%   endif %}
+{%   if item.cert is defined %}
+{%     set __mycert = item.cert %}
+{%   elif item.cert_src is defined %}
+{%     set __mycert = __rsyslog_default_pki_path + __rsyslog_default_pki_cert_dir + item.cert_src | basename %}
+{%   else %}
+{%     set __mycert = __rsyslog_default_pki_path + __rsyslog_default_pki_cert_dir + 'es-cert.pem' %}
+{%   endif %}
+{%   if item.private_key is defined %}
+{%     set __myprivkey = item.private_key %}
+{%   elif item.private_key_src is defined %}
+{%     set __myprivkey = __rsyslog_default_pki_path + __rsyslog_default_pki_key_dir + item.private_key_src | basename %}
+{%   else %}
+{%     set __myprivkey = __rsyslog_default_pki_path + __rsyslog_default_pki_key_dir + 'es-key.pem' %}
+{%   endif %}
+            tls.cacert="{{ __cacert }}"
+            tls.mycert="{{ __mycert }}"
+            tls.myprivkey="{{ __myprivkey }}"
+{% endif %}
+        )
+    }
+}

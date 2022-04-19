@@ -1,0 +1,39 @@
+- name: Ensure that the rule runs with ssh
+  hosts: all
+  vars:
+  # this is the outside address under which the ssh dump server is
+  # known and ansible is supposed to be configured to be able to
+  # connect to it (via inventory).
+    kdump_ssh_server_outside: localhost
+    kdump_ssh_source: "{{ ansible_env['SSH_CONNECTION'].split()[0] }}"
+
+  # this is the address at which the ssh dump server can be reached
+  # from the managed host. Dumps will be uploaded there.
+    kdump_ssh_server_inside: "{{ kdump_ssh_source if kdump_ssh_source in hostvars[kdump_ssh_server_outside]['ansible_all_ipv4_addresses'] + hostvars[kdump_ssh_server_outside]['ansible_all_ipv6_addresses']  else hostvars[kdump_ssh_server_outside]['ansible_default_ipv4']['address'] }}"
+  tags:
+  # this test executes some tasks on localhost and relies on
+  # localhost being a different host than the managed host
+  # (localhost is being used as a second host in multihost
+  # scenario). This also means that localhost must be capable
+  # enough (not just a container - must be runnign a sshd).
+    - 'tests::multihost_localhost'
+
+  tasks:
+    - name: gather facts from {{ kdump_ssh_server_outside }}
+      setup:
+      delegate_to: "{{ kdump_ssh_server_outside }}"
+      delegate_facts: true
+
+    - include_role:
+        name: redhat.rhel_system_roles.kdump
+      vars:
+        kdump_ssh_user: "{{ hostvars[kdump_ssh_server_outside]['ansible_user_id'] }}" # This is the outside address. Ansible will connect to it to
+      # copy the ssh key.
+        kdump_ssh_server: "{{ kdump_ssh_server_outside }}"
+        kdump_path: /tmp/test
+        kdump_target:
+          type: ssh
+        # This is the ssh dump server address visible from inside
+        # the machine being configured. Dumps are to be copied
+        # there.
+          location: "{{ kdump_ssh_user }}@{{ kdump_ssh_server_inside }}"

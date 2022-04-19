@@ -1,0 +1,5 @@
+[subversion]
+name=subversion
+stream=1.10
+profiles=
+state=enabled

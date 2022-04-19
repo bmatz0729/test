@@ -1,0 +1,46 @@
+---
+- name: install session recording packages
+  package:
+    name: "{{ __tlog_packages }}"
+
+- name: get the rpm package facts
+  package_facts:
+    manager: auto
+
+- name: install cockpit session recording
+  package:
+    name: "{{ __tlog_cockpit_packages }}"
+  when:
+    - "'cockpit' in ansible_facts.packages"
+
+- name: configure basic sssd
+  template:
+    src: sssd.conf
+    dest: "{{ __tlog_sssd_conf }}"
+    owner: root
+    group: root
+    mode: 0600
+    force: no
+  when:
+    - tlog_use_sssd | bool
+    - "'sssd' in ansible_facts.packages"
+    - ansible_facts.packages.sssd[0].version is version("2.1", "<")
+  notify: tlog_handler restart sssd
+
+- name: configure sssd session recording config
+  template:
+    src: sssd-session-recording.conf
+    dest: "{{ __tlog_sssd_session_recording_conf }}"
+    owner: root
+    group: root
+    mode: 0600
+  when: tlog_use_sssd
+  notify: tlog_handler restart sssd
+
+- name: configure tlog rec session
+  template:
+    src: tlog-rec-session.conf
+    dest: "{{ __tlog_rec_session_conf }}"
+    owner: root
+    group: root
+    mode: 0644

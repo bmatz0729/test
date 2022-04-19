@@ -1,0 +1,11 @@
+[2022-04-18 17:40:22.322] [remoteagent] [info] Installing extension: redhat.ansible
+[2022-04-18 17:40:25.611] [remoteagent] [info] Installing extension: ms-python.python
+[2022-04-18 17:40:27.739] [remoteagent] [info] Downloaded extension: ms-python.python /home/student11/.local/share/code-server/CachedExtensionVSIXs/ms-python.python-2021.12.1559732655
+[2022-04-18 17:40:30.469] [remoteagent] [info] Extracted extension to /home/student11/.local/share/code-server/extensions/.5484e753-d629-48ab-add0-9b1baf9c961d: ms-python.python
+[2022-04-18 17:40:30.487] [remoteagent] [info] Renamed to /home/student11/.local/share/code-server/extensions/ms-python.python-2021.12.1559732655
+[2022-04-18 17:40:30.490] [remoteagent] [info] Extracting completed. ms-python.python
+[2022-04-18 17:40:30.681] [remoteagent] [info] Extracted extension to /home/student11/.local/share/code-server/extensions/.f0ec765e-53d1-46c9-a7b6-a99919cb62d7: redhat.ansible
+[2022-04-18 17:40:30.687] [remoteagent] [info] Renamed to /home/student11/.local/share/code-server/extensions/redhat.ansible-0.4.5
+[2022-04-18 17:40:30.688] [remoteagent] [info] Extracting completed. redhat.ansible
+[2022-04-18 17:40:30.688] [remoteagent] [info] Extension installed successfully: ms-python.python
+[2022-04-18 17:40:30.688] [remoteagent] [info] Extension installed successfully: redhat.ansible

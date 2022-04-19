@@ -1,0 +1,5 @@
+[2022-04-18 17:40:16.175] [remoteagent] [info] Installing extension: bierner.markdown-preview-github-styles
+[2022-04-18 17:40:17.095] [remoteagent] [info] Extracted extension to /home/student11/.local/share/code-server/extensions/.b078a28d-8fe7-4885-be01-2b489e626879: bierner.markdown-preview-github-styles
+[2022-04-18 17:40:17.102] [remoteagent] [info] Renamed to /home/student11/.local/share/code-server/extensions/bierner.markdown-preview-github-styles-0.1.6
+[2022-04-18 17:40:17.103] [remoteagent] [info] Extracting completed. bierner.markdown-preview-github-styles
+[2022-04-18 17:40:17.104] [remoteagent] [info] Extension installed successfully: bierner.markdown-preview-github-styles

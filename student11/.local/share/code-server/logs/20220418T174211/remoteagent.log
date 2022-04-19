@@ -1,0 +1,29 @@
+[2022-04-18 17:42:11.501] [remoteagent] [info] Extension host agent started.
+[2022-04-19 14:39:44.218] [remoteagent] [info] [127.0.0.1][f588944c][ManagementConnection] New connection established.
+[2022-04-19 14:39:46.082] [remoteagent] [info] [127.0.0.1][960e9f61][ExtensionHostConnection] New connection established.
+[2022-04-19 14:39:46.088] [remoteagent] [info] [127.0.0.1][960e9f61][ExtensionHostConnection] <97498> Launched Extension Host Process.
+[2022-04-19 14:39:49.833] [remoteagent] [info] Installing extension: redhat.ansible
+[2022-04-19 14:39:50.519] [remoteagent] [info] Installing extension: redhat.vscode-yaml
+[2022-04-19 14:39:51.611] [remoteagent] [info] Downloaded extension: redhat.vscode-yaml /home/student11/.local/share/code-server/CachedExtensionVSIXs/redhat.vscode-yaml-1.6.0
+[2022-04-19 14:39:51.698] [remoteagent] [info] Extracted extension to /home/student11/.local/share/code-server/extensions/.b9fdf8a7-046c-4fe4-a414-e757bc13f59a: redhat.vscode-yaml
+[2022-04-19 14:39:51.704] [remoteagent] [info] Renamed to /home/student11/.local/share/code-server/extensions/redhat.vscode-yaml-1.6.0
+[2022-04-19 14:39:51.705] [remoteagent] [info] Extracting completed. redhat.vscode-yaml
+[2022-04-19 14:39:52.530] [remoteagent] [info] Downloaded extension: redhat.ansible /home/student11/.local/share/code-server/CachedExtensionVSIXs/redhat.ansible-0.8.1
+[2022-04-19 14:39:52.578] [remoteagent] [info] Extracted extension to /home/student11/.local/share/code-server/extensions/.78a2a7ef-c9ad-4738-9abf-5b87cf9a48b2: redhat.ansible
+[2022-04-19 14:39:52.583] [remoteagent] [info] Renamed to /home/student11/.local/share/code-server/extensions/redhat.ansible-0.8.1
+[2022-04-19 14:39:52.584] [remoteagent] [info] Extracting completed. redhat.ansible
+[2022-04-19 14:39:52.587] [remoteagent] [info] Extension installed successfully: redhat.vscode-yaml
+[2022-04-19 14:39:52.587] [remoteagent] [info] Extension installed successfully: redhat.ansible
+[2022-04-19 18:58:12.339] [remoteagent] [info] [127.0.0.1][f588944c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2022-04-19 19:01:14.120] [remoteagent] [info] [127.0.0.1][f588944c][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[2022-04-19 19:01:14.121] [remoteagent] [info] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[2022-04-19 19:01:17.759] [remoteagent] [info] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[2022-04-19 19:03:37.917] [remoteagent] [info] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[2022-04-19 19:03:38.463] [remoteagent] [info] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[2022-04-19 19:11:24.454] [remoteagent] [info] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[2022-04-19 19:11:27.649] [remoteagent] [info] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[2022-04-19 19:14:32.742] [remoteagent] [info] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[2022-04-19 19:14:33.154] [remoteagent] [info] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[2022-04-19 19:22:32.800] [remoteagent] [info] [127.0.0.1][d8a650da][ManagementConnection] New connection established.
+[2022-04-19 19:22:33.379] [remoteagent] [info] [127.0.0.1][c5c876f1][ExtensionHostConnection] New connection established.
+[2022-04-19 19:22:33.416] [remoteagent] [info] [127.0.0.1][c5c876f1][ExtensionHostConnection] <124711> Launched Extension Host Process.

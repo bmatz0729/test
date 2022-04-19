@@ -1,0 +1,13 @@
+ancestor: null
+releases:
+  1.0.0:
+    fragments:
+    - test.yaml
+    release_date: '2021-05-18'
+  1.0.1:
+    changes:
+      release_summary:
+      - Updated README.md and regenerated documentation.
+    fragments:
+    - 8_readme_update.yaml
+    release_date: '2021-05-24'

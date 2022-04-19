@@ -1,0 +1,47 @@
+{
+ "collection_info": {
+  "namespace": "ansible",
+  "name": "network",
+  "version": "1.0.1",
+  "authors": [
+   "Ansible Network Community (ansible-network)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "networking",
+   "security",
+   "cloud",
+   "network_cli",
+   "netconf",
+   "httpapi",
+   "grpc"
+  ],
+  "description": "Ansible Network meta Collection to install all network supported content.",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {
+   "ansible.netcommon": "*",
+   "ansible.utils": "*",
+   "arista.eos": "*",
+   "cisco.ios": "*",
+   "cisco.iosxr": "*",
+   "cisco.nxos": "*",
+   "junipernetworks.junos": "*",
+   "openvswitch.openvswitch": "*",
+   "vyos.vyos": "*",
+   "frr.frr": "*"
+  },
+  "repository": "https://github.com/ansible-collections/ansible.network",
+  "documentation": null,
+  "homepage": null,
+  "issues": null
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "181a90c4bc94e11f7846f277c3e19ab7f0e697669d42cd5b3dca8c2ae28d3130",
+  "format": 1
+ },
+ "format": 1
+}

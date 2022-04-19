@@ -1,0 +1,129 @@
+{
+    "image_contents": [
+        {
+            "dependencies": [
+                {
+                    "purl": "pkg:pypi/bcrypt@3.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/decorator@5.0.7"
+                },
+                {
+                    "purl": "pkg:pypi/gssapi@1.6.12"
+                },
+                {
+                    "purl": "pkg:pypi/ncclient@0.6.10"
+                },
+                {
+                    "purl": "pkg:pypi/ntlm-auth@1.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/paramiko@2.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/pyasn1@0.4.8"
+                },
+                {
+                    "purl": "pkg:pypi/pykerberos@1.2.1"
+                },
+                {
+                    "purl": "pkg:pypi/pynacl@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyopenssl@19.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/pypsrp@0.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyspnego@0.1.5"
+                },
+                {
+                    "purl": "pkg:pypi/pywinrm@0.4.1"
+                },
+                {
+                    "purl": "pkg:pypi/requests-credssp@1.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/requests-ntlm@1.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/resolvelib@0.5.4"
+                },
+                {
+                    "purl": "pkg:pypi/toml@0.10.2"
+                },
+                {
+                    "purl": "pkg:pypi/xmltodict@0.12.0"
+                }
+            ],
+            "purl": "pkg:generic/ee-minimal?vcs_url=https%3A%2F%2Fcode.engineering.redhat.com%2Fgerrit%2Faap-cachito%40c3e233a2ea68f3a1b2f797b3a0ebee0d92426ff5#ee-minimal",
+            "sources": [
+                {
+                    "purl": "pkg:pypi/bcrypt@3.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/decorator@5.0.7"
+                },
+                {
+                    "purl": "pkg:pypi/gssapi@1.6.12"
+                },
+                {
+                    "purl": "pkg:pypi/ncclient@0.6.10"
+                },
+                {
+                    "purl": "pkg:pypi/ntlm-auth@1.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/paramiko@2.7.2"
+                },
+                {
+                    "purl": "pkg:pypi/pyasn1@0.4.8"
+                },
+                {
+                    "purl": "pkg:pypi/pykerberos@1.2.1"
+                },
+                {
+                    "purl": "pkg:pypi/pynacl@1.4.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyopenssl@19.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/pypsrp@0.5.0"
+                },
+                {
+                    "purl": "pkg:pypi/pyspnego@0.1.5"
+                },
+                {
+                    "purl": "pkg:pypi/pywinrm@0.4.1"
+                },
+                {
+                    "purl": "pkg:pypi/requests-credssp@1.2.0"
+                },
+                {
+                    "purl": "pkg:pypi/requests-ntlm@1.1.0"
+                },
+                {
+                    "purl": "pkg:pypi/resolvelib@0.5.4"
+                },
+                {
+                    "purl": "pkg:pypi/toml@0.10.2"
+                },
+                {
+                    "purl": "pkg:pypi/xmltodict@0.12.0"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "icm_spec": "https://raw.githubusercontent.com/containerbuildsystem/atomic-reactor/f4abcfdaf8247a6b074f94fa84f3846f82d781c6/atomic_reactor/schemas/content_manifest.json",
+        "icm_version": 1,
+        "image_layer_index": 3
+    },
+    "content_sets": [
+        "ansible-automation-platform-2_DOT_0-early-access-for-rhel-8-x86_64-rpms",
+        "rhel-8-for-x86_64-baseos-rpms",
+        "rhel-8-for-x86_64-appstream-rpms"
+    ]
+}

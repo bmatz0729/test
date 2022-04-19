@@ -1,0 +1,72 @@
+ARG REMOTE_SOURCE
+ARG REMOTE_SOURCE_DIR
+ARG REMOTE_SOURCE_APP_DIR=$REMOTE_SOURCE_DIR/app
+ARG PIP_CERT
+
+FROM sha256:078c7d4aca51b39cf0dc6dfdf8efb9953216cb1502a9ec935d5973b7afdfbdb7 AS galaxy
+# =============================================================================
+ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=
+
+ADD _build /build
+WORKDIR /build
+
+RUN ansible-galaxy role install -r requirements.yml --roles-path /usr/share/ansible/roles
+RUN ansible-galaxy collection install $ANSIBLE_GALAXY_CLI_COLLECTION_OPTS -r requirements.yml --collections-path /usr/share/ansible/collections
+
+# NOTE(pabelanger): Install extra collections for automation controller
+RUN ansible-galaxy collection install $ANSIBLE_GALAXY_CLI_COLLECTION_OPTS -r controller-requirements.yml --collections-path /usr/share/automation-controller/collections
+
+FROM sha256:df5d9fdcdbd4a1c7db0b7235a43affd1d7d2354bf6f2e8f84e8712fab512ce5f AS builder
+# =============================================================================
+ARG REMOTE_SOURCE_DIR
+
+# NOTE(pabelanger): Copy in data from https://cachito.engineering.redhat.com
+# https://source.redhat.com/groups/public/container-build-system/container_build_system_wiki/containers_from_source_multistage_builds_in_osbs#jive_content_id_Cachito_Integration_for_pip
+COPY $REMOTE_SOURCE $REMOTE_SOURCE_DIR
+
+COPY --from=galaxy /usr/share/ansible /usr/share/ansible
+ADD _build/bindep.txt bindep.txt
+ADD _build/requirements.txt requirements.txt
+RUN ansible-builder introspect --sanitize --user-bindep=bindep.txt --user-pip=requirements.txt --write-bindep=/tmp/src/bindep.txt --write-pip=/tmp/src/requirements.txt
+
+ADD _build/build-requirements.txt /tmp/src/build-requirements.txt
+# NOTE(pabelanger): Combined both requirements files for upper-constraints.txt
+RUN cd $REMOTE_SOURCE_DIR/app/ee-supported \
+  && cat build-requirements.txt requirements.txt > /tmp/src/upper-constraints.txt
+
+# NOTE(pabelanger): Disable build isolation for pip3. This means we can use
+# existing python RPMs for build dependencies over adding them to cachito.
+ENV PIP_OPTS=--no-build-isolation
+RUN assemble
+
+FROM sha256:078c7d4aca51b39cf0dc6dfdf8efb9953216cb1502a9ec935d5973b7afdfbdb7
+# =============================================================================
+ARG PIP_CERT
+
+# NOTE(pabelanger): The pip cert to access cachito
+COPY --from=builder $PIP_CERT $PIP_CERT
+COPY --from=galaxy /usr/share/ansible /usr/share/ansible
+COPY --from=galaxy /usr/share/automation-controller /usr/share/automation-controller
+COPY --from=builder /output/ /output
+
+RUN /output/install-from-bindep \
+  && rm -rf /output/wheels
+
+# NOTE(pabelanger): Also delete the pip cert
+RUN rm -rf $PIP_CERT
+
+ENV DESCRIPTION="Red Hat Ansible Automation Platform Supported Execution Environment" \
+    container=oci
+
+LABEL com.redhat.component="ee-supported-container" \
+      name="ansible-automation-platform-20-early-access/ee-supported-rhel8" \
+      version="2.0.0" \
+      summary="${DESCRIPTION}" \
+      io.openshift.expose-services="" \
+      io.openshift.tags="automation,ansible" \
+      io.k8s.display-name="ee-supported-rhel8" \
+      maintainer="Ansible Automation Platform Productization Team" \
+      description="${DESCRIPTION}"
+
+ADD ee-supported-container-2.0.0-16.json /root/buildinfo/content_manifests/ee-supported-container-2.0.0-16.json
+LABEL "release"="16" "com.redhat.license_terms"="https://www.redhat.com/agreements" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2021-08-10T18:39:33.237816" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="44b8445be79b34a210942fcda892ccb54deef5cb" "com.redhat.build-host"="cpt-1001.osbs.prod.upshift.rdu2.redhat.com" "io.k8s.description"="Red Hat Ansible Automation Platform Supported Execution Environment" "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ansible-automation-platform-20-early-access/ee-supported-rhel8/images/2.0.0-16"

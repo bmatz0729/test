@@ -1,0 +1,2290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.10" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+@media screen {
+  body {
+    max-width: 50em; /* approximately 80 characters wide */
+    margin-left: 16em;
+  }
+
+  #toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 13em;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    margin: 0;
+    overflow: auto;
+    border-right: 3px solid #f8f8f8;
+    background-color: white;
+  }
+
+  #toc .toclevel1 {
+    margin-top: 0.5em;
+  }
+
+  #toc .toclevel2 {
+    margin-top: 0.25em;
+    display: list-item;
+    color: #aaaaaa;
+  }
+
+  #toctitle {
+    margin-top: 0.5em;
+  }
+}
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_linux_system_roles_logging">linux-system-roles/logging</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><span class="image">
+<img src="https://github.com/linux-system-roles/logging/workflows/tox/badge.svg" alt="CI Testing" />
+</span></p></div>
+<div class="sect2">
+<h3 id="_table_of_contents">Table of Contents</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#background">Background</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#definitions">Definitions</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#logging-configuration">Logging Configuration</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#brief-overview">Brief overview</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#variables">Variables</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#logging_inputs-options">Logging_inputs options</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#logging_outputs-options">Logging_outputs options</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#logging_flows-options">Logging_flows options</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#security-options">Security options</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#server-performance-optimization-options">Server performance
+optimization options</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#other-options">Other options</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#update-and-delete">Update and Delete</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#configuration-examples">Configuration Examples</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#standalone-configuration">Standalone configuration</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#client-configuration">Client configuration</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#server-configuration">Server configuration</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#client-configuration-with-relp">Client configuration with Relp</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#server-configuration-with-relp">Server configuration with Relp</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#port-and-selinux">Port and SELinux</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#providers">Providers</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#tests">Tests</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#implementation-details">Implementation Details</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_background">Background</h3>
+<div class="paragraph"><p>Logging role is an abstract layer for provisioning and configuring the
+logging system. Currently, rsyslog is the only supported provider.</p></div>
+<div class="paragraph"><p>In the nature of logging, there are multiple ways to read logs and
+multiple ways to output them. For instance, the logging system may read
+logs from local files, or read them from systemd/journal, or receive
+them from the other logging system over the network. Then, the logs may
+be stored in the local files in the /var/log directory, or sent to
+Elasticsearch, or forwarded to other logging system. The combination
+between the inputs and the outputs needs to be flexible. For instance,
+you may want to inputs from journal stored just in the local file, while
+inputs read from files stored in the local log files as well as
+forwarded to the other logging system.</p></div>
+<div class="paragraph"><p>To satisfy such requirements, logging role introduced 3 primary
+variables <code>logging_inputs</code>, <code>logging_outputs</code>, and <code>logging_flows</code>. The
+inputs are represented in the list of <code>logging_inputs</code> dictionary, the
+outputs are in the list of <code>logging_outputs</code> dictionary, and the
+relationship between them are defined as a list of <code>logging_flows</code>
+dictionary. The details are described in
+<a href="#logging-configuration">Logging Configuration</a>.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_requirements">Requirements</h3>
+<div class="paragraph"><p>This role is supported on RHEL/CentOS-7, RHEL/CentOS-8 and Fedora
+distributions.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_definitions">Definitions</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>logging_inputs</code> - List of logging inputs dictionary to specify input
+types.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>basics</code> - basic inputs configuring inputs from systemd journal or
+unix socket.
+</p>
+</li>
+<li>
+<p>
+<code>files</code> - files inputs configuring inputs from local files.
+</p>
+</li>
+<li>
+<p>
+<code>remote</code> - remote inputs configuring inputs from the other logging
+system over network.
+</p>
+</li>
+<li>
+<p>
+<code>ovirt</code> - ovirt inputs configuring inputs from the oVirt system.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>logging_outputs</code> - List of logging outputs dictionary to specify
+output types.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>elasticsearch</code> - elasticsearch outputs configuring outputs to
+elasticsearch. It is available only when the input is <code>ovirt</code>.
+</p>
+</li>
+<li>
+<p>
+<code>files</code> - files outputs configuring outputs to the local files.
+</p>
+</li>
+<li>
+<p>
+<code>forwards</code> - forwards outputs configuring outputs to the other
+logging system.
+</p>
+</li>
+<li>
+<p>
+<code>remote_files</code> - remote files outputs configuring outputs from the
+other logging system to the local files.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>logging_flows</code> - List of logging flows dictionary to define
+relationships between logging inputs and outputs.
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.rsyslog.com/"><code>Rsyslog</code></a> - The logging role default log
+provider used for log processing.
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.elastic.co/"><code>Elasticsearch</code></a> - Elasticsearch is a
+distributed, search and analytic engine for all types of data. One of
+the supported outputs in the logging role.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_logging_configuration">Logging Configuration</h3>
+<div class="sect3">
+<h4 id="_brief_overview">Brief overview</h4>
+<div class="paragraph"><p>Logging role allows to have variables <code>logging_inputs</code>,
+<code>logging_outputs</code>, and <code>logging_flows</code> with additional options to
+configure logging system such as <code>rsyslog</code>.</p></div>
+<div class="paragraph"><p>Currently, the logging role supports four types of logging
+<a href="tasks/inputs/">inputs</a>: <code>basics</code>, <code>files</code>, <code>ovirt</code>, and <code>remote</code>.
+And four types of <a href="tasks/outputs/">outputs</a>: <code>elasticsearch</code>,
+<code>files</code>, <code>forwards</code>, and <code>remote_files</code>. To deploy configuration files
+with these inputs and outputs, specify the inputs as <code>logging_inputs</code>
+and the outputs as <code>logging_outputs</code>. To define the flows from inputs to
+outputs, use <code>logging_flows</code>. The <code>logging_flows</code> has three keys <code>name</code>,
+<code>inputs</code>, and <code>outputs</code>, where <code>inputs</code> is a list of
+<code>logging_inputs name</code> values and <code>outputs</code> is a list of
+<code>logging_outputs name</code> values.</p></div>
+<div class="paragraph"><p>This is a schematic logging configuration to show log messages from
+input_nameA are passed to output_name0 and output_name1; log messages
+from input_nameB are passed only to output_name1.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> a schematic logging configuration
+  <span style="color:#000000; font-weight:bold">hosts:</span> all
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> input_nameA
+        <span style="color:#000000; font-weight:bold">type:</span> input_typeA
+      - <span style="color:#000000; font-weight:bold">name:</span> input_nameB
+        <span style="color:#000000; font-weight:bold">type:</span> input_typeB
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> output_name<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> output_type<span style="color:#b07e00">0</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> output_name<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> output_type<span style="color:#b07e00">1</span>
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow_nameX
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>input_nameA<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>output_name<span style="color:#b07e00">0</span><span style="color:#000000">,</span> output_name<span style="color:#b07e00">1</span><span style="color:#000000">]</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow_nameY
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>input_nameB<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>output_name<span style="color:#b07e00">1</span><span style="color:#000000">]</span></code></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_variables">Variables</h4>
+<div class="sect4">
+<h5 id="_logging_inputs_options">Logging_inputs options</h5>
+<div class="paragraph"><p><code>logging_inputs</code>: A list of following dictionary to configure inputs.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+common keys
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>name</code>: Unique name of the input. Used in the <code>logging_flows</code> inputs
+list and a part of the generated config filename.
+</p>
+</li>
+<li>
+<p>
+<code>type</code>: Type of the input element. Currently, <code>basics</code>, <code>files</code>,
+<code>ovirt</code>, and <code>remote</code> are supported. The <code>type</code> is used to specify a
+task type which corresponds to a directory name in
+roles/rsyslog/{tasks,vars}/inputs/.
+</p>
+</li>
+<li>
+<p>
+<code>state</code>: State of the configuration file. <code>present</code> or <code>absent</code>.
+Default to <code>present</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>basics</code> type - <code>basics</code> input supports reading logs from systemd
+journal or systemd unix socket. <strong>available options</strong>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>kernel_message</code>: Load <code>imklog</code> if set to <code>true</code>. Default to <code>false</code>.
+</p>
+</li>
+<li>
+<p>
+<code>use_imuxsock</code>: Use <code>imuxsock</code> instead of <code>imjournal</code>. Default to
+<code>false</code>.
+</p>
+</li>
+<li>
+<p>
+<code>ratelimit_burst</code>: Maximum number of messages that can be emitted
+within ratelimit_interval. Default to <code>20000</code> if use_imuxsock is false.
+Default to <code>200</code> if use_imuxsock is true.
+</p>
+</li>
+<li>
+<p>
+<code>ratelimit_interval</code>: Interval to evaluate ratelimit_burst. Default
+to <code>600</code> seconds if use_imuxsock is false. Default to <code>0</code> if
+use_imuxsock is true. 0 indicates ratelimiting is turned off.
+</p>
+</li>
+<li>
+<p>
+<code>persist_state_interval</code>: Journal state is persisted every value
+messages. Default to <code>10</code>. Effective only when use_imuxsock is false.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>files</code> type - <code>files</code> input supports reading logs from the local
+files. <strong>available options</strong>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>input_log_path</code>: File name to be read by the imfile plugin. The
+value should be full path. Wildcard <em>*</em> is allowed in the path. Default
+to <code>/var/log/containers/*.log</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>ovirt</code> type - <code>ovirt</code> input supports oVirt specific inputs.
+<strong>available options</strong>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>subtype</code>: ovirt input subtype. Value is one of <code>engine</code>, <code>collectd</code>,
+and <code>vdsm</code>.
+</p>
+</li>
+<li>
+<p>
+<code>ovirt_env_name</code>: ovirt environment name. Default to <code>engine</code>.
+</p>
+</li>
+<li>
+<p>
+<code>ovirt_env_uuid</code>: ovirt uuid. Default to none.
+</p>
+<div class="paragraph"><p><strong>available options for engine and vdsm</strong>
+<strong> <code>ovirt_elasticsearch_index_prefix</code>: Index prefix for elasticsearch.
+Default to <code>project.ovirt-logs</code>.
+</strong> <code>ovirt_engine_fqdn</code>: ovirt engine fqdn. Default to none.
+<strong> <code>ovirt_input_file</code>: ovirt input file. Default to
+<code>/var/log/ovirt-engine/test-engine.log</code> for <code>engine</code>; default to
+<code>/var/log/vdsm/vdsm.log</code> for <code>vdsm</code>.
+</strong> <code>ovirt_vds_cluster_name</code>: vds cluster name. Default to none.</p></div>
+<div class="paragraph"><p><strong>available options for collectd</strong>
+<strong> <code>ovirt_collectd_port</code>: collectd port number. Default to <code>44514</code>.
+</strong> <code>ovirt_elasticsearch_index_prefix</code>: Index prefix for elasticsearch.
+Default to <code>project.ovirt-metrics</code>.
+* <code>relp</code> type - <code>relp</code> input supports receiving logs from the remote
+logging system over the network using relp. <strong>available options</strong>
+<strong> <code>port</code>: Port number Relp is listening to. Default to <code>20514</code>. See
+also <a href="#port-and-selinux">Port and SELinux</a>.
+</strong> <code>tls</code>: If true, encrypt the connection with TLS. You must provide
+key/certificates and triplets {<code>ca_cert</code>, <code>cert</code>, <code>private_key</code>} and/or
+{<code>ca_cert_src</code>, <code>cert_src</code>, <code>private_key_src</code>}. Default to <code>true</code>.
+<strong> <code>ca_cert</code>: Path to CA cert to configure Relp with tls. Default to
+<code>/etc/pki/tls/certs/basename of ca_cert_src</code>.
+</strong> <code>cert</code>: Path to cert to configure Relp with tls. Default to
+<code>/etc/pki/tls/certs/basename of cert_src</code>.
+<strong> <code>private_key</code>: Path to key to configure Relp with tls. Default to
+<code>/etc/pki/tls/private/basename of private_key_src</code>.
+</strong> <code>ca_cert_src</code>: Local CA cert file path which is copied to the target
+host. If <code>ca_cert</code> is specified, it is copied to the location.
+Otherwise, to logging_config_dir.
+<strong> <code>cert_src</code>: Local cert file path which is copied to the target host.
+If <code>cert</code> is specified, it is copied to the location. Otherwise, to
+logging_config_dir.
+</strong> <code>private_key_src</code>: Local key file path which is copied to the target
+host. If <code>private_key</code> is specified, it is copied to the location.
+Otherwise, to logging_config_dir.
+<strong> <code>pki_authmode</code>: Specifying the authentication mode. <code>name</code> or
+<code>fingerprint</code> is accepted. Default to <code>name</code>.
+</strong> <code>permitted_clients</code>: List of hostnames, IP addresses,
+fingerprints(sha1), and wildcard DNS domains which will be allowed by
+the <code>logging</code> server to connect and send logs over TLS. Default to
+<code>['*.{{ logging_domain }}']</code>
+* <code>remote</code> type - <code>remote</code> input supports receiving logs from the remote
+logging system over the network. <strong>available options</strong>
+<strong> <code>udp_ports</code>: List of UDP port numbers to listen. If set, the <code>remote</code>
+input listens on the UDP ports. No defaults. If both <code>udp_ports</code> and
+<code>tcp_ports</code> are set in a <code>remote</code> input item, <code>udp_ports</code> is used and
+<code>tcp_ports</code> is dropped. See also <a href="#port-and-selinux">Port and
+SELinux</a>.
+</strong> <code>tcp_ports</code>: List of TCP port numbers to listen. If set, the <code>remote</code>
+input listens on the TCP ports. Default to <code>[514]</code>. If both <code>udp_ports</code>
+and <code>tcp_ports</code> are set in a <code>remote</code> input item, <code>udp_ports</code> is used
+and <code>tcp_ports</code> is dropped. If both <code>udp_ports</code> and <code>tcp_ports</code> are not
+set in a <code>remote</code> input item, <code>tcp_ports: [514]</code> is added to the item.
+See also <a href="#port-and-selinux">Port and SELinux</a>.
+<strong> <code>tls</code>: Set to <code>true</code> to encrypt the connection using the default TLS
+implementation used by the provider. Default to <code>false</code>.
+</strong> <code>pki_authmode</code>: Specifying the default network driver authentication
+mode. <code>x509/name</code>, <code>x509/fingerprint</code>, or <code>anon</code> is accepted. Default to
+<code>x509/name</code>.
+** <code>permitted_clients</code>: List of hostnames, IP addresses,
+fingerprints(sha1), and wildcard DNS domains which will be allowed by
+the <code>logging</code> server to connect and send logs over TLS. Default to
+<code>['*.{{ logging_domain }}']</code></p></div>
+<div class="paragraph"><p>There are 3 types of items in the remote type - udp, plain tcp and tls
+tcp. The udp type configured using <code>udp_ports</code>; the plain tcp type is
+configured using <code>tcp_ports</code> without <code>tls</code> or with <code>tls: false</code>; the tls
+tcp type is configured using <code>tcp_ports</code> with <code>tls: true</code> at the same
+time. Please note there might be only one instance of each of the three
+types. E.g., if there are 2 <code>udp</code> type items, it fails to deploy.</p></div>
+<div class="paragraph"><p>Valid configuration example</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>- name: remote_udp
+  type: remote
+  udp_ports: [514, ...]
+- name: remote_ptcp
+  type: remote
+  tcp_ports: [514, ...]
+- name: remote_tcp
+  type: remote
+  tcp_ports: [6514, ...]
+  tls: true
+  pki_authmode: x509/name
+  permitted_clients: ['*.example.com']</code></pre>
+</div></div>
+<div class="paragraph"><p>Invalid configuration example 1; duplicated udp</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>- name: remote_udp0
+  type: remote
+  udp_ports: [514]
+- name: remote_udp1
+  type: remote
+  udp_ports: [1514]</code></pre>
+</div></div>
+<div class="paragraph"><p>Invalid configuration example 2; duplicated tcp</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>- name: remote_implicit_tcp
+  type: remote
+- name: remote_tcp
+  type: remote
+  tcp_ports: [1514]</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="sect4">
+<h5 id="_logging_outputs_options">Logging_outputs options</h5>
+<div class="paragraph"><p><code>logging_outputs</code>: A list of following dictionary to configure outputs.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+common keys
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>name</code>: Unique name of the output. Used in the <code>logging_flows</code>
+outputs list and a part of the generated config filename.
+</p>
+</li>
+<li>
+<p>
+<code>type</code>: Type of the output element. Currently, <code>elasticsearch</code>,
+<code>files</code>, <code>forwards</code>, and <code>remote_files</code> are supported. The <code>type</code> is
+used to specify a task type which corresponds to a directory name in
+roles/rsyslog/{tasks,vars}/outputs/.
+</p>
+</li>
+<li>
+<p>
+<code>state</code>: State of the configuration file. <code>present</code> or <code>absent</code>.
+Default to <code>present</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>elasticsearch</code> type - <code>elasticsearch</code> output supports sending logs to
+Elasticsearch. It is available only when the input is <code>ovirt</code>. Assuming
+Elasticsearch is already configured and running. <strong>available options</strong>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>server_host</code>: Host name Elasticsearch is running on. <strong>Required</strong>.
+</p>
+</li>
+<li>
+<p>
+<code>server_port</code>: Port number Elasticsearch is listening to. Default to
+<code>9200</code>.
+</p>
+</li>
+<li>
+<p>
+<code>index_prefix</code>: Elasticsearch index prefix the particular log will be
+indexed to. <strong>Required</strong>.
+</p>
+</li>
+<li>
+<p>
+<code>input_type</code>: Specifying the input type. Currently only type <code>ovirt</code>
+is supported. Default to <code>ovirt</code>.
+</p>
+</li>
+<li>
+<p>
+<code>retryfailures</code>: Specifying whether retries or not in case of
+failure. Allowed value is <code>true</code> or <code>false</code>. Default to <code>true</code>.
+</p>
+</li>
+<li>
+<p>
+<code>tls</code>: If true, encrypt the connection with TLS. You must provide
+key/certificates and triplets {<code>ca_cert</code>, <code>cert</code>, <code>private_key</code>} and/or
+{<code>ca_cert_src</code>, <code>cert_src</code>, <code>private_key_src</code>}. Default to <code>true</code>.
+</p>
+</li>
+<li>
+<p>
+<code>use_cert</code>: [DEPRECATED] If true, encrypt the connection with TLS.
+You must provide key/certificates and triplets {<code>ca_cert</code>, <code>cert</code>,
+<code>private_key</code>} and/or {<code>ca_cert_src</code>, <code>cert_src</code>, <code>private_key_src</code>}.
+Default to <code>true</code>. Option <code>use_cert</code> is deprecated in favor of <code>tls</code> and
+<code>use_cert</code> will be removed in the next minor release.
+</p>
+</li>
+<li>
+<p>
+<code>ca_cert</code>: Path to CA cert for Elasticsearch. Default to
+<code>/etc/pki/tls/certs/basename of ca_cert_src</code>.
+</p>
+</li>
+<li>
+<p>
+<code>cert</code>: Path to cert to connect to Elasticsearch. Default to
+<code>/etc/pki/tls/certs/basename of cert_src</code>.
+</p>
+</li>
+<li>
+<p>
+<code>private_key</code>: Path to key to connect to Elasticsearch. Default to
+<code>/etc/pki/tls/private/basename of private_key_src</code>.
+</p>
+</li>
+<li>
+<p>
+<code>ca_cert_src</code>: Local CA cert file path which is copied to the target
+host. If <code>ca_cert</code> is specified, it is copied to the location.
+Otherwise, to logging_config_dir.
+</p>
+</li>
+<li>
+<p>
+<code>cert_src</code>: Local cert file path which is copied to the target host.
+If <code>cert</code> is specified, it is copied to the location. Otherwise, to
+logging_config_dir.
+</p>
+</li>
+<li>
+<p>
+<code>private_key_src</code>: Local key file path which is copied to the target
+host. If <code>private_key</code> is specified, it is copied to the location.
+Otherwise, to logging_config_dir.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>files</code> type - <code>files</code> output supports storing logs in the local files
+usually in /var/log. <strong>available options</strong>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>facility</code>: Facility in selector; default to <code>*</code>.
+</p>
+</li>
+<li>
+<p>
+<code>severity</code>: Severity in selector; default to <code>*</code>.
+</p>
+</li>
+<li>
+<p>
+<code>exclude</code>: Exclude list used in selector; default to none.
+</p>
+</li>
+<li>
+<p>
+<code>property</code>: Property in property-based filter; no default
+</p>
+</li>
+<li>
+<p>
+<code>property_op</code>: Operation in property-based filter; In case of not
+<code>!</code>, put the <code>property_op</code> value in quotes; default to <code>contains</code>
+</p>
+</li>
+<li>
+<p>
+<code>property_value</code>: Value in property-based filter; default to <code>error</code>
+</p>
+</li>
+<li>
+<p>
+<code>path</code>: Path to the output file.
+</p>
+<div class="paragraph"><p>Selector options and property-based filter options are exclusive. If
+Property-based filter options are defined, selector options will be
+ignored.</p></div>
+<div class="paragraph"><p>Unless the above options are given, these local file outputs are
+configured.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>kern.*                                      /dev/console
+*.info;mail.none;authpriv.none;cron.none    /var/log/messages
+authpriv.*                                  /var/log/secure
+mail.*                                      -/var/log/maillog
+cron.*                                      -/var/log/cron
+*.emerg                                     :omusrmsg:*
+uucp,news.crit                              /var/log/spooler
+local7.*</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<code>forwards</code> type - <code>forwards</code> output sends logs to the remote logging
+system over the network. <strong>available options</strong>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>facility</code>: Facility in selector; default to <code>*</code>.
+</p>
+</li>
+<li>
+<p>
+<code>severity</code>: Severity in selector; default to <code>*</code>.
+</p>
+</li>
+<li>
+<p>
+<code>exclude</code>: Exclude list used in selector; default to none.
+</p>
+</li>
+<li>
+<p>
+<code>property</code>: Property in property-based filter; no default
+</p>
+</li>
+<li>
+<p>
+<code>property_op</code>: Operation in property-based filter; In case of not
+<code>!</code>, put the <code>property_op</code> value in quotes; default to <code>contains</code>
+</p>
+</li>
+<li>
+<p>
+<code>property_value</code>: Value in property-based filter; default to <code>error</code>
+</p>
+</li>
+<li>
+<p>
+<code>target</code>: Target host (fqdn). <strong>Required</strong>.
+</p>
+</li>
+<li>
+<p>
+<code>udp_port</code>: UDP port number. Default to <code>514</code>.
+</p>
+</li>
+<li>
+<p>
+<code>tcp_port</code>: TCP port number. Default to <code>514</code>.
+</p>
+</li>
+<li>
+<p>
+<code>tls</code>: Set to <code>true</code> to encrypt the connection using the default TLS
+implementation used by the provider. Default to <code>false</code>.
+</p>
+</li>
+<li>
+<p>
+<code>pki_authmode</code>: Specifying the default network driver authentication
+mode. <code>x509/name</code>, <code>x509/fingerprint</code>, or <code>anon</code> is accepted. Default to
+<code>x509/name</code>.
+</p>
+</li>
+<li>
+<p>
+<code>permitted_server</code>: Hostname, IP address, fingerprint(sha1) or
+wildcard DNS domain of the server which this client will be allowed to
+connect and send logs over TLS. Default to <code>*.{{ logging_domain }}</code>
+</p>
+<div class="paragraph"><p>Selector options and property-based filter options are exclusive. If
+Property-based filter options are defined, selector options will be
+ignored.
+* <code>relp</code> type - <code>relp</code> output sends logs to the remote logging system
+over the network using relp. <strong>available options</strong>
+<strong> <code>target</code>: Host name the remote logging system is running on.
+<strong>Required</strong>.
+</strong> <code>port</code>: Port number the remote logging system is listening to.
+Default to <code>20514</code>.
+<strong> <code>tls</code>: If true, encrypt the connection with TLS. You must provide
+key/certificates and triplets {<code>ca_cert</code>, <code>cert</code>, <code>private_key</code>} and/or
+{<code>ca_cert_src</code>, <code>cert_src</code>, <code>private_key_src</code>}. Default to <code>true</code>.
+</strong> <code>ca_cert</code>: Path to CA cert to configure Relp with tls. Default to
+<code>/etc/pki/tls/certs/basename of ca_cert_src</code>.
+<strong> <code>cert</code>: Path to cert to configure Relp with tls. Default to
+<code>/etc/pki/tls/certs/basename of cert_src</code>.
+</strong> <code>private_key</code>: Path to key to configure Relp with tls. Default to
+<code>/etc/pki/tls/private/basename of private_key_src</code>.
+<strong> <code>ca_cert_src</code>: Local CA cert file path which is copied to the target
+host. If <code>ca_cert</code> is specified, it is copied to the location.
+Otherwise, to logging_config_dir.
+</strong> <code>cert_src</code>: Local cert file path which is copied to the target host.
+If <code>cert</code> is specified, it is copied to the location. Otherwise, to
+logging_config_dir.
+<strong> <code>private_key_src</code>: Local key file path which is copied to the target
+host. If <code>private_key</code> is specified, it is copied to the location.
+Otherwise, to logging_config_dir.
+</strong> <code>pki_authmode</code>: Specifying the authentication mode. <code>name</code> or
+<code>fingerprint</code> is accepted. Default to <code>name</code>.
+<strong> <code>permitted_servers</code>: List of hostnames, IP addresses,
+fingerprints(sha1), and wildcard DNS domains which will be allowed by
+the <code>logging</code> client to connect and send logs over TLS. Default to
+<code>['*.{{ logging_domain }}']</code>
+* <code>remote_files</code> type - <code>remote_files</code> output stores logs to the local
+files per remote host and program name originated the logs. <strong>available
+options</strong>
+</strong> <code>facility</code>: Facility in selector; default to <code>*</code>.
+<strong> <code>severity</code>: Severity in selector; default to <code>*</code>.
+</strong> <code>exclude</code>: Exclude list used in selector; default to none.
+<strong> <code>property</code>: Property in property-based filter; no default
+</strong> <code>property_op</code>: Operation in property-based filter; In case of not
+<code>!</code>, put the <code>property_op</code> value in quotes; default to <code>contains</code>
+<strong> <code>property_value</code>: Value in property-based filter; default to <code>error</code>
+</strong> <code>async_writing</code>: If set to <code>true</code>, the files are written
+asynchronously. Allowed value is <code>true</code> or <code>false</code>. Default to <code>false</code>.
+<strong> <code>client_count</code>: Count of client logging system supported this rsyslog
+server. Default to <code>10</code>.
+</strong> <code>io_buffer_size</code>: Buffer size used to write output data. Default to
+<code>65536</code> bytes.
+<strong> <code>remote_log_path</code>: Full path to store the filtered logs. This is an
+example to support the per host output log files
+<code>/path/to/output/dir/%FROMHOST%/%PROGRAMNAME:::secpath-replace%.log</code>
+</strong> <code>remote_sub_path</code>: Relative path to logging_system_log_dir to store
+the filtered logs.</p></div>
+<div class="paragraph"><p>Selector options and property-based filter options are exclusive. If
+Property-based filter options are defined, selector options will be
+ignored.</p></div>
+<div class="paragraph"><p>if both <code>remote_log_path</code> and <code>remote_sub_path</code> are <em>not</em> specified, the
+remote_file output configured with the following settings.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>template(
+  name="RemoteMessage"
+  type="string"
+  string="/var/log/remote/msg/%FROMHOST%/%PROGRAMNAME:::secpath-replace%.log"
+)
+template(
+  name="RemoteHostAuthLog"
+  type="string"
+  string="/var/log/remote/auth/%FROMHOST%/%PROGRAMNAME:::secpath-replace%.log"
+)
+template(
+  name="RemoteHostCronLog"
+  type="string"
+  string="/var/log/remote/cron/%FROMHOST%/%PROGRAMNAME:::secpath-replace%.log"
+)
+template(
+  name="RemoteHostMailLog"
+  type="string"
+  string="/var/log/remote/mail/%FROMHOST%/%PROGRAMNAME:::secpath-replace%.log"
+)
+ruleset(name="unique_remote_files_output_name") {
+  authpriv.*   action(name="remote_authpriv_host_log" type="omfile" DynaFile="RemoteHostAuthLog")
+  *.info;mail.none;authpriv.none;cron.none action(name="remote_message" type="omfile" DynaFile="RemoteMessage")
+  cron.*       action(name="remote_cron_log" type="omfile" DynaFile="RemoteHostCronLog")
+  mail.*       action(name="remote_mail_service_log" type="omfile" DynaFile="RemoteHostMailLog")
+}</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="sect4">
+<h5 id="_logging_flows_options">Logging_flows options</h5>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>name</code>: Unique name of the flow.
+</p>
+</li>
+<li>
+<p>
+<code>inputs</code>: A list of inputs, from which processing log messages starts.
+</p>
+</li>
+<li>
+<p>
+<code>outputs</code>: A list of outputs. to which the log messages are sent.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect4">
+<h5 id="_security_options">Security options</h5>
+<div class="paragraph"><p>These variables are set in the same level of the <code>logging_inputs</code>,
+<code>logging_output</code>, and <code>logging_flows</code>.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>logging_pki_files</code>: Specifying either of the paths of the ca_cert,
+cert, and key on the control host or the paths of theirs on the managed
+host or both of them. When TLS connection is configured, <code>ca_cert_src</code>
+and/or <code>ca_cert</code> is required. To configure the certificate of the
+logging system, <code>cert_src</code> and/or <code>cert</code> is required. To configure the
+private key of the logging system, <code>private_key_src</code> and/or
+<code>private_key</code> is required.
+</p>
+</li>
+</ul></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>  ca_cert_src:     location of the ca_cert on the control host; if given, the file is copied to the managed host.
+  cert_src:        location of the cert on the control host; if given, the file is copied to the managed host.
+  private_key_src: location of the key on the control host; if given, the file is copied to the managed host.
+  ca_cert:     path to be deployed on the managed host; the path is also used in the rsyslog config.
+               default to /etc/pki/tls/certs/&lt;ca_cert_src basename&gt;
+  cert:        ditto
+               default to /etc/pki/tls/certs/&lt;cert_src basename&gt;
+  private_key: ditto
+               default to /etc/pki/tls/private/&lt;private_key_src basename&gt;</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>logging_domain</code>: The default DNS domain used to accept remote
+incoming logs from remote hosts. Default to "{{ ansible_domain if
+ansible_domain else ansible_hostname }}"
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect4">
+<h5 id="_server_performance_optimization_options">Server performance optimization options</h5>
+<div class="paragraph"><p>These variables are set in the same level of the <code>logging_inputs</code>,
+<code>logging_output</code>, and <code>logging_flows</code>.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>logging_tcp_threads</code>: Input thread count listening on the plain tcp
+(ptcp) port. Default to <code>1</code>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_udp_threads</code>: Input thread count listening on the udp port.
+Default to <code>1</code>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_udp_system_time_requery</code>: Every <code>value</code> OS system calls, get
+the system time. Recommend not to set above 10. Default to <code>2</code> times.
+</p>
+</li>
+<li>
+<p>
+<code>logging_udp_batch_size</code>: Maximum number of udp messages per OS system
+call. Recommend not to set above 128. Default to <code>32</code>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_server_queue_type</code>: Type of queue. <code>FixedArray</code> is available.
+Default to <code>LinkedList</code>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_server_queue_size</code>: Maximum number of messages in the queue.
+Default to <code>50000</code>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_server_threads</code>: Number of worker threads. Default to
+<code>logging_tcp_threads</code> + <code>logging_udp_threads</code>.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect4">
+<h5 id="_other_options">Other options</h5>
+<div class="paragraph"><p>These variables are set in the same level of the <code>logging_inputs</code>,
+<code>logging_output</code>, and <code>logging_flows</code>.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>logging_enabled</code>: When <em>true</em>, logging role will deploy specified
+configuration file set. Default to <em>true</em>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_mark</code>: Mark message periodically by immark, if set to <code>true</code>.
+Default to <code>false</code>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_mark_interval</code>: Interval for <code>logging_mark</code> in seconds.
+Default to <code>3600</code>.
+</p>
+</li>
+<li>
+<p>
+<code>logging_purge_original_conf</code>: <code>true</code> or <code>false</code>. If set to <code>true</code>,
+files in /etc/rsyslog.d are purged.
+</p>
+</li>
+<li>
+<p>
+<code>logging_system_log_dir</code>: Directory where the local log output files
+are placed. Default to <code>/var/log</code>.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_update_and_delete">Update and Delete</h4>
+<div class="paragraph"><p>Due to the nature of ansible idempotency, if you run ansible-playbook
+multiple times without changing any variables and options, no changes
+are made from the second time. If some changes are made, only the
+rsyslog configuration files affected by the changes are recreated. To
+delete any existing rsyslog input or output config files generated by
+the previous ansible-playbook run, you need to add "state: absent" to
+the dictionary to be deleted (in this case, input_nameA and
+output_name0). And remove the flow dictionary related to the input and
+output as follows.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>logging_inputs:
+  - name: input_nameA
+    type: input_typeA
+    state: absent
+  - name: input_nameB
+    type: input_typeB
+logging_outputs:
+  - name: output_name0
+    type: output_type0
+    state: absent
+  - name: output_name1
+    type: output_type1
+logging_flows:
+  - name: flow_nameY
+    inputs: [input_nameB]
+    outputs: [output_name1]</code></pre>
+</div></div>
+<div class="paragraph"><p>If you want to remove all the configuration files previously configured,
+in addition to setting <code>state: absent</code> to each logging_inputs and
+logging_outputs item, add <code>logging_enabled: false</code> to the configuration
+variables as follows. It will eliminate the global and common
+configuration files, as well.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>logging_enabled: false
+logging_inputs:
+  - name: input_nameA
+    type: input_typeA
+    state: absent
+  - name: input_nameB
+    type: input_typeB
+    state: absent
+logging_outputs:
+  - name: output_name0
+    type: output_type0
+    state: absent
+  - name: output_name1
+    type: output_type1
+    state: absent
+logging_flows:
+  - name: flow_nameY
+    inputs: [input_nameB]
+    outputs: [output_name1]</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_examples">Configuration Examples</h3>
+<div class="sect3">
+<h4 id="_standalone_configuration">Standalone configuration</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>basics input</code> reading logs from systemd journal and
+implicit <code>files output</code> to write to the local files.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying basics input and implicit files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> all
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> system_input
+        <span style="color:#000000; font-weight:bold">type:</span> basics</code></pre>
+</div></div>
+<div class="paragraph"><p>The following playbook generates the same logging configuration files.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying basics input and files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> all
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> system_input
+        <span style="color:#000000; font-weight:bold">type:</span> basics
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output
+        <span style="color:#000000; font-weight:bold">type:</span> files
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>system_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>files_output<span style="color:#000000">]</span></code></pre>
+</div></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>basics input</code> reading logs from systemd unix socket and
+<code>files output</code> to write to the local files.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying basics input using systemd unix socket and files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> all
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> system_input
+        <span style="color:#000000; font-weight:bold">type:</span> basics
+        <span style="color:#000000; font-weight:bold">use_imuxsock:</span> true
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output
+        <span style="color:#000000; font-weight:bold">type:</span> files
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>system_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>files_output<span style="color:#000000">]</span></code></pre>
+</div></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>basics input</code> reading logs from systemd journal and
+<code>files output</code> to write to the individually configured local files.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying basic input and configured files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> all
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> system_input
+        <span style="color:#000000; font-weight:bold">type:</span> basics
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">severity:</span> info
+        <span style="color:#000000; font-weight:bold">exclude:</span>
+          - authpriv.none
+          - auth.none
+          - <span style="color:#000000; font-weight:bold">cron</span>.none
+          - <span style="color:#000000; font-weight:bold">mail</span>.none
+        <span style="color:#000000; font-weight:bold">path:</span> /var/log/messages
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">facility:</span> authpriv<span style="color:#000000">,</span>auth
+        <span style="color:#000000; font-weight:bold">path:</span> /var/log/secure
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>system_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>files_output<span style="color:#b07e00">0</span><span style="color:#000000">,</span> files_output<span style="color:#b07e00">1</span><span style="color:#000000">]</span></code></pre>
+</div></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>files input</code> reading logs from local files and
+<code>files output</code> to write to the individually configured local files.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying files input and configured files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> all
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_input<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">input_log_path:</span> /var/log/containerA/<span style="color:#000000">*</span>.log
+      - <span style="color:#000000; font-weight:bold">name:</span> files_input<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">input_log_path:</span> /var/log/containerB/<span style="color:#000000">*</span>.log
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">severity:</span> info
+        <span style="color:#000000; font-weight:bold">exclude:</span>
+          - authpriv.none
+          - auth.none
+          - <span style="color:#000000; font-weight:bold">cron</span>.none
+          - <span style="color:#000000; font-weight:bold">mail</span>.none
+        <span style="color:#000000; font-weight:bold">path:</span> /var/log/messages
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">facility:</span> authpriv<span style="color:#000000">,</span>auth
+        <span style="color:#000000; font-weight:bold">path:</span> /var/log/secure
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>files_input<span style="color:#b07e00">0</span><span style="color:#000000">,</span> files_input<span style="color:#b07e00">1</span><span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>files_output<span style="color:#b07e00">0</span><span style="color:#000000">,</span> files_output<span style="color:#b07e00">1</span><span style="color:#000000">]</span></code></pre>
+</div></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>files input</code> reading logs from local files and
+<code>files output</code> to write to the local files based on the property-based
+filters.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying files input and configured files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> all
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_input<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">input_log_path:</span> /var/log/containerA/<span style="color:#000000">*</span>.log
+      - <span style="color:#000000; font-weight:bold">name:</span> files_input<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">input_log_path:</span> /var/log/containerB/<span style="color:#000000">*</span>.log
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">property:</span> msg
+        <span style="color:#000000; font-weight:bold">property_op:</span> contains
+        <span style="color:#000000; font-weight:bold">property_value:</span> error
+        <span style="color:#000000; font-weight:bold">path:</span> /var/log/errors.log
+      - <span style="color:#000000; font-weight:bold">name:</span> files_output<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">property:</span> msg
+        <span style="color:#000000; font-weight:bold">property_op:</span> <span style="color:#bf0303">&quot;!contains&quot;</span>
+        <span style="color:#000000; font-weight:bold">property_value:</span> error
+        <span style="color:#000000; font-weight:bold">path:</span> /var/log/others.log
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>files_input<span style="color:#b07e00">0</span><span style="color:#000000">,</span> files_input<span style="color:#b07e00">1</span><span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>files_output<span style="color:#b07e00">0</span><span style="color:#000000">,</span> files_output<span style="color:#b07e00">1</span><span style="color:#000000">]</span></code></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_client_configuration">Client configuration</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>basics input</code> reading logs from systemd journal and
+<code>forwards output</code> to forward the logs to the remote rsyslog.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying basics input and forwards output
+  <span style="color:#000000; font-weight:bold">hosts:</span> clients
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> basic_input
+        <span style="color:#000000; font-weight:bold">type:</span> basics
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> forward_output<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> forwards
+        <span style="color:#000000; font-weight:bold">severity:</span> info
+        <span style="color:#000000; font-weight:bold">target:</span> your_target_hostname
+        <span style="color:#000000; font-weight:bold">udp_port:</span> <span style="color:#b07e00">514</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> forward_output<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> forwards
+        <span style="color:#000000; font-weight:bold">facility:</span> <span style="color:#000000; font-weight:bold">mail</span>
+        <span style="color:#000000; font-weight:bold">target:</span> your_target_hostname
+        <span style="color:#000000; font-weight:bold">tcp_port:</span> <span style="color:#b07e00">514</span>
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flows<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>basic_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>forward_output<span style="color:#b07e00">0</span><span style="color:#000000">,</span> forward_output<span style="color:#b07e00">1</span><span style="color:#000000">]</span></code></pre>
+</div></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>files input</code> reading logs from a local file and
+<code>forwards output</code> to forward the logs to the remote rsyslog over tls.
+Assuming the ca_cert, cert and key files are prepared at the specified
+paths on the control host. The files are deployed to the default
+location <code>/etc/pki/tls/certs/</code>, <code>/etc/pki/tls/certs/</code>, and
+<code>/etc/pki/tls/private</code>, respectively.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying files input and forwards output with certs
+  <span style="color:#000000; font-weight:bold">hosts:</span> clients
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_pki_files:</span>
+      - <span style="color:#000000; font-weight:bold">ca_cert_src:</span> /local/path/to/ca_cert
+        <span style="color:#000000; font-weight:bold">cert_src:</span> /local/path/to/cert
+        <span style="color:#000000; font-weight:bold">private_key_src:</span> /local/path/to/key
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> files_input
+        <span style="color:#000000; font-weight:bold">type:</span> files
+        <span style="color:#000000; font-weight:bold">input_log_path:</span> /var/log/containers/<span style="color:#000000">*</span>.log
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> forwards_output
+        <span style="color:#000000; font-weight:bold">type:</span> forwards
+        <span style="color:#000000; font-weight:bold">target:</span> your_target_host
+        <span style="color:#000000; font-weight:bold">tcp_port:</span> your_target_port
+        <span style="color:#000000; font-weight:bold">pki_authmode:</span> x<span style="color:#b07e00">509</span>/<span style="color:#0057ae">name</span>
+        <span style="color:#000000; font-weight:bold">permitted_server:</span> <span style="color:#bf0303">&apos;*.example.com&apos;</span>
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flows<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>basic_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>forwards-severity_and_facility<span style="color:#000000">]</span></code></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_server_configuration">Server configuration</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>remote input</code> reading logs from remote rsyslog and
+<code>remote_files output</code> to write the logs to the local files under the
+directory named by the remote host name.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying remote input and remote_files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> server
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> remote_udp_input
+        <span style="color:#000000; font-weight:bold">type:</span> remote
+        <span style="color:#000000; font-weight:bold">udp_ports:</span> <span style="color:#000000">[</span><span style="color:#b07e00">514</span><span style="color:#000000">,</span> <span style="color:#b07e00">1514</span><span style="color:#000000">]</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> remote_tcp_input
+        <span style="color:#000000; font-weight:bold">type:</span> remote
+        <span style="color:#000000; font-weight:bold">tcp_ports:</span> <span style="color:#000000">[</span><span style="color:#b07e00">514</span><span style="color:#000000">,</span> <span style="color:#b07e00">1514</span><span style="color:#000000">]</span>
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> remote_files_output
+        <span style="color:#000000; font-weight:bold">type:</span> remote_files
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow_<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>remote_udp_input<span style="color:#000000">,</span> remote_tcp_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>remote_files_output<span style="color:#000000">]</span></code></pre>
+</div></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>remote input</code> reading logs from remote rsyslog and
+<code>remote_files output</code> to write the logs to the configured local files
+with the tls setup supporting 20 clients. Assuming the ca_cert, cert and
+key files are prepared at the specified paths on the control host. The
+files are deployed to the default location <code>/etc/pki/tls/certs/</code>,
+<code>/etc/pki/tls/certs/</code>, and <code>/etc/pki/tls/private</code>, respectively.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying remote input and remote_files output with certs
+  <span style="color:#000000; font-weight:bold">hosts:</span> server
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_pki_files:</span>
+      - <span style="color:#000000; font-weight:bold">ca_cert_src:</span> /local/path/to/ca_cert
+        <span style="color:#000000; font-weight:bold">cert_src:</span> /local/path/to/cert
+        <span style="color:#000000; font-weight:bold">private_key_src:</span> /local/path/to/key
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> remote_tcp_input
+        <span style="color:#000000; font-weight:bold">type:</span> remote
+        <span style="color:#000000; font-weight:bold">tcp_ports:</span> <span style="color:#000000">[</span><span style="color:#b07e00">6514</span><span style="color:#000000">,</span> <span style="color:#b07e00">7514</span><span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">permitted_clients:</span> <span style="color:#000000">[</span><span style="color:#bf0303">&apos;*.example.com&apos;</span><span style="color:#000000">,</span> <span style="color:#bf0303">&apos;*.test.com&apos;</span><span style="color:#000000">]</span>
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> remote_files_output<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">type:</span> remote_files
+        <span style="color:#000000; font-weight:bold">remote_log_path:</span> /var/log/remote/<span style="color:#000000">%</span>FROMHOST<span style="color:#000000">%</span>/<span style="color:#000000">%</span>PROGRAMNAME:::secpath-<span style="color:#000000; font-weight:bold">replace</span><span style="color:#000000">%</span>.log
+        <span style="color:#000000; font-weight:bold">async_writing:</span> true
+        <span style="color:#000000; font-weight:bold">client_count:</span> <span style="color:#b07e00">20</span>
+        <span style="color:#000000; font-weight:bold">io_buffer_size:</span> <span style="color:#b07e00">8192</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> remote_files_output<span style="color:#b07e00">1</span>
+        <span style="color:#000000; font-weight:bold">type:</span> remote_files
+        <span style="color:#000000; font-weight:bold">remote_sub_path:</span> others/<span style="color:#000000">%</span>FROMHOST<span style="color:#000000">%</span>/<span style="color:#000000">%</span>PROGRAMNAME:::secpath-<span style="color:#000000; font-weight:bold">replace</span><span style="color:#000000">%</span>.log
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow_<span style="color:#b07e00">0</span>
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>remote_udp_input<span style="color:#000000">,</span> remote_tcp_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>remote_files_output<span style="color:#b07e00">0</span><span style="color:#000000">,</span> remote_files_output<span style="color:#b07e00">1</span><span style="color:#000000">]</span></code></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_client_configuration_with_relp">Client configuration with Relp</h4>
+<div class="paragraph"><p>Deploying <code>basics input</code> reading logs from systemd journal and
+<code>relp output</code> to send the logs to the remote rsyslog over relp.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying basics input and relp output
+  <span style="color:#000000; font-weight:bold">hosts:</span> clients
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> basic_input
+        <span style="color:#000000; font-weight:bold">type:</span> basics
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> relp_client
+        <span style="color:#000000; font-weight:bold">type:</span> relp
+        <span style="color:#000000; font-weight:bold">target:</span> logging.server.com
+        <span style="color:#000000; font-weight:bold">port:</span> <span style="color:#b07e00">20514</span>
+        <span style="color:#000000; font-weight:bold">tls:</span> true
+        <span style="color:#000000; font-weight:bold">ca_cert_src:</span> /path/to/ca.pem
+        <span style="color:#000000; font-weight:bold">cert_src:</span> /path/to/client-cert.pem
+        <span style="color:#000000; font-weight:bold">private_key_src:</span> /path/to/client-key.pem
+        <span style="color:#000000; font-weight:bold">pki_authmode:</span> <span style="color:#0057ae">name</span>
+        <span style="color:#000000; font-weight:bold">permitted_servers:</span>
+          - <span style="color:#bf0303">&apos;*.server.com&apos;</span>
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>basic_input<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>relp_client<span style="color:#000000">]</span></code></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_server_configuration_with_relp">Server configuration with Relp</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploying <code>relp input</code> reading logs from remote rsyslog and
+<code>remote_files output</code> to write the logs to the local files under the
+directory named by the remote host name.
+</p>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>---
+- <span style="color:#000000; font-weight:bold">name:</span> Deploying remote input and remote_files output
+  <span style="color:#000000; font-weight:bold">hosts:</span> server
+  <span style="color:#000000; font-weight:bold">roles:</span>
+    - redhat.rhel_system_roles.logging
+  <span style="color:#000000; font-weight:bold">vars:</span>
+    <span style="color:#000000; font-weight:bold">logging_inputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> relp_server
+        <span style="color:#000000; font-weight:bold">type:</span> relp
+        <span style="color:#000000; font-weight:bold">port:</span> <span style="color:#b07e00">20514</span>
+        <span style="color:#000000; font-weight:bold">tls:</span> true
+        <span style="color:#000000; font-weight:bold">ca_cert_src:</span> /path/to/ca.pem
+        <span style="color:#000000; font-weight:bold">cert_src:</span> /path/to/server-cert.pem
+        <span style="color:#000000; font-weight:bold">private_key_src:</span> /path/to/server-key.pem
+        <span style="color:#000000; font-weight:bold">pki_authmode:</span> <span style="color:#0057ae">name</span>
+        <span style="color:#000000; font-weight:bold">permitted_clients:</span>
+          - <span style="color:#bf0303">&apos;*.client.com&apos;</span>
+          - <span style="color:#bf0303">&apos;*.example.com&apos;</span>
+    <span style="color:#000000; font-weight:bold">logging_outputs:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> remote_files_output
+        <span style="color:#000000; font-weight:bold">type:</span> remote_files
+    <span style="color:#000000; font-weight:bold">logging_flows:</span>
+      - <span style="color:#000000; font-weight:bold">name:</span> flow
+        <span style="color:#000000; font-weight:bold">inputs:</span> <span style="color:#000000">[</span>relp_server<span style="color:#000000">]</span>
+        <span style="color:#000000; font-weight:bold">outputs:</span> <span style="color:#000000">[</span>remote_files_output<span style="color:#000000">]</span></code></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_port_and_selinux">Port and SELinux</h4>
+<div class="paragraph"><p>SELinux is only configured to allow sending and receiving on the
+following ports by default:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>syslogd_port_t        tcp   514, 20514
+syslogd_port_t        udp   514, 20514</code></pre>
+</div></div>
+<div class="paragraph"><p>If other ports need to be configured, you can use
+<a href="https://github.com/linux-system-roles/selinux">linux-system-roles/selinux</a>
+to manage SELinux contexts.</p></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_providers">Providers</h3>
+<div class="paragraph"><p><a href="roles/rsyslog">Rsyslog</a> - This documentation contains rsyslog
+specific information.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_tests">Tests</h3>
+<div class="paragraph"><p><a href="tests">Automated CI-tests</a> - This documentation shows how to execute
+CI tests in the tests directory as well as how to debug when the test
+fails.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+</div>
+</body>
+</html>

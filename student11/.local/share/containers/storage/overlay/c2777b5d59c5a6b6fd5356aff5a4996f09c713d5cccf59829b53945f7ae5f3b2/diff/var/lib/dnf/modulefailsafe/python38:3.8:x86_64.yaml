@@ -1,0 +1,366 @@
+---
+document: modulemd
+version: 2
+data:
+  name: python38
+  stream: 3.8
+  version: 8040020210420090415
+  context: 6dfe838a
+  arch: x86_64
+  summary: Python programming language, version 3.8
+  description: >-
+    This module gives users access to the internal Python 3.8 in RHEL8, as
+
+    well as provides some additional Python packages the users might need.
+
+    In addition to these you can install any python3-* package available
+
+    in RHEL and use it with Python from this module.
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+    - ASL 2.0 or BSD
+    - BSD
+    - BSD and Boost and Public Domain
+    - BSD and Python and ASL 2.0
+    - BSD and Python and Unicode
+    - LGPLv2
+    - LGPLv3+ with exceptions
+    - MIT
+    - MIT and (BSD or ASL 2.0)
+    - MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0
+      or BSD)
+    - Python
+  xmd: {}
+  dependencies:
+  - buildrequires:
+      httpd: [2.4]
+      platform: [el8.4.0.z]
+      python38: [3.8-bootstrap]
+      swig: [3.0]
+    requires:
+      platform: [el8]
+  references:
+    community: https://www.python.org/
+    documentation: https://docs.python.org/3.8/
+  profiles:
+    build:
+      rpms:
+      - python38
+      - python38-devel
+      - python38-rpm-macros
+    common:
+      rpms:
+      - python38
+  api:
+    rpms:
+    - python38
+    - python38-Cython
+    - python38-PyMySQL
+    - python38-asn1crypto
+    - python38-babel
+    - python38-cffi
+    - python38-chardet
+    - python38-cryptography
+    - python38-devel
+    - python38-idle
+    - python38-idna
+    - python38-jinja2
+    - python38-libs
+    - python38-lxml
+    - python38-markupsafe
+    - python38-mod_wsgi
+    - python38-numpy
+    - python38-numpy-f2py
+    - python38-pip
+    - python38-pip-wheel
+    - python38-ply
+    - python38-psutil
+    - python38-psycopg2
+    - python38-pycparser
+    - python38-pysocks
+    - python38-pytz
+    - python38-pyyaml
+    - python38-requests
+    - python38-rpm-macros
+    - python38-scipy
+    - python38-setuptools
+    - python38-setuptools-wheel
+    - python38-six
+    - python38-test
+    - python38-tkinter
+    - python38-urllib3
+    - python38-wheel
+    - python38-wheel-wheel
+  filter:
+    rpms:
+    - python38-atomicwrites
+    - python38-attrs
+    - python38-more-itertools
+    - python38-packaging
+    - python38-pluggy
+    - python38-py
+    - python38-pyparsing
+    - python38-pytest
+    - python38-wcwidth
+  buildopts:
+    rpms:
+      macros: >
+        # === Bootstrap phase 3/4 ===
+
+        #
+
+        %python3_pkgversion 38
+
+        %_without_python2 1
+
+        # py, pyparsing, atomicwrites, packaging, pytest
+
+        %_without_docs 1
+  components:
+    rpms:
+      Cython:
+        rationale: Python component
+        ref: stream-0.29.14-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      PyYAML:
+        rationale: Python component
+        ref: stream-5.3.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      babel:
+        rationale: Python component
+        ref: stream-2.7.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      mod_wsgi:
+        rationale: Python component
+        ref: stream-4.6.8-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      numpy:
+        rationale: Python component
+        ref: stream-1.17.3-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      pytest:
+        rationale: Python component
+        ref: stream-4.6.6-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-PyMySQL:
+        rationale: Python component
+        ref: stream-0.10.1-python38-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-asn1crypto:
+        rationale: Python component
+        ref: stream-1.2.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-atomicwrites:
+        rationale: Python component
+        ref: stream-1.3.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-attrs:
+        rationale: Python component
+        ref: stream-19.3.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-cffi:
+        rationale: Python component
+        ref: stream-1.13.2-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-chardet:
+        rationale: Python component
+        ref: stream-3.0.4-python38-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-cryptography:
+        rationale: Python component
+        ref: stream-2.8-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-idna:
+        rationale: Python component
+        ref: stream-2.8-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-jinja2:
+        rationale: Python component
+        ref: stream-2.10.3-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-lxml:
+        rationale: Python component
+        ref: stream-4.4.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-markupsafe:
+        rationale: Python component
+        ref: stream-1.1.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-more-itertools:
+        rationale: Python component
+        ref: stream-7.2.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-packaging:
+        rationale: Python component
+        ref: stream-19.2-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pluggy:
+        rationale: Python component
+        ref: stream-0.13.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-ply:
+        rationale: Python component
+        ref: stream-3.11-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-psutil:
+        rationale: Python component
+        ref: stream-5.6.4-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-psycopg2:
+        rationale: Python component
+        ref: stream-2.8.4-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-py:
+        rationale: Python component
+        ref: stream-1.8.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pycparser:
+        rationale: Python component
+        ref: stream-2.19-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pysocks:
+        rationale: Python component
+        ref: stream-1.7.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-requests:
+        rationale: Python component
+        ref: stream-2.22.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-urllib3:
+        rationale: Python component
+        ref: stream-1.25.7-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-wcwidth:
+        rationale: Python component
+        ref: stream-0.1.7-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-wheel:
+        rationale: Packaging tool
+        ref: stream-0.33.6-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python38:
+        rationale: The main Python interpreter
+        ref: stream-3.8-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python3x-pip:
+        rationale: Packaging tool
+        ref: stream-19.3.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python3x-pyparsing:
+        rationale: Python component
+        ref: stream-2.4.5-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python3x-setuptools:
+        rationale: Packaging tool
+        ref: stream-41.6.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python3x-six:
+        rationale: Python component
+        ref: stream-1.12.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      pytz:
+        rationale: Python component
+        ref: stream-2019.3-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      scipy:
+        rationale: Python component
+        ref: stream-1.3.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+  artifacts:
+    rpms:
+    - Cython-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.src
+    - Cython-debugsource-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - PyYAML-0:5.4.1-1.module+el8.4.0+10706+5c295a3e.src
+    - PyYAML-debugsource-0:5.4.1-1.module+el8.4.0+10706+5c295a3e.x86_64
+    - babel-0:2.7.0-10.module+el8.4.0+8888+89bc7e79.src
+    - mod_wsgi-0:4.6.8-3.module+el8.4.0+8888+89bc7e79.src
+    - numpy-0:1.17.3-5.module+el8.4.0+8888+89bc7e79.src
+    - numpy-debugsource-0:1.17.3-5.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-PyMySQL-0:0.10.1-1.module+el8.4.0+9692+8e86ab84.src
+    - python-asn1crypto-0:1.2.0-3.module+el8.4.0+8888+89bc7e79.src
+    - python-cffi-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.src
+    - python-cffi-debugsource-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-chardet-0:3.0.4-19.module+el8.4.0+8888+89bc7e79.src
+    - python-cryptography-0:2.8-3.module+el8.4.0+8888+89bc7e79.src
+    - python-cryptography-debugsource-0:2.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-idna-0:2.8-6.module+el8.4.0+8888+89bc7e79.src
+    - python-jinja2-0:2.10.3-4.module+el8.4.0+8888+89bc7e79.src
+    - python-lxml-0:4.4.1-5.module+el8.4.0+9001+fc421f6c.src
+    - python-lxml-debugsource-0:4.4.1-5.module+el8.4.0+9001+fc421f6c.x86_64
+    - python-markupsafe-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.src
+    - python-markupsafe-debugsource-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-ply-0:3.11-10.module+el8.4.0+9579+e9717e18.src
+    - python-psutil-0:5.6.4-3.module+el8.4.0+8888+89bc7e79.src
+    - python-psutil-debugsource-0:5.6.4-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-psycopg2-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.src
+    - python-psycopg2-debugsource-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-pycparser-0:2.19-3.module+el8.4.0+8888+89bc7e79.src
+    - python-pysocks-0:1.7.1-4.module+el8.4.0+8888+89bc7e79.src
+    - python-requests-0:2.22.0-9.module+el8.4.0+8888+89bc7e79.src
+    - python-urllib3-0:1.25.7-4.module+el8.4.0+8888+89bc7e79.src
+    - python-wheel-0:0.33.6-5.module+el8.4.0+8888+89bc7e79.src
+    - python38-0:3.8.6-3.module+el8.4.0+9579+e9717e18.src
+    - python38-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-Cython-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-Cython-debuginfo-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-PyMySQL-0:0.10.1-1.module+el8.4.0+9692+8e86ab84.noarch
+    - python38-asn1crypto-0:1.2.0-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-babel-0:2.7.0-10.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-cffi-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-cffi-debuginfo-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-chardet-0:3.0.4-19.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-cryptography-0:2.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-cryptography-debuginfo-0:2.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-debug-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-debuginfo-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-debugsource-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-devel-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-idle-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-idna-0:2.8-6.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-jinja2-0:2.10.3-4.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-libs-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-lxml-0:4.4.1-5.module+el8.4.0+9001+fc421f6c.x86_64
+    - python38-lxml-debuginfo-0:4.4.1-5.module+el8.4.0+9001+fc421f6c.x86_64
+    - python38-markupsafe-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-markupsafe-debuginfo-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-mod_wsgi-0:4.6.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-numpy-0:1.17.3-5.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-numpy-debuginfo-0:1.17.3-5.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-numpy-doc-0:1.17.3-5.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-numpy-f2py-0:1.17.3-5.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-pip-0:19.3.1-1.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pip-wheel-0:19.3.1-1.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-ply-0:3.11-10.module+el8.4.0+9579+e9717e18.noarch
+    - python38-psutil-0:5.6.4-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psutil-debuginfo-0:5.6.4-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psycopg2-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psycopg2-debuginfo-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psycopg2-doc-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psycopg2-tests-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-pycparser-0:2.19-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pysocks-0:1.7.1-4.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pytz-0:2019.3-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pyyaml-0:5.4.1-1.module+el8.4.0+10706+5c295a3e.x86_64
+    - python38-pyyaml-debuginfo-0:5.4.1-1.module+el8.4.0+10706+5c295a3e.x86_64
+    - python38-requests-0:2.22.0-9.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-rpm-macros-0:3.8.6-3.module+el8.4.0+9579+e9717e18.noarch
+    - python38-scipy-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-scipy-debuginfo-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-setuptools-0:41.6.0-4.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-setuptools-wheel-0:41.6.0-4.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-six-0:1.12.0-10.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-test-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-tkinter-0:3.8.6-3.module+el8.4.0+9579+e9717e18.x86_64
+    - python38-urllib3-0:1.25.7-4.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-wheel-0:0.33.6-5.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-wheel-wheel-0:0.33.6-5.module+el8.4.0+8888+89bc7e79.noarch
+    - python3x-pip-0:19.3.1-1.module+el8.4.0+8888+89bc7e79.src
+    - python3x-setuptools-0:41.6.0-4.module+el8.4.0+8888+89bc7e79.src
+    - python3x-six-0:1.12.0-10.module+el8.4.0+8888+89bc7e79.src
+    - pytz-0:2019.3-3.module+el8.4.0+8888+89bc7e79.src
+    - scipy-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.src
+    - scipy-debugsource-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.x86_64
+...

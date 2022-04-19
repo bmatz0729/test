@@ -1,0 +1,37 @@
+[2022-04-18T17:40:35.232Z] info  code-server 4.0.1 735c6da829535969ff7193c79379299e4a1cb9bc
+[2022-04-18T17:40:35.233Z] info  Using user-data-dir ~/.local/share/code-server
+[2022-04-18T17:40:35.253Z] info  Using config file ~/.config/code-server/config.yaml
+[2022-04-18T17:40:35.253Z] info  HTTP server listening on http://127.0.0.1:8080/ 
+[2022-04-18T17:40:35.253Z] info    - Authentication is enabled
+[2022-04-18T17:40:35.253Z] info      - Using password from $PASSWORD
+[2022-04-18T17:40:35.253Z] info    - Not serving HTTPS 
+[17:42:11] Extension host agent started.
+[14:39:44] [127.0.0.1][f588944c][ManagementConnection] New connection established.
+[14:39:46] [127.0.0.1][960e9f61][ExtensionHostConnection] New connection established.
+[14:39:46] [127.0.0.1][960e9f61][ExtensionHostConnection] <97498> Launched Extension Host Process.
+[14:39:49] Installing extension: redhat.ansible
+[14:39:50] Installing extension: redhat.vscode-yaml
+[14:39:51] Downloaded extension: redhat.vscode-yaml /home/student11/.local/share/code-server/CachedExtensionVSIXs/redhat.vscode-yaml-1.6.0
+[14:39:51] Extracted extension to /home/student11/.local/share/code-server/extensions/.b9fdf8a7-046c-4fe4-a414-e757bc13f59a: redhat.vscode-yaml
+[14:39:51] Renamed to /home/student11/.local/share/code-server/extensions/redhat.vscode-yaml-1.6.0
+[14:39:51] Extracting completed. redhat.vscode-yaml
+[14:39:52] Downloaded extension: redhat.ansible /home/student11/.local/share/code-server/CachedExtensionVSIXs/redhat.ansible-0.8.1
+[14:39:52] Extracted extension to /home/student11/.local/share/code-server/extensions/.78a2a7ef-c9ad-4738-9abf-5b87cf9a48b2: redhat.ansible
+[14:39:52] Renamed to /home/student11/.local/share/code-server/extensions/redhat.ansible-0.8.1
+[14:39:52] Extracting completed. redhat.ansible
+[14:39:52] Extension installed successfully: redhat.vscode-yaml
+[14:39:52] Extension installed successfully: redhat.ansible
+[18:58:12] [127.0.0.1][f588944c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[19:01:14] [127.0.0.1][f588944c][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[19:01:14] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[19:01:17] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[19:03:37] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[19:03:38] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[19:11:24] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[19:11:27] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[19:14:32] [127.0.0.1][f588944c][ManagementConnection] The client has reconnected.
+[19:14:33] [127.0.0.1][960e9f61][ExtensionHostConnection] The client has reconnected.
+[19:22:32] [127.0.0.1][d8a650da][ManagementConnection] New connection established.
+[19:22:33] [127.0.0.1][c5c876f1][ExtensionHostConnection] New connection established.
+[19:22:33] [127.0.0.1][c5c876f1][ExtensionHostConnection] <124711> Launched Extension Host Process.
+[IPC Library: Pty Host]  INFO Persistent process "1": Replaying 8917 chars and 1 size events

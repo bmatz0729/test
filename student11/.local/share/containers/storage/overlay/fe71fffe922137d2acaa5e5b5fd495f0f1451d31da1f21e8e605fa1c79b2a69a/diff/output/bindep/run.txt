@@ -1,0 +1,14 @@
+git-lfs
+python38-cffi
+python38-cryptography
+python38-lxml
+python38-pbr
+python38-pycparser
+python38-pytz
+python38-pyyaml
+python38-requests
+python38-six
+qemu-img
+receptor
+receptorctl
+subversion

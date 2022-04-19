@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: BSD-3-Clause
+---
+- name: Test executing the role with default parameters
+  hosts: all
+  roles:
+    - redhat.rhel_system_roles.network
+  tasks:
+    - name: Test warning and info logs
+      assert:
+        that:
+          - "'warnings' not in __network_connections_result"
+        msg: "There are warnings"
+
+  pre_tasks:
+    - name: Save host state
+      import_tasks: tasks/save_state.yml
+
+  post_tasks:
+    - name: Restore host state
+      import_tasks: tasks/restore_state.yml

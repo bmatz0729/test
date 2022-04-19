@@ -1,0 +1,22 @@
+{
+    "version": "1.0.0",
+    "plays": [],
+    "stdout": [
+        "\u001b[0;31mERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:\u001b[0m",
+        "\u001b[0;31mJSON: Expecting value: line 1 column 1 (char 0)\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31mSyntax Error while loading YAML.\u001b[0m",
+        "\u001b[0;31m  did not find expected '-' indicator\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31mThe error appears to be in '/home/student11/rhel-workshop/ansible-files/files/loop_users_2.yml': line 6, column 2, but may\u001b[0m",
+        "\u001b[0;31mbe elsewhere in the file depending on the exact syntax problem.\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31mThe offending line appears to be:\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31m tasks:\u001b[0m",
+        "\u001b[0;31m ^ here\u001b[0m"
+    ],
+    "status": "failed",
+    "status_color": 9
+}

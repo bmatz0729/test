@@ -1,0 +1,3 @@
+Error: Unexpected SIGPIPE
+    at process.<anonymous> (/usr/lib/code-server/vendor/modules/code-oss-dev/out/bootstrap.js:1:370)
+    at process.emit (events.js:400:28)

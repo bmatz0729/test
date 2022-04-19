@@ -1,0 +1,108 @@
+_receptor()
+{
+  local cur prevdashed count DASHCMDS
+  cur=${COMP_WORDS[COMP_CWORD]}
+  count=$((COMP_CWORD-1))
+  while [[ $count > 1 && ! ${COMP_WORDS[$count]} == --* ]]; do
+    count=$((count-1))
+  done
+  prevdashed=${COMP_WORDS[$count]}
+  DASHCMDS="--help --bash-completion --config -c --node --local-only --version --log-level --trace --tls-server --tls-client --cert-init --cert-makereq --cert-signreq --control-service --command-service --ip-router --tcp-server --tcp-client --udp-server --udp-client --unix-socket-server --unix-socket-client --tcp-listener --tcp-peer --udp-listener --udp-peer --ws-listener --ws-peer --work-command --command-runner --work-kubernetes --work-python"
+  if [[ $cur == -* ]]; then
+    COMPREPLY=($(compgen -W "$DASHCMDS" -- ${cur}))
+  else    case ${prevdashed} in
+      -c|--config)
+        COMPREPLY=($(compgen -f -- ${cur}))
+        ;;
+      --node)
+        COMPREPLY=($(compgen -W "id= allowedpeers= datadir=" -- ${cur}))
+        ;;
+      --local-only)
+        COMPREPLY=($(compgen -W "" -- ${cur}))
+        ;;
+      --version)
+        COMPREPLY=($(compgen -W "" -- ${cur}))
+        ;;
+      --log-level)
+        COMPREPLY=($(compgen -W "level=" -- ${cur}))
+        ;;
+      --trace)
+        COMPREPLY=($(compgen -W "" -- ${cur}))
+        ;;
+      --tls-server)
+        COMPREPLY=($(compgen -W "name= cert= key= requireclientcert= clientcas=" -- ${cur}))
+        ;;
+      --tls-client)
+        COMPREPLY=($(compgen -W "name= cert= key= rootcas= insecureskipverify=" -- ${cur}))
+        ;;
+      --cert-init)
+        COMPREPLY=($(compgen -W "commonname= bits= notbefore= notafter= outcert= outkey=" -- ${cur}))
+        ;;
+      --cert-makereq)
+        COMPREPLY=($(compgen -W "commonname= bits= dnsname= ipaddress= nodeid= outreq= inkey= outkey=" -- ${cur}))
+        ;;
+      --cert-signreq)
+        COMPREPLY=($(compgen -W "req= cacert= cakey= notbefore= notafter= outcert= verify=" -- ${cur}))
+        ;;
+      --control-service)
+        COMPREPLY=($(compgen -W "service= filename= permissions= tls= tcplisten= tcptls=" -- ${cur}))
+        ;;
+      --command-service)
+        COMPREPLY=($(compgen -W "service= command= tls=" -- ${cur}))
+        ;;
+      --ip-router)
+        COMPREPLY=($(compgen -W "networkname= interface= localnet= routes=" -- ${cur}))
+        ;;
+      --tcp-server)
+        COMPREPLY=($(compgen -W "port= bindaddr= remotenode= remoteservice= tlsserver= tlsclient=" -- ${cur}))
+        ;;
+      --tcp-client)
+        COMPREPLY=($(compgen -W "service= address= tlsserver= tlsclient=" -- ${cur}))
+        ;;
+      --udp-server)
+        COMPREPLY=($(compgen -W "port= bindaddr= remotenode= remoteservice=" -- ${cur}))
+        ;;
+      --udp-client)
+        COMPREPLY=($(compgen -W "service= address=" -- ${cur}))
+        ;;
+      --unix-socket-server)
+        COMPREPLY=($(compgen -W "filename= permissions= remotenode= remoteservice= tls=" -- ${cur}))
+        ;;
+      --unix-socket-client)
+        COMPREPLY=($(compgen -W "service= filename= tls=" -- ${cur}))
+        ;;
+      --tcp-listener)
+        COMPREPLY=($(compgen -W "bindaddr= port= tls= cost= nodecost=" -- ${cur}))
+        ;;
+      --tcp-peer)
+        COMPREPLY=($(compgen -W "address= redial= tls= cost=" -- ${cur}))
+        ;;
+      --udp-listener)
+        COMPREPLY=($(compgen -W "bindaddr= port= cost= nodecost=" -- ${cur}))
+        ;;
+      --udp-peer)
+        COMPREPLY=($(compgen -W "address= redial= cost=" -- ${cur}))
+        ;;
+      --ws-listener)
+        COMPREPLY=($(compgen -W "bindaddr= port= path= tls= cost= nodecost=" -- ${cur}))
+        ;;
+      --ws-peer)
+        COMPREPLY=($(compgen -W "address= redial= extraheader= tls= cost=" -- ${cur}))
+        ;;
+      --work-command)
+        COMPREPLY=($(compgen -W "worktype= command= params= allowruntimeparams=" -- ${cur}))
+        ;;
+      --work-kubernetes)
+        COMPREPLY=($(compgen -W "worktype= namespace= image= command= params= authmethod= kubeconfig= pod= kubeverifytls= kubetlscadata= allowruntimeauth= allowruntimetls= allowruntimecommand= allowruntimeparams= allowruntimepod= deletepodonrestart= streammethod=" -- ${cur}))
+        ;;
+      --work-python)
+        COMPREPLY=($(compgen -W "worktype= plugin= function= config=" -- ${cur}))
+        ;;
+      *)
+        COMPREPLY=($(compgen -W "$DASHCMDS" -- ${cur}))
+        ;;
+    esac
+  fi
+  [[ $COMPREPLY == *= ]] && compopt -o nospace
+}
+complete -F _receptor receptor
